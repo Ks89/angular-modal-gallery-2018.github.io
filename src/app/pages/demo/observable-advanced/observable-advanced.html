@@ -1,0 +1,106 @@
+<div class="container">
+
+  <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src"><u class="text-success"><h1 class="text-success">Observable Advanced example</h1></u></a>
+  <p>Advanced modal gallery example with <b class="text-success">manual subscription.</b></p>
+  <br>
+
+  <h2>Live Demo <small>(Manual subscription + Delay of 500ms)</small></h2>
+  <br>
+  <modal-gallery [modalImages]="imagesArraySubscribed"></modal-gallery>
+  <br><br>
+
+  <section>
+    <h2>Code</h2>
+    <br>
+
+    <h5>Template</h5>
+    <br>
+    <pre>
+      &lt;modal-gallery [modalImages]="imagesArraySubscribed"&gt;&lt;/modal-gallery&gt;
+    </pre>
+    <h5>Typescript</h5>
+    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    </codemirror>
+  </section>
+
+  <br><br>
+
+  <section>
+    <h2>Details</h2>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+        <tr>
+          <th>Input (.html)</th>
+          <th>Value (.ts)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>modalImages</code></td>
+          <td>
+            <div><i>Value: </i><code>Image[]</code></div>
+            <div><b class="text-success">Array of <code>Image</code> initialized with a manual subscription</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>imagePointer</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div>It will display the entire gallery</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>downloadable</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div>(<code>false</code> by default)</div>
+            <div>Not downloadable at all</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>description</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div>It will use the default description</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>buttonsConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div>
+              <ul>
+                <li><i class="fa fa-download"></i> is <span class="text-danger">hidden</span></li>
+                <li><i class="fa fa-external-link"></i> is <span class="text-danger">hidden</span></li>
+                <li><i class="fa fa-close"></i> is <span class="text-success">visible</span> by default</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>keyboardConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div>All keyboard's keys have default values (<kbd>esc</kbd>, <kbd>&rarr;</kbd>, <kbd>&larr;</kbd> )</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>enableCloseOutside</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div>(<code>false</code> by default)</div>
+            <div>Clicking on the semi-transparent background, modal-gallery won't do nothing</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>slideConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div>Infinite sliding is enabled by default, so you will be able to navigate between images without restrictions</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
