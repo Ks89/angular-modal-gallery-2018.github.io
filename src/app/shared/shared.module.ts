@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { SHARED_COMPONENTS } from './components/components';
-import { Ng2PageScrollModule, PageScrollConfig } from 'ng2-page-scroll';
+import { NgxPageScrollModule, PageScrollConfig } from 'ngx-page-scroll';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    Ng2PageScrollModule,
+    NgxPageScrollModule,
   ],
   exports: [
     SHARED_COMPONENTS

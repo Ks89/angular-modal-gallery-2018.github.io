@@ -50,7 +50,7 @@ import { COMPONENTS } from './pages/components';
 import { AppComponent } from './app.component';
 
 import { CodemirrorModule } from 'ng2-codemirror';
-import { Ng2PageScrollModule, PageScrollConfig } from 'ng2-page-scroll';
+import { NgxPageScrollModule, PageScrollConfig } from 'ngx-page-scroll';
 
 @NgModule({
   imports: [
@@ -70,7 +70,7 @@ import { Ng2PageScrollModule, PageScrollConfig } from 'ng2-page-scroll';
     NgbModule.forRoot(), // forRoot ensures the providers are only created once
 
     CodemirrorModule,
-    Ng2PageScrollModule.forRoot(),
+    NgxPageScrollModule,
     ModalGalleryModule.forRoot(),
     CoreModule,
     SharedModule

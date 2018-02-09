@@ -12,7 +12,7 @@ import 'mousetrap'; // Mandatory for angular-modal-gallery 3.x.x or greater (`np
 import { ModalGalleryModule } from 'angular-modal-gallery';
 // **************************************************************************
 
-import { Ng2PageScrollModule, PageScrollConfig } from 'ng2-page-scroll';
+import { NgxPageScrollModule, PageScrollConfig } from 'ngx-page-scroll';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { Ng2PageScrollModule, PageScrollConfig } from 'ng2-page-scroll';
     CommonModule,
     routing,
     SharedModule,
-    Ng2PageScrollModule,
+    NgxPageScrollModule,
     ModalGalleryModule // no for root here
   ],
   declarations: [
