@@ -1,0 +1,26 @@
+$color-primary: #3b009a;
+$color-secondary: #00e1ff;
+$color-white: #FFF;
+$color-black: #000;
+
+$font-huge: 24px;
+$font-big: 18px;
+$font-middle: 14px;
+$font-small: 12px;
+$font-very-small: 10px;
+
+// Roboto fonts from assets folder
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+$roboto-bold: "Roboto-Bold", serif;
+$roboto-regular: "Roboto-Regular", serif;
