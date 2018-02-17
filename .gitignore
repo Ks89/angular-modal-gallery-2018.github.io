@@ -26,4 +26,4 @@ node_modules
 # Compiled front-end files
 dist
 
-docs
+lib-docs

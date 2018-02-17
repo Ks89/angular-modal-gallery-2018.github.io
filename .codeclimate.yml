@@ -29,6 +29,7 @@ ratings:
   - "**.scss"
 exclude_paths:
 - "docs"
+- "lib-docs"
 - "coverage"
 - "dist"
 - ".scannerwork"
