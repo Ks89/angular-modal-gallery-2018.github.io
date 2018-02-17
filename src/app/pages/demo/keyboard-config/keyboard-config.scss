@@ -22,14 +22,16 @@
  * SOFTWARE.
  */
 
+@import "theme";
+
 .title {
-  background-color: #3c763d;
-  background: linear-gradient(135deg, #3c763d, #7de87d);
+  background-color: $color-primary;
+  background: linear-gradient(135deg, $color-primary, $color-secondary);
   margin-top: 32px;
-  color: white;
+  color: $color-white;
 
   h1 {
-    color: white;
+    color: $color-white;
   }
 }
 
