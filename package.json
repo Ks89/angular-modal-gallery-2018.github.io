@@ -1,6 +1,6 @@
 {
   "name": "angular-modal-gallery-official-website",
-  "version": "5.0.0",
+  "version": "5.0.0-rc.1",
   "author": "Stefano Cappa",
   "description": "based on https://github.com/Ks89/angular-cli-skeleton",
   "license": "MIT",
@@ -9,8 +9,8 @@
   "private": true,
   "repository": "https://github.com/Ks89/angular-modal-gallery.github.io",
   "engines": {
-    "node": ">=9.0.0",
-    "npm": ">=5..0"
+    "node": ">=9.3.0",
+    "npm": ">=5.6.0"
   },
   "scripts": {
     "ng": "ng",
