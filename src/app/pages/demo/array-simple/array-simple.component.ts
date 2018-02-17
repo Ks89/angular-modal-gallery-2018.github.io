@@ -33,8 +33,7 @@ import { TitleService } from '../../../core/services/title.service';
 
 @Component({
   selector: 'mmw-array-simple-page',
-  templateUrl: 'array-simple.html',
-  styleUrls: ['array-simple.scss']
+  templateUrl: 'array-simple.html'
 })
 export class ArraySimpleComponent {
   imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);

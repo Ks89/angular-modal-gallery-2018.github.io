@@ -27,7 +27,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'mmw-navbar',
-  templateUrl: 'navbar.html'
+  templateUrl: 'navbar.html',
+  styleUrls: ['navbar.scss']
 })
 export class NavbarComponent {
   constructor(private router: Router) {}

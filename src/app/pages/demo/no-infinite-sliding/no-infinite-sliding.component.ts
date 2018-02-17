@@ -34,8 +34,7 @@ import { codemirrorHtml } from '../../codemirror.config';
 
 @Component({
   selector: 'mmw-no-infinite-sliding-page',
-  templateUrl: 'no-infinite-sliding.html',
-  styleUrls: ['no-infinite-sliding.scss']
+  templateUrl: 'no-infinite-sliding.html'
 })
 export class NoInfiniteSlidingComponent {
 

@@ -34,8 +34,7 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
   selector: 'mmw-add-image-array-page',
-  templateUrl: 'add-image-array.html',
-  styleUrls: ['add-image-array.scss']
+  templateUrl: 'add-image-array.html'
 })
 export class AddImageArrayComponent {
 

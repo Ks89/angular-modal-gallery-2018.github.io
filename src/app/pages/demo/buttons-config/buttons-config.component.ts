@@ -34,8 +34,7 @@ import { codemirrorHtml } from '../../codemirror.config';
 
 @Component({
   selector: 'mmw-buttons-config-page',
-  templateUrl: 'buttons-config.html',
-  styleUrls: ['buttons-config.scss']
+  templateUrl: 'buttons-config.html'
 })
 export class ButtonsConfigComponent {
   imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);

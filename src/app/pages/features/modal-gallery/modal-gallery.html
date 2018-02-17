@@ -2,21 +2,23 @@
 
   <!-- TODO Add link to github sources -->
   <a id="ModalGallery" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src"><u class="text-success"><h1 class="text-success">ModalGallery</h1></u></a>
-  <p>The ModalGallery component is a collection of images. It displays images as
-    thumbnails in a single row. Clicking on one of them, the image will be showed in full screen in a modal way.</p>
-  <p>In addition to this, ModalGallery provides navigation between modal images with both mouse and keyboard and it
-    can enable/disable download features. To conclude, it is also possible to configure descriptions and to add a button
-    to navigate to an external URL.</p>
+  <p>The ModalGallery component is the main component of this library. It contains the collection of images and many other config objects.
+    It displays images as thumbnails (thanks to PlainGalleryComponent). Clicking on one of them, the image will be showed in full screen in a modal way using
+    many other inner components: BackgroundComponent, UpperButtonsComponent, CurrentImageComponent, LoadingSpinnerComponent, DotsComponent and PreviewsComponent.</p>
+  <p>All these components together provide navigation between images with both mouse and keyboard and it
+    can enable/disable download features and other advanced behaviours.</p>
+  <p>This is the only public component, so evey input must be provided to it. However, many of the inputs are managed by inner components,
+    so I decided to split this documentation based on Components.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td>Selector</td>
-        <td><code>modal-gallery</code></td>
+        <td>Template (HTML) selector</td>
+        <td><code>ks-modal-gallery</code></td>
       </tr>
       <tr>
         <td>Exported as</td>
-        <td><code>modalGallery</code></td>
+        <td><code>ksModalGallery</code></td>
       </tr>
     </tbody>
   </table>
@@ -29,13 +31,12 @@
           <td><small><code>modalImages</code></small></td>
           <td>
             <div>
-              <i>Type: </i><code>Array&lt;<code><a pageScroll href="#Image">Image</a></code>&gt; | Observable&lt;Array&lt;<code><a
-              pageScroll href="#Image">Image</a></code>&gt;&gt;</code>
+              <i>Type: </i><code><a pageScroll href="#Image">Image[]</a></code>
             </div>
             <div>
-              An array of <a pageScroll href="#Image"><code>Image</code></a> objects or an Observable of it, that represent both the thumb gallery and the
+              The mandatory array of <a pageScroll href="#Image"><code>Image</code></a> objects, that represent both the thumb gallery and the
               modal images. In fact, an <a pageScroll href="#Image"><code>Image</code></a> is an object with both thumb and
-              image source paths. For more info check <a pageScroll href="#Image"><code>Image</code></a>.
+              image source paths with other additional configuration parameters. For more info check <a pageScroll href="#Image"><code>Image</code></a>.
             </div>
           </td>
         </tr>
@@ -43,12 +44,12 @@
           <td><small><code>downloadable</code></small></td>
           <td>
             <div>
-              <i>Type: </i><code>boolean</code><span class="badge badge-default pull-right">optional</span>
+              <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
             </div>
             <div>
               <p>If true, you'll be able to download the current modal image always with keyboard shortcut (<kbd>ctrl</kbd>+<kbd>s</kbd>
                 or <kbd>cmd</kbd>+<kbd>s</kbd>),
-                but the download button will be displayed only if <code>showDownloadButton</code> will be true. Otherwise,
+                but the download button will be visible only when <code>showDownloadButton</code> is true. Otherwise,
                 all download features will be disabled. <code>downloadable=false</code> by default</p>
               <p>Please be careful: on SmartPhones and Tablets you can't use keyboard shortcuts, so to download images, please enable both <code>downloadable</code> and
                 <code>showDownloadButton</code> to add the download button.</p>
@@ -56,10 +57,105 @@
           </td>
         </tr>
         <tr>
+          <td>
+            <div>
+              <small><code>buttonsConfig</code></small>
+            </div>
+          </td>
+          <td>
+            <div>
+              <i>Type: </i><code><a pageScroll href="#ButtonsConfig">ButtonsConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            </div>
+            <div>
+              <p>Interface to choose which buttons to show and handle their behaviour. ModalComponent pass this object straight to UpperButtonsComponent,
+                so if you want to know how to use it, please check UpperButtonsComponent.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <small><code>enableCloseOutside</code></small>
+            </div>
+          </td>
+          <td>
+            <div>
+              <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            </div>
+            <div>
+              <p>If true, you can click on the semi-transparent background of modal images to close it. <code>enableCloseOutside=true</code> by default.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <small><code>previewConfig</code></small>
+            </div>
+          </td>
+          <td>
+            <div>
+              <i>Type: </i><code><a pageScroll href="#PreviewConfig">PreviewConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            </div>
+            <div>
+              <p>Interface to configure previews, for instance to choose either the number, visibility, arrows, siezes. ModalComponent pass this object straight to PreviewsComponent,
+                so if you want to know how to use it, please check PreviewsComponent.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <small><code>loadingConfig</code></small>
+            </div>
+          </td>
+          <td>
+            <div>
+              <i>Type: </i><code><a pageScroll href="#LoadingConfig">LoadingConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            </div>
+            <div>
+              <p>Interface to hide/show and to configure the modal loading spinner. ModalComponent pass this object straight to LoadingSpinnerComponent,
+                so if you want to know how to use it, please check LoadingSpinnerComponent.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <small><code>slideConfig</code></small>
+            </div>
+          </td>
+          <td>
+            <div>
+              <i>Type: </i><code><a pageScroll href="#SlideConfig">SlideConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            </div>
+            <div>
+              <p>Interface to enable infinite-sliding (you won't be able to navigate before both the first and after the last images) and to configure side-previews.
+                By default, infinite sliding is disabled, and side-previews are visible with width: '100px' and height: 'auto'.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <small><code>accessibilityConfig</code></small>
+            </div>
+          </td>
+          <td>
+            <div>
+              <i>Type: </i><code><a pageScroll href="#AccessibilityConfig">AccessibilityConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            </div>
+            <div>
+              <p>Interface to customize accessibility features, like alt, titles, aria-labels and so on. ModalGalleryComponent applies a default value with english texts.
+                This default config object is exported as <small><code>KS_DEFAULT_ACCESSIBILITY_CONFIG'</code></small>.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td><small><code>description</code></small></td>
           <td>
             <div>
-              <i>Type: </i><code><a pageScroll href="#DescriptionInterface">Description</a></code> interface<span class="badge badge-default pull-right">optional</span>
+              <i>Type: </i><code><a pageScroll href="#DescriptionInterface">Description</a></code> interface<span class="badge badge-pill badge-secondary pull-right">optional</span>
             </div>
             <div>
               <p>Interface to specify a custom description either a full string or an object with string properties.
@@ -79,27 +175,12 @@
         <tr>
           <td>
             <div>
-              <small><code>buttonsConfig</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code><a pageScroll href="#ButtonsConfig">ButtonsConfig</a></code><span class="badge badge-default pull-right">optional</span>
-            </div>
-            <div>
-              <p>Interface to configure button's visibility. All properties are optional and buttons hidden, except for the `close` button.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div>
               <small><code>keyboardConfig</code></small>
             </div>
           </td>
           <td>
             <div>
-              <i>Type: </i><code><a pageScroll href="#KeyboardConfig">KeyboardConfig</a></code><span class="badge badge-default pull-right">optional</span>
+              <i>Type: </i><code><a pageScroll href="#KeyboardConfig">KeyboardConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
             </div>
             <div>
               <p>Interface to configure keyboard's buttons. All properties are optional ad with default values. Check <code><a pageScroll href="#KeyboardConfig">KeyboardConfig</a></code> for more information.</p>
@@ -109,89 +190,16 @@
         <tr>
           <td>
             <div>
-              <small><code>enableClose Outside</code></small>
+              <small><code>plainGalleryConfig</code></small>
             </div>
           </td>
           <td>
             <div>
-              <i>Type: </i><code>boolean</code><span class="badge badge-default pull-right">optional</span>
+              <i>Type: </i><code><a pageScroll href="#PlainGalleryConfig">PlainGalleryConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
             </div>
             <div>
-              <p>If true, you can click on the semi-transparent background of modal images to close it. <code>enableCloseOutside=false</code> by default.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <small><code>slideConfig</code></small>
-            </div>
-            <div>
-              <span class="badge badge-success pull-left">NEW</span>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code><a pageScroll href="#SlideConfig">SlideConfig</a></code><span class="badge badge-default pull-right">optional</span>
-            </div>
-            <div>
-              <p>If this object contains 'infinite: true', you won't be able to navigate before both the first and after the last images.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <small><code>showDownload Button</code></small>
-            </div>
-            <div>
-              <span class="badge badge-danger pull-left">deprecated</span>
-            </div>
-          <td>
-            <div>
-              <i>Type: </i><code>boolean</code><span class="badge badge-default pull-right">optional</span>
-            </div>
-            <div>
-              <p class="text-danger">PLEASE SWITCH TO <code>buttonsConfig</code>. This property will be removed in version 4.0.0.</p>
-              <p>If both <code>downloadable</code> and <code>showDownloadButton</code> are true,
-                the download button will be displayed in the modal view. Otherwise, not. <code>downloadable=false</code>
-                by default</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <small><code>showExtUrl Button</code></small>
-            </div>
-            <div>
-              <span class="badge badge-danger pull-left">deprecated</span>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code>boolean</code><span class="badge badge-default pull-right">optional</span>
-            </div>
-            <div>
-              <p class="text-danger">PLEASE SWITCH TO <code>buttonsConfig</code>. This property will be removed in version 4.0.0.</p>
-              <p>If true and the image URL is defined, the external URL button will
-                be displayed in the modal view. Otherwise, not. <code>downloadable=false</code> by default</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td><small><code>imagePointer</code></small></td>
-          <td>
-            <div>
-              <i>Type: </i><code>number</code><span class="badge badge-default pull-right">optional</span>
-            </div>
-            <div>
-              <p>Parameter useful to open the modal gallery (passing a value >=0) showing the image with
-                index = <code>imagePointer</code>.</p>
-              <p>I recommend to use this input only if you want to build a custom gallery with "+n more" feature.
-                Otherwise, you shouldn't pass this value (leave it undefined). For more information about that, I really encourage
-                to see the official example (<a [routerLink]="['//demo/array-pointer']">Array example</a> or <a [routerLink]="['/demo/observable-pointer']">Observable example</a>) to understand what I'm saying.</p>
-              <p>Also, please be careful, because I'm planning to change this feature in the next major release (still unscheduled, probably at the end of 2017).</p>
+              <p>Interface to configure thumbnails, for instance to change the layout. Furthermore, it's useful to write fully custom layout (for more info see official demos).
+                ModalComponent pass this object to PlainGalleryComponent, so if you want to know how to use it, please check PlainGalleryComponent.</p>
             </div>
           </td>
         </tr>
@@ -204,7 +212,7 @@
     <table class="table table-hover table-sm">
       <tbody>
         <tr>
-          <td><code>close</code></td>
+          <td><small><code>close</code></small></td>
           <td>
             <p>An <code><a pageScroll href="#ImageModalEvent">ImageModalEvent</a></code> right <b>before</b> that the modal view closes.</p>
             <p>It contains an <code><a pageScroll href="#ActionEnum">Action</a></code> enum and a result (boolean or number)</p>
@@ -215,7 +223,7 @@
           </td>
         </tr>
         <tr>
-          <td><code>show</code></td>
+          <td><small><code>show</code></small></td>
           <td>
             <p>An <code><a pageScroll href="#ImageModalEvent">ImageModalEvent</a></code> right <b>before</b> that the modal image will be visible.</p>
             <p>It contains an <code><a pageScroll href="#ActionEnum">Action</a></code> enum and a result (boolean or number).</p>
@@ -227,7 +235,7 @@
           </td>
         </tr>
         <tr>
-          <td><code>firstImage</code></td>
+          <td><small><code>firstImage</code></small></td>
           <td>
             <p>An <code><a pageScroll href="#ImageModalEvent">ImageModalEvent</a></code> right <b>before</b> that the FIRST image in
               <code>modalImages</code> is visible.</p>
@@ -239,7 +247,7 @@
           </td>
         </tr>
         <tr>
-          <td><code>lastImage</code></td>
+          <td><small><code>lastImage</code></small></td>
           <td>
             <p>An <code><a pageScroll href="#ImageModalEvent">ImageModalEvent</a></code> right <b>before</b> that the LAST image in
               <code>modalImages</code> is visible.</p>
@@ -251,7 +259,7 @@
           </td>
         </tr>
         <tr>
-          <td><code>hasData</code></td>
+          <td><small><code>hasData</code></small></td>
           <td>
             <p>An <code><a pageScroll href="#ImageModalEvent">ImageModalEvent</a></code> right <b>after</b> the initialization of <code>modalImages</code>.</p>
             <p>It contains an <code><a pageScroll href="#ActionEnum">Action</a></code> enum and a result (boolean or number)</p>
@@ -263,7 +271,7 @@
           </td>
         </tr>
         <tr>
-          <td><code>buttonBeforeHook</code></td>
+          <td><small><code>buttonBeforeHook</code></small></td>
           <td>
             <p>A <code><a pageScroll href="#ButtonEvent">ButtonEvent</a></code> right <b>before</b> the action related to an upper button.</p>
             <p>It contains an <code><a pageScroll href="#ActionEnum">Action</a></code> enum, the current <code><a pageScroll href="#Image">Image</a></code> and the <code><a pageScroll href="#ButtonConfig">ButtonConfig</a></code> that triggered this event</p>
@@ -277,7 +285,7 @@
           </td>
         </tr>
         <tr>
-          <td><code>buttonAfterHook</code></td>
+          <td><small><code>buttonAfterHook</code></small></td>
           <td>
             <p>A <code><a pageScroll href="#ButtonEvent">ButtonEvent</a></code> right <b>after</b> the action related to an upper button.</p>
             <p>It contains an <code><a pageScroll href="#ActionEnum">Action</a></code> enum, the current <code><a pageScroll href="#Image">Image</a></code> and the <code><a pageScroll href="#ButtonConfig">ButtonConfig</a></code> that triggered this event</p>
@@ -303,7 +311,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>id</code></td>
+      <td><small><code>id</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>number</code>
@@ -314,7 +322,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>modal</code></td>
+      <td><small><code>modal</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>ModalImage</code>
@@ -325,10 +333,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>plain</code></td>
+      <td><small><code>plain</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>PlainImage</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>PlainImage</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Optional interface to configure the thumbnail (or 'plain image').</p>
@@ -348,7 +356,7 @@
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td><code>img</code></td>
+        <td><small><code>img</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>string</code>
@@ -359,10 +367,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>description</code></td>
+        <td><small><code>description</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>Optional description text.
@@ -372,10 +380,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>extUrl</code></td>
+        <td><small><code>extUrl</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>Optional external URL path. You must use a valid URL, because <code>angular-modal-gallery</code>
@@ -384,10 +392,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>title</code></td>
+        <td><small><code>title</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>Optional title text. It sets 'title' html's attribute, useful for accessibility purposes.
@@ -396,10 +404,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>alt</code></td>
+        <td><small><code>alt</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>Optional alt text. It sets 'alt' html's attribute, useful for accessibility purposes.
@@ -408,10 +416,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>arialLabel</code></td>
+        <td><small><code>arialLabel</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>Optional aria label text. It sets 'aria-label' html's attribute, useful for accessibility purposes.
@@ -433,7 +441,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>img</code></td>
+      <td><small><code>img</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>string</code>
@@ -444,10 +452,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>description</code></td>
+      <td><small><code>description</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Optional description text. To ignore this feature, don't add this property.</p>
@@ -455,10 +463,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>title</code></td>
+      <td><small><code>title</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Optional title text. It sets 'title' html's attribute, useful for accessibility purposes.
@@ -467,10 +475,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>alt</code></td>
+      <td><small><code>alt</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Optional alt text. It sets 'alt' html's attribute, useful for accessibility purposes.
@@ -479,10 +487,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>arialLabel</code></td>
+      <td><small><code>arialLabel</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Optional aria label text. It sets 'aria-label' html's attribute, useful for accessibility purposes.
@@ -491,10 +499,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>size</code></td>
+      <td><small><code>size</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>Size</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>Size</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Optional object to change the size of modal image. 'width: 50px' and 'height: auto' by default.</p>
@@ -514,7 +522,7 @@
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td><code>action</code></td>
+        <td><small><code>action</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>Action</code>
@@ -525,7 +533,7 @@
         </td>
       </tr>
       <tr>
-        <td><code>result</code></td>
+        <td><small><code>result</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>number | boolean</code>
@@ -549,7 +557,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>visible</code></td>
+      <td><small><code>visible</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>boolean</code>
@@ -572,7 +580,7 @@
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td><code>strategy</code></td>
+        <td><small><code>strategy</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>DescriptionStrategy</code>
@@ -586,7 +594,7 @@
         <td><small><code>imageText</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>It's the beginning part of the description. By default its value is the string 'Image',
@@ -600,7 +608,7 @@
         <td><small><code>number Separator</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>It's the text between the current image number ad the total number of images.</p>
@@ -612,7 +620,7 @@
         <td><small><code>beforeText Description</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>It's the text between the total number of images and the final description text</p>
@@ -624,7 +632,7 @@
         <td><small><code>customFull Description</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>It's the full text description. If you set this value, all others will be ignored.</p>
@@ -647,7 +655,7 @@
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td><code>visible</code></td>
+        <td><small><code>visible</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>boolean</code>
@@ -658,7 +666,7 @@
         </td>
       </tr>
       <tr>
-        <td><code>strategy</code></td>
+        <td><small><code>strategy</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>ButtonsStrategy</code>
@@ -669,10 +677,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>buttons</code></td>
+        <td><small><code>buttons</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>ButtonConfig[]</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>ButtonConfig[]</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>If you choose <code>ButtonsStrategy.CUSTOM</code> you can add your buttons to this array</p>
@@ -692,18 +700,18 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>button</code></td>
+      <td><small><code>button</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>ButtonConfig</code>
         </div>
         <div>
-          <p>The button configuration/representation</p>
+          <p>The button configuration / representation</p>
         </div>
       </td>
     </tr>
     <tr>
-      <td><code>image</code></td>
+      <td><small><code>image</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>Image | null</code>
@@ -714,7 +722,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>action</code></td>
+      <td><small><code>action</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>Action</code>
@@ -737,10 +745,10 @@
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td><code>className</code></td>
+        <td><small><code>className</code></small></td>
         <td>
           <div>
-           <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+           <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
            <p>To specify the css class name with the icon (for instance, with font-awesome, you can use 'fa fa-close')</p>
@@ -748,10 +756,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>size</code></td>
+        <td><small><code>size</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>Size</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>Size</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
            <p>To choose the size of the button (if you are using fonts as icons please check 'fontSize').
@@ -760,10 +768,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>fontSize</code></td>
+        <td><small><code>fontSize</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>To specify the size of the font ('font-size' css property) if you are using a font as icon (for instance, with font-awesome)</p>
@@ -771,7 +779,7 @@
         </td>
       </tr>
       <tr>
-        <td><code>type</code></td>
+        <td><small><code>type</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>ButtonType</code>
@@ -782,10 +790,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>title</code></td>
+        <td><small><code>title</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>Optional title text. It sets 'title' html's attribute, useful for accessibility purposes.
@@ -794,10 +802,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>arialLabel</code></td>
+        <td><small><code>arialLabel</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>Optional aria label text. It sets 'aria-label' html's attribute, useful for accessibility purposes.
@@ -806,10 +814,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>extUrlInNewTab</code></td>
+        <td><small><code>extUrlInNewTab</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>boolean</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>To open in a new tab (instead of the current one) the url specified in extUrl property</p>
@@ -830,10 +838,10 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>esc</code></td>
+      <td><small><code>esc</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>number</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Javascript keycode to use instead of the default <kbd>esc</kbd></p>
@@ -841,10 +849,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>right</code></td>
+      <td><small><code>right</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>number</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Javascript keycode to use instead of the default  <kbd>&rarr;</kbd></p>
@@ -852,10 +860,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>left</code></td>
+      <td><small><code>left</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>number</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Javascript keycode to use instead of the default <kbd>&larr;</kbd></p>
@@ -875,7 +883,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>enable</code></td>
+      <td><small><code>enable</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>boolean</code>
@@ -886,7 +894,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>type</code></td>
+      <td><small><code>type</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>LoadingType</code>
@@ -909,10 +917,10 @@
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td><code>infinite</code></td>
+        <td><small><code>infinite</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>boolean</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>If false, infinite sliding is visible, otherwise not</p>
@@ -920,10 +928,10 @@
         </td>
       </tr>
       <tr>
-        <td><code>sidePreviews</code></td>
+        <td><small><code>sidePreviews</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>SidePreviewsConfig</code><span class="badge badge-default pull-right">optional</span>
+            <i>Type: </i><code>SidePreviewsConfig</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
             <p>With this property, you can hide/show side-previews or change sizes.</p>
@@ -943,7 +951,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>visible</code></td>
+      <td><small><code>visible</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>boolean</code>
@@ -954,10 +962,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>number</code></td>
+      <td><small><code>number</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>number</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Number of previews to show. 3 by default.</p>
@@ -965,10 +973,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>arrows</code></td>
+      <td><small><code>arrows</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>boolean</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>If false, preview's navigation arrows are visible, otherwise not. false by default.</p>
@@ -976,10 +984,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>clickable</code></td>
+      <td><small><code>clickable</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>boolean</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>If false, previous won't be clickable, otherwise not. true by default.</p>
@@ -987,10 +995,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>size</code></td>
+      <td><small><code>size</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>Size</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>Size</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>You can change the default size of previews. <code>width: 50px</code> and <code>height: auto</code> by default.</p>
@@ -1010,7 +1018,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>strategy</code></td>
+      <td><small><code>strategy</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>PlainGalleryStrategy</code>
@@ -1021,7 +1029,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>layout</code></td>
+      <td><small><code>layout</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>PlainGalleryLayout</code>
@@ -1032,10 +1040,10 @@
       </td>
     </tr>
     <tr>
-      <td><code>advanced</code></td>
+      <td><small><code>advanced</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>AdvancedConfig</code><span class="badge badge-default pull-right">optional</span>
+          <i>Type: </i><code>AdvancedConfig</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
           <p>Optional object used to configure 'AdvancedLayout'. It will be ignored with both 'LineLayout' and 'GridLayout'.</p>
@@ -1062,7 +1070,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>breakConfig</code></td>
+      <td><small><code>breakConfig</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>BreakConfig</code>
@@ -1073,7 +1081,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>justify</code></td>
+      <td><small><code>justify</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>string</code>
@@ -1084,7 +1092,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>size</code></td>
+      <td><small><code>size</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>Size</code>
@@ -1107,7 +1115,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>breakConfig</code></td>
+      <td><small><code>breakConfig</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>BreakConfig</code>
@@ -1118,7 +1126,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>size</code></td>
+      <td><small><code>size</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>Size</code>
@@ -1141,7 +1149,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>modalOpenerByIndex</code></td>
+      <td><small><code>modalOpenerByIndex</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>number</code>
@@ -1152,7 +1160,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>hideDefaultPlainGallery</code></td>
+      <td><small><code>hideDefaultPlainGallery</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>boolean</code>
@@ -1175,7 +1183,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>length</code></td>
+      <td><small><code>length</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>number</code>
@@ -1186,7 +1194,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>wrap</code></td>
+      <td><small><code>wrap</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>boolean</code>
@@ -1209,7 +1217,7 @@
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td><code>aTags</code></td>
+        <td><small><code>aTags</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>boolean</code>
@@ -1220,7 +1228,7 @@
         </td>
       </tr>
       <tr>
-        <td><code>additionalBackground</code></td>
+        <td><small><code>additionalBackground</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>string</code>
@@ -1306,7 +1314,7 @@
   <table class="table table-hover table-sm">
     <tbody>
     <tr>
-      <td><code>width</code></td>
+      <td><small><code>width</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>string</code>
@@ -1319,7 +1327,7 @@
       </td>
     </tr>
     <tr>
-      <td><code>height</code></td>
+      <td><small><code>height</code></small></td>
       <td>
         <div>
           <i>Type: </i><code>string</code>

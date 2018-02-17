@@ -27,8 +27,7 @@ import { TitleService } from '../../../core/services/title.service';
 
 @Component({
   selector: 'mmw-gallery-array-page',
-  templateUrl: 'modal-gallery.html',
-  styleUrls: ['modal-gallery.scss']
+  templateUrl: 'modal-gallery.html'
 })
 export class ModalGalleryComponent {
   constructor(private titleService: TitleService) {

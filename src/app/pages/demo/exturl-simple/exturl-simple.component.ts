@@ -34,8 +34,7 @@ import { codemirrorHtml } from '../../codemirror.config';
 
 @Component({
   selector: 'mmw-exturl-simple-page',
-  templateUrl: 'exturl-simple.html',
-  styleUrls: ['exturl-simple.scss']
+  templateUrl: 'exturl-simple.html'
 })
 export class ExtUrlSimpleComponent {
   imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);

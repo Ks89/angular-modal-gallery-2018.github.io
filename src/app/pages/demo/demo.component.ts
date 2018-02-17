@@ -3,8 +3,7 @@ import { TitleService } from '../../core/services/title.service';
 
 @Component({
   selector: 'mmw-demo-page',
-  templateUrl: 'demo.html',
-  styleUrls: ['demo.scss']
+  templateUrl: 'demo.html'
 })
 export class DemoComponent {
 

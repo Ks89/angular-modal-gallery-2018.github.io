@@ -24,13 +24,10 @@
 
 @import "theme";
 
-.title {
-  background-color: $color-primary;
-  background: linear-gradient(135deg, $color-primary, $color-secondary);
-  margin-top: 32px;
-  color: $color-white;
+a {
+  font-family: $roboto-light;
+}
 
-  h1 {
-    color: $color-white;
-  }
+.bg-dark {
+  background-color: $color-light-black !important;
 }

@@ -33,8 +33,7 @@ import { TitleService } from '../../../core/services/title.service';
 
 @Component({
   selector: 'mmw-description-full-custom-page',
-  templateUrl: 'description-full-custom.html',
-  styleUrls: ['description-full-custom.scss']
+  templateUrl: 'description-full-custom.html'
 })
 export class DescriptionFullCustomComponent {
   imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);

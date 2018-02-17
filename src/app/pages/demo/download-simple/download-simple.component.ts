@@ -34,8 +34,7 @@ import { codemirrorHtml } from '../../codemirror.config';
 
 @Component({
   selector: 'mmw-download-simple-page',
-  templateUrl: 'download-simple.html',
-  styleUrls: ['download-simple.scss']
+  templateUrl: 'download-simple.html'
 })
 export class DownloadSimpleComponent {
   imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);

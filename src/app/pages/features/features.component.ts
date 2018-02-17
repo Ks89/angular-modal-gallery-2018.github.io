@@ -27,8 +27,7 @@ import { TitleService } from '../../core/services/title.service';
 
 @Component({
   selector: 'mmw-features-page',
-  templateUrl: 'features.html',
-  styleUrls: ['features.scss']
+  templateUrl: 'features.html'
 })
 export class FeaturesComponent {
 

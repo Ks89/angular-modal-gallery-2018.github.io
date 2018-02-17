@@ -33,8 +33,7 @@ import { TitleService } from '../../../core/services/title.service';
 
 @Component({
   selector: 'mmw-close-outside-page',
-  templateUrl: 'close-outside.html',
-  styleUrls: ['close-outside.scss']
+  templateUrl: 'close-outside.html'
 })
 export class CloseOusideComponent {
   imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);

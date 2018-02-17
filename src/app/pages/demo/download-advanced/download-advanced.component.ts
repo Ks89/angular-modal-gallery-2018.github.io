@@ -33,8 +33,7 @@ import { TitleService } from '../../../core/services/title.service';
 
 @Component({
   selector: 'mmw-download-advanced-page',
-  templateUrl: 'download-advanced.html',
-  styleUrls: ['download-advanced.scss']
+  templateUrl: 'download-advanced.html'
 })
 export class DownloadAdvancedComponent {
   imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);

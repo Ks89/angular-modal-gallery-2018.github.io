@@ -34,8 +34,7 @@ import { codemirrorHtml } from '../../codemirror.config';
 
 @Component({
   selector: 'mmw-keyboard-config-page',
-  templateUrl: 'keyboard-config.html',
-  styleUrls: ['keyboard-config.scss']
+  templateUrl: 'keyboard-config.html'
 })
 export class KeyboardConfigComponent {
   imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);

@@ -27,8 +27,7 @@ import { TitleService } from '../../../core/services/title.service';
 
 @Component({
   selector: 'mmw-global-config-page',
-  templateUrl: 'global-config.html',
-  styleUrls: ['global-config.scss']
+  templateUrl: 'global-config.html'
 })
 export class GlobalConfigComponent {
   constructor(private titleService: TitleService) {

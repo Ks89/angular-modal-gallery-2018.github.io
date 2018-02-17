@@ -32,7 +32,6 @@ const PATH = environment.imgPath;
 
 @Component({
   selector: 'mmw-home-page',
-  styleUrls: ['home.scss'],
   templateUrl: 'home.html'
 })
 export class HomeComponent {

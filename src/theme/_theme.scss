@@ -26,6 +26,9 @@ $color-primary: #3b009a;
 $color-secondary: #00e1ff;
 $color-white: #FFF;
 $color-black: #000;
+$color-light-black: #343A40;
+$color-code: #c100e0;
+$color-url: #0060b7;
 
 $font-huge: 24px;
 $font-big: 18px;
@@ -46,5 +49,19 @@ $font-very-small: 10px;
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: Roboto-Light;
+  src: url("/assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto-Thin;
+  src: url("/assets/fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 $roboto-bold: "Roboto-Bold", serif;
 $roboto-regular: "Roboto-Regular", serif;
+$roboto-light: "Roboto-Light", serif;
+$roboto-thin: "Roboto-Thin", serif;

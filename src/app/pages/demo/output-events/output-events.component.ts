@@ -33,8 +33,7 @@ import { TitleService } from '../../../core/services/title.service';
 
 @Component({
   selector: 'mmw-output-events-page',
-  templateUrl: 'output-events.html',
-  styleUrls: ['output-events.scss']
+  templateUrl: 'output-events.html'
 })
 export class OutputEventsComponent {
   imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);

@@ -5,9 +5,9 @@ import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader'
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
-import { AppShellComponent } from './app-shell/app-shell.component';
+// import { AppShellComponent } from './app-shell/app-shell.component';
 
-const routes: Routes = [{path: 'app-shell-path', component: AppShellComponent}];
+// const routes: Routes = [{path: 'app-shell-path', component: AppShellComponent}];
 
 @NgModule({
   imports: [
@@ -15,10 +15,9 @@ const routes: Routes = [{path: 'app-shell-path', component: AppShellComponent}];
     // by the ServerModule from @angular/platform-server.
     AppModule,
     ServerModule,
-    ModuleMapLoaderModule, // <-- *Important* to have lazy-loaded routes work
-    RouterModule.forRoot(routes)
+    ModuleMapLoaderModule // <-- *Important* to have lazy-loaded routes work
   ],
   bootstrap: [AppComponent],
-  declarations: [AppShellComponent]
+  declarations: []
 })
 export class AppServerModule {}

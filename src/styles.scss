@@ -47,10 +47,35 @@ html {
   text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
+.title {
+  background-color: $color-primary;
+  background: linear-gradient(135deg, $color-primary, $color-secondary);
+  margin-top: 32px;
+  color: $color-white;
+
+  h1 {
+    color: $color-white;
+    font-family: $roboto-thin;
+  }
+}
+
+
 .text-success {
   color: $color-primary !important;
 }
 
 td {
   min-width: 134px;
+}
+
+code {
+  color: $color-code;
+}
+
+a {
+  color: $color-url;
+}
+
+kbd {
+  background-color: $color-light-black;
 }

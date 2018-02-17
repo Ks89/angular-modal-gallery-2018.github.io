@@ -26,7 +26,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'mmw-getting-started-page',
-  styleUrls: ['getting-started.scss'],
   templateUrl: 'getting-started.html'
 })
 export class GettingStartedComponent {
