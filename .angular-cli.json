@@ -32,10 +32,6 @@
         ]
       },
       "scripts": [
-        "../node_modules/jquery/dist/jquery.slim.js",
-        "../node_modules/popper.js/dist/umd/popper.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js",
-        "../node_modules/socket.io-client/dist/socket.io.slim.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -52,7 +48,7 @@
       "assets": [
         "assets",
         "favicon.png",
-        "manifest.json"
+        "404.html"
       ],
       "index": "index.html",
       "main": "main.server.ts",
@@ -62,14 +58,16 @@
       "prefix": "app",
       "serviceWorker": true,
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "../node_modules/codemirror/lib/codemirror.css",
+        "../node_modules/codemirror/theme/monokai.css"
       ],
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.slim.js",
-        "../node_modules/popper.js/dist/umd/popper.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js",
-        "../node_modules/socket.io/lib/index.js"
-      ],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "theme"
+        ]
+      },
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

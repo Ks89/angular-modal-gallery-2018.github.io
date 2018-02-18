@@ -71,6 +71,7 @@
     "@angular/router": "^5.2.5",
     "@angular/service-worker": "^5.2.5",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0",
+    "@nguniversal/express-engine": "^5.0.0-beta.5",
     "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.5",
     "angular-modal-gallery": "^5.0.0-rc.1",
     "bootstrap": "^4.0.0",
@@ -89,7 +90,7 @@
     "zone.js": "^0.8.20"
   },
   "devDependencies": {
-    "@angular/cli": "^1.6.8",
+    "@angular/cli": "^1.7.0",
     "@angular/compiler-cli": "^5.2.5",
     "@angular/language-service": "^5.2.5",
     "@angularclass/hmr": "^2.1.3",
