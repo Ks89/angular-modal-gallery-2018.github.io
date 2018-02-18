@@ -24,21 +24,20 @@
 
 import { Component } from '@angular/core';
 
-import { Description, Image } from 'angular-modal-gallery';
-
-import * as _ from 'lodash';
+import { DescriptionStrategy, Description, Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-description-full-custom-page',
+  selector: 'app-description-full-custom-page',
   templateUrl: 'description-full-custom.html'
 })
 export class DescriptionFullCustomComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   customFullDescription: Description = {
+    strategy: DescriptionStrategy.ALWAYS_VISIBLE,
     // you should build this value programmaticaly with the result of (show)="..()" event
     customFullDescription: 'Custom description of the current visible image'
     // if customFullDescription !== undefined, all other fields will be ignored

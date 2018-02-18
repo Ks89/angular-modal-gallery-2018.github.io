@@ -24,19 +24,17 @@
 
 import { Component } from '@angular/core';
 
-import { Action, Image, ImageModalEvent } from 'angular-modal-gallery';
-
-import * as _ from 'lodash';
+import { Action, ButtonEvent, Image, ImageModalEvent } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-output-events-page',
+  selector: 'app-output-events-page',
   templateUrl: 'output-events.html'
 })
 export class OutputEventsComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   imageLoaded: ImageModalEvent;
   visibleIndex: ImageModalEvent;
@@ -79,4 +77,11 @@ export class OutputEventsComponent {
     this.closeImageModal = event;
   }
 
+  onButtonBeforeHook(event: ButtonEvent) {
+    console.log('onButtonBeforeHook ', event);
+  }
+
+  onButtonAfterHook(event: ButtonEvent) {
+    console.log('onButtonAfterHook ', event);
+  }
 }

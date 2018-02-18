@@ -26,17 +26,15 @@ import { Component } from '@angular/core';
 
 import { Image } from 'angular-modal-gallery';
 
-import * as _ from 'lodash';
-
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-download-advanced-page',
+  selector: 'app-download-advanced-page',
   templateUrl: 'download-advanced.html'
 })
 export class DownloadAdvancedComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Download advanced');

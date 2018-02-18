@@ -24,32 +24,45 @@
 
 import { Component } from '@angular/core';
 
-import { Image } from 'angular-modal-gallery';
-
-import * as _ from 'lodash';
+import { ButtonsConfig, ButtonsStrategy, Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
-import { codemirrorHtml } from '../../codemirror.config';
+import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'mmw-download-simple-page',
+  selector: 'app-download-simple-page',
   templateUrl: 'download-simple.html'
 })
 export class DownloadSimpleComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
+  configTs: any = codemirrorTs;
 
   codeHtml: string;
+  codeTypescript: string;
+
+  buttonsConfigSimple: ButtonsConfig = {
+    visible: true,
+    strategy: ButtonsStrategy.SIMPLE
+  };
 
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Download simple');
 
     this.codeHtml =
-      `<modal-gallery [modalImages]="imagesArray"
+      `<ks-modal-gallery [modalImages]="images"
                [downloadable]="true"
-               [buttonsConfig]="{download: true}">
-</modal-gallery>`;
+               [buttonsConfig]="buttonsConfigSimple">
+</ks-modal-gallery>`;
+
+    this.codeTypescript =
+      `  images: Image[]; // init this value with your images
+    
+  buttonsConfigSimple: ButtonsConfig = {
+    visible: true,
+    strategy: ButtonsStrategy.SIMPLE
+  };`;
   }
 }

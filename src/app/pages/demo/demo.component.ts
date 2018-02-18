@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TitleService } from '../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-demo-page',
+  selector: 'app-demo-page',
   templateUrl: 'demo.html'
 })
 export class DemoComponent {

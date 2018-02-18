@@ -26,7 +26,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'mmw-footer',
+  selector: 'app-footer',
   templateUrl: 'footer.html',
   styleUrls: ['footer.scss']
 })

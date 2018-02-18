@@ -25,7 +25,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'mmw-sidebar',
+  selector: 'app-sidebar',
   templateUrl: 'sidebar.html',
   styleUrls: ['sidebar.scss']
 })

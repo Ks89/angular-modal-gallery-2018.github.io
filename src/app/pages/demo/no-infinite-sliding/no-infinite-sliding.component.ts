@@ -26,19 +26,17 @@ import { Component } from '@angular/core';
 
 import { Image } from 'angular-modal-gallery';
 
-import * as _ from 'lodash';
-
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml } from '../../codemirror.config';
 
 @Component({
-  selector: 'mmw-no-infinite-sliding-page',
+  selector: 'app-no-infinite-sliding-page',
   templateUrl: 'no-infinite-sliding.html'
 })
 export class NoInfiniteSlidingComponent {
 
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
 
@@ -48,8 +46,7 @@ export class NoInfiniteSlidingComponent {
     this.titleService.titleEvent.emit('Demo - No infinite sliding');
 
     this.codeHtml =
-      `<modal-gallery [modalImages]="imagesArray"
-               [slideConfig]="{infinite: false}">
-</modal-gallery>`;
+      `<ks-modal-gallery [modalImages]="images"
+    [slideConfig]="{infinite: false, sidePreviews: {show: true, size: {width: '100px', height: 'auto'}}}"></ks-modal-gallery>`;
   }
 }

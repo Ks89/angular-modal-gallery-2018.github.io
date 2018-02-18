@@ -24,23 +24,19 @@
 
 import { Component } from '@angular/core';
 
-import { Action, Image, ImageModalEvent } from 'angular-modal-gallery';
+import { Action, AdvancedLayout, Image, ImageModalEvent, PlainGalleryConfig, PlainGalleryStrategy } from 'angular-modal-gallery';
 
-import * as _ from 'lodash';
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'mmw-array-image-pointer-page',
+  selector: 'app-array-image-pointer-page',
   templateUrl: 'array-image-pointer.html',
   styleUrls: ['array-image-pointer.scss']
 })
 export class ArrayImagePointerComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
-
-  openModalWindow: boolean = false;
-  imagePointer: number = 0;
+  images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
   configTs: any = codemirrorTs;
@@ -48,13 +44,18 @@ export class ArrayImagePointerComponent {
   codeHtml: string;
   codeTypescript: string;
 
+  customPlainGalleryRowConfig: PlainGalleryConfig = {
+    strategy: PlainGalleryStrategy.CUSTOM,
+    layout: new AdvancedLayout(-1, true)
+  };
+
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Array image pointer');
 
     this.codeHtml =
-      `<div *ngFor="let img of imagesArray; let i = index">
+      `<div *ngFor="let img of images; let i = index">
     <div class="float-left" *ngIf="i <= 2">
-      <a class="more" *ngIf="i==2" (click)="openImageModal(img)">+{{imagesArray.length - 3}} more </a>
+      <a class="more" *ngIf="i==2" (click)="openImageModal(img)">+{{images.length - 3}} more </a>
       <img *ngIf="img.thumb" class="list-img" src="{{img.thumb}}"
         (click)="openImageModal(img)" alt='{{img.description}}'/>
       <img *ngIf="!img.thumb" class="list-img" src="{{img.img}}"
@@ -62,18 +63,18 @@ export class ArrayImagePointerComponent {
     </div>
   </div>
   <div *ngIf="openModalWindow">
-    <modal-gallery [modalImages]="imagesArray"
+    <modal-gallery [modalImages]="images"
                    [imagePointer]="imagePointer"
                    (close)="onCloseImageModal($event)"></modal-gallery>
   </div>`;
 
     this.codeTypescript =
-      `imagesArray: Array<Image>; // init this value with your images
+      `images: Image[]; // init this value with your images
   openModalWindow: boolean = false;
   imagePointer: number = 0;
   
   openImageModal(image: Image) {
-    this.imagePointer = this.imagesArray.indexOf(image);
+    this.imagePointer = this.images.indexOf(image);
     this.openModalWindow = true;
   }
   
@@ -82,9 +83,10 @@ export class ArrayImagePointerComponent {
   }`;
   }
 
-  openImageModal(image: Image) {
-    this.imagePointer = this.imagesArray.indexOf(image);
-    this.openModalWindow = true;
+  openImageModalRow(image: Image) {
+    console.log('Opening modal gallery from custom plain gallery row, with image: ', image);
+    const index: number = this.getCurrentIndexCustomLayout(image, this.images);
+    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, {layout: new AdvancedLayout(index, true)});
   }
 
   // It's mandatory, because you have to manage `openModalWindow` manually
@@ -92,6 +94,12 @@ export class ArrayImagePointerComponent {
   onCloseImageModal(event: ImageModalEvent) {
     console.log('onClose action: ' + Action[event.action]);
     console.log('onClose result:' + event.result);
-    this.openModalWindow = false;
+    // reset custom plain gallery config
+    this.customPlainGalleryRowConfig = Object.assign({}, this.customPlainGalleryRowConfig, {layout: new AdvancedLayout(-1, true)});
   }
+
+  private getCurrentIndexCustomLayout(image: Image, images: Image[]): number {
+    return image ? images.indexOf(image) : -1;
+  }
+
 }

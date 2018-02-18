@@ -26,17 +26,15 @@ import { Component } from '@angular/core';
 
 import { Image } from 'angular-modal-gallery';
 
-import * as _ from 'lodash';
-
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-array-simple-page',
+  selector: 'app-array-simple-page',
   templateUrl: 'array-simple.html'
 })
 export class ArraySimpleComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Array simple');

@@ -6,13 +6,15 @@
 
   <h2>Live Demo</h2>
   <br>
-  <modal-gallery [modalImages]="imagesArray"
-                 (hasData)="onImageLoaded($event)"
-                 (close)="onCloseImageModal($event)"
-                 (show)="onVisibleIndex($event)"
-                 (firstImage)="onIsFirstImage($event)"
-                 (lastImage)="onIsLastImage($event)">
-  </modal-gallery>
+  <ks-modal-gallery [modalImages]="images"
+                    (hasData)="onImageLoaded($event)"
+                    (close)="onCloseImageModal($event)"
+                    (show)="onVisibleIndex($event)"
+                    (firstImage)="onIsFirstImage($event)"
+                    (lastImage)="onIsLastImage($event)"
+                    (buttonBeforeHook)="onButtonBeforeHook($event)"
+                    (buttonAfterHook)="onButtonAfterHook($event)">
+  </ks-modal-gallery>
   <br><br>
   <h5>Live demo results</h5>
   <table class="table table-hover table-sm">
@@ -61,7 +63,7 @@
     <h2>Code</h2>
     <br>
     <pre>
-      &lt;modal-gallery [modalImages]="imagesArray"
+      &lt;modal-gallery [modalImages]="images"
                      (hasData)="onImageLoaded($event)"
                      (close)="onCloseImageModal($event)"
                      (show)="onVisibleIndex($event)"

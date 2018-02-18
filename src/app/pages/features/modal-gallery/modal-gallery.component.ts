@@ -26,7 +26,7 @@ import { Component } from '@angular/core';
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-gallery-array-page',
+  selector: 'app-gallery-array-page',
   templateUrl: 'modal-gallery.html'
 })
 export class ModalGalleryComponent {

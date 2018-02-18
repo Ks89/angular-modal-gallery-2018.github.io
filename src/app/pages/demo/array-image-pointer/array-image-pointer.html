@@ -8,18 +8,27 @@
   <h2>Live Demo</h2>
   <br>
 
-  <div *ngFor="let img of imagesArray; let i = index">
-    <div class="float-left" *ngIf="i <= 2">
-      <a class="more" *ngIf="i==2" (click)="openImageModal(img)"> +<span *ngIf="imagesArray">{{imagesArray.length - 3}}</span> more </a>
-      <img *ngIf="img.thumb" class="list-img" src="{{img.thumb}}" (click)="openImageModal(img)" alt='{{img.description}}'/>
-      <img *ngIf="!img.thumb" class="list-img" src="{{img.img}}" (click)="openImageModal(img)" alt='{{img.description}}'/>
-    </div>
+  <div class="my-app-custom-plain-container-row">
+    <ng-container *ngFor="let img of images; let i = index">
+      <div *ngIf="i <= 2"> <!-- 2 is a fixed value that I'm using to display only two images -->
+        <a class="more" *ngIf="i==2" (click)="openImageModalRow(img)"> +{{images.length - 2 - 1}} more </a>
+        <img *ngIf="img.plain && img.plain.img; else noThumb"
+             class="my-app-custom-image-row"
+             [src]="img.plain.img"
+             (click)="openImageModalRow(img)"
+             [alt]="img.modal.description"/>
+
+        <ng-template #noThumb>
+          <img class="my-app-custom-image-row"
+               [src]="img.modal.img"
+               (click)="openImageModalRow(img)"
+               [alt]="img.modal.description"/>
+        </ng-template>
+      </div>
+    </ng-container>
   </div>
-  <div *ngIf="openModalWindow">
-    <modal-gallery [modalImages]="imagesArray"
-                   [imagePointer]="imagePointer"
-                   (close)="onCloseImageModal($event)"></modal-gallery>
-  </div>
+  <ks-modal-gallery [modalImages]="images"
+                    [plainGalleryConfig]="customPlainGalleryRowConfig"></ks-modal-gallery>
 
   <br><br><br><br>
   <h5>Live demo results</h5>

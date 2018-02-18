@@ -26,42 +26,40 @@ import { Component } from '@angular/core';
 
 import { Image } from 'angular-modal-gallery';
 
-import * as _ from 'lodash';
-
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'mmw-add-image-array-page',
+  selector: 'app-add-image-array-page',
   templateUrl: 'add-image-array.html'
 })
 export class AddImageArrayComponent {
 
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
   configTs: any = codemirrorTs;
 
   codeTypescript: string;
 
-  private originalArrayLength: number = IMAGES_ARRAY.length;
-
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Add image array');
 
     this.codeTypescript =
-      `  imagesArray: Observable<Array<Image>>; // init this value with your images
-  
-  private originalArrayLength: number = // init this value with the number of images
-  
+      `  images: Image[]; // init this value with your images
+    
   addRandomImage() {
-    this.imagesArray.push(this.imagesArray[Math.floor(Math.random() * this.originalArrayLength)]);
+    const imageToCopy: Image = this.images[Math.floor(Math.random() * this.images.length)];
+    const newImage: Image = new Image(this.images.length - 1 + 1, imageToCopy.modal, imageToCopy.plain);
+    this.images = [...this.images, newImage]; // this is really important (you MUST create a new copy of the input array)
   }`;
 
   }
 
   addRandomImage() {
-    this.imagesArray.push(this.imagesArray[Math.floor(Math.random() * this.originalArrayLength)]);
+    const imageToCopy: Image = this.images[Math.floor(Math.random() * this.images.length)];
+    const newImage: Image = new Image(this.images.length - 1 + 1, imageToCopy.modal, imageToCopy.plain);
+    this.images = [...this.images, newImage];
   }
 }

@@ -17,11 +17,11 @@ const routes: Routes = [
     data: {preload: true}
   },
 
-  // {
-  //   path: 'demo',
-  //   loadChildren: './pages/demo/demo.module#DemoModule',
-  //   data: {preload: true}
-  // },
+  {
+    path: 'demo',
+    loadChildren: './pages/demo/demo.module#DemoModule',
+    data: {preload: true}
+  },
 
   {path: 'migration', component: MigrationComponent},
 

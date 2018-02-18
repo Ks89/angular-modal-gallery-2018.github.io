@@ -26,18 +26,16 @@ import { Component } from '@angular/core';
 
 import { Image } from 'angular-modal-gallery';
 
-import * as _ from 'lodash';
-
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml } from '../../codemirror.config';
 
 @Component({
-  selector: 'mmw-keyboard-config-page',
+  selector: 'app-keyboard-config-page',
   templateUrl: 'keyboard-config.html'
 })
 export class KeyboardConfigComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
 
@@ -47,8 +45,8 @@ export class KeyboardConfigComponent {
     this.titleService.titleEvent.emit('Demo - Keyboard config');
 
     this.codeHtml =
-      `<modal-gallery [modalImages]="imagesArray"
+      `<ks-modal-gallery [modalImages]="images"
                [keyboardConfig]="{esc: 81, left: 40, right: 38}">
-</modal-gallery>`;
+</ks-modal-gallery>`;
   }
 }

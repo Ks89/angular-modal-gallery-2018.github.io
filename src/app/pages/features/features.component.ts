@@ -26,7 +26,7 @@ import { Component } from '@angular/core';
 import { TitleService } from '../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-features-page',
+  selector: 'app-features-page',
   templateUrl: 'features.html'
 })
 export class FeaturesComponent {

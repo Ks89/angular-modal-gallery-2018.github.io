@@ -24,21 +24,20 @@
 
 import { Component } from '@angular/core';
 
-import { Description, Image } from 'angular-modal-gallery';
-
-import * as _ from 'lodash';
+import { DescriptionStrategy, Description, Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-description-custom-page',
+  selector: 'app-description-custom-page',
   templateUrl: 'description-custom.html'
 })
 export class DescriptionCustomComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   customDescription: Description = {
+    strategy: DescriptionStrategy.ALWAYS_VISIBLE,
     imageText: 'Look this image ',
     numberSeparator: ' of ',
     beforeTextDescription: ' => '

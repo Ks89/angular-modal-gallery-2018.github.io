@@ -29,7 +29,7 @@ import { environment } from '../../../../environments/environment';
 const PATH = environment.imgPath;
 
 @Component({
-  selector: 'mmw-intro-header',
+  selector: 'app-intro-header',
   templateUrl: 'intro-header.html',
   styleUrls: ['intro-header.scss']
 })

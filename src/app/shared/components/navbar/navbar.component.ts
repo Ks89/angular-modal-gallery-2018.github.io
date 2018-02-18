@@ -26,7 +26,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'mmw-navbar',
+  selector: 'app-navbar',
   templateUrl: 'navbar.html',
   styleUrls: ['navbar.scss']
 })

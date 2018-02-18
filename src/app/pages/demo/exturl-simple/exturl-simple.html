@@ -6,15 +6,20 @@
 
   <h2>Live Demo</h2>
   <br>
-  <modal-gallery [modalImages]="imagesArray"
-                 [buttonsConfig]="{extUrl: true}">
-  </modal-gallery>
+  <ks-modal-gallery [modalImages]="images"
+                 [buttonsConfig]="buttonsConfigAdvanced">
+  </ks-modal-gallery>
   <br><br>
 
   <section>
     <h2>Code</h2>
     <br>
+    <h5>Template</h5>
     <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    </codemirror>
+    <br>
+    <h5>Typescript</h5>
+    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
     </codemirror>
   </section>
 

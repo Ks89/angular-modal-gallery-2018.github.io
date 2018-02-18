@@ -24,32 +24,44 @@
 
 import { Component } from '@angular/core';
 
-import { Image } from 'angular-modal-gallery';
-
-import * as _ from 'lodash';
+import { ButtonsConfig, ButtonsStrategy, Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
-import { codemirrorHtml } from '../../codemirror.config';
+import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'mmw-buttons-config-page',
+  selector: 'app-buttons-config-page',
   templateUrl: 'buttons-config.html'
 })
 export class ButtonsConfigComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
+  configTs: any = codemirrorTs;
 
   codeHtml: string;
+  codeTypescript: string;
+
+  buttonsConfigDefault: ButtonsConfig = {
+    visible: true,
+    strategy: ButtonsStrategy.DEFAULT
+  };
 
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Buttons config');
 
     this.codeHtml =
-      `<modal-gallery [modalImages]="imagesArray"
-               [downloadable]="true"
-               [buttonsConfig]="{download: true, extUrl: true, close: false}">
-</modal-gallery>`;
+      `<ks-modal-gallery [modalImages]="images"
+               [buttonsConfig]="buttonsConfigDefault">
+</ks-modal-gallery>`;
+
+    this.codeTypescript =
+      `  images: Image[]; // init this value with your images
+    
+  buttonsConfigDefault: ButtonsConfig = {
+    visible: true,
+    strategy: ButtonsStrategy.DEFAULT
+  };`;
   }
 }

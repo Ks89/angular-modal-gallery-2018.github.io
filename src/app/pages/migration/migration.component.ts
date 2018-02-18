@@ -25,7 +25,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'mmw-migration-page',
+  selector: 'app-migration-page',
   templateUrl: 'migration.html'
 })
 export class MigrationComponent {}

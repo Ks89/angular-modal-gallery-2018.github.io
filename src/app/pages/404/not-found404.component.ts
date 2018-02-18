@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 @Component({
-  selector: 'mmw-not-found',
+  selector: 'app-not-found',
   template: '<h3>Error 404: Page not found. Click here to go back to the <a href="https://ks89.github.io/angular-modal-gallery-2018.github.io/">main page</a></h3>'
 })
 

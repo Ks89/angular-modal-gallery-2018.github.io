@@ -26,7 +26,7 @@ import { Component } from '@angular/core';
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-global-config-page',
+  selector: 'app-global-config-page',
   templateUrl: 'global-config.html'
 })
 export class GlobalConfigComponent {

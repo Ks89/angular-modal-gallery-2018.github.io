@@ -26,17 +26,15 @@ import { Component } from '@angular/core';
 
 import { Image } from 'angular-modal-gallery';
 
-import * as _ from 'lodash';
-
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
-  selector: 'mmw-close-outside-page',
+  selector: 'app-close-outside-page',
   templateUrl: 'close-outside.html'
 })
 export class CloseOusideComponent {
-  imagesArray: Array<Image> = _.cloneDeep(IMAGES_ARRAY);
+  images: Image[] = [...IMAGES_ARRAY];
 
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Click Outside');
