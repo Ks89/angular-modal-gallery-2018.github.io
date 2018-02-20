@@ -49,7 +49,7 @@ export class InfiniteSlidingComponent {
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
-              [slideConfig]="{infinite: true, sidePreviews: {show: false}}">
+               [slideConfig]="{infinite: true, sidePreviews: {show: false}}">
 </ks-modal-gallery>`;
   }
 }
