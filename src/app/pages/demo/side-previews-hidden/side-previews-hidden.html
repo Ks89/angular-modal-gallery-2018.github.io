@@ -1,12 +1,15 @@
 <div class="container">
 
-  <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src"><u class="text-success"><h1 class="text-success">Array Simple example</h1></u></a>
-  <p>Minimal and simple modal gallery example.</p>
+  <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src">
+    <u class="text-success"><h1 class="text-success">Hidden side-previews</h1></u>
+  </a>
+  <p>Modal gallery without side-previews.</p>
   <br>
 
   <h2>Live Demo</h2>
   <br>
-  <ks-modal-gallery [modalImages]="images"></ks-modal-gallery>
+  <ks-modal-gallery [modalImages]="images"
+                    [slideConfig]="{infinite: false, sidePreviews: {show: false}}"></ks-modal-gallery>
   <br><br>
 
   <section>
@@ -88,7 +91,7 @@
         <tr>
           <td><code>slideConfig</code></td>
           <td>
-            <div><i>Value: </i><code>undefined</code></div>
+            <div><i>Value: </i><code>&#123;infinite: false, sidePreviews: &#123;show: false&#125;&#125;</code></div>
             <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
             <div>Infinite sliding is disabled by default and side previews are visible with a default size</div>
           </td>

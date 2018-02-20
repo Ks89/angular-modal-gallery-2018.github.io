@@ -1,14 +1,13 @@
 <div class="container">
 
   <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src"><u class="text-success"><h1 class="text-success">Download Simple example</h1></u></a>
-  <p>Minimal and simple modal gallery example with <b class="text-success">downloadable images.</b></p>
+  <p>Modal gallery example with <b class="text-success">downloadable images ONLY with ctrl+s/cmd+s.</b></p>
   <br>
 
   <h2>Live Demo</h2>
   <br>
   <ks-modal-gallery [modalImages]="images"
-                 [downloadable]="true"
-                 [buttonsConfig]="buttonsConfigSimple">
+                    [downloadable]="true">
   </ks-modal-gallery>
   <br><br>
 
@@ -18,86 +17,115 @@
     <h5>Template</h5>
     <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
     </codemirror>
-    <br>
-    <h5>Typescript</h5>
-    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
-    </codemirror>
   </section>
+
+  <br><br>
 
   <section>
     <h2>Details</h2>
     <br>
     <table class="table table-hover table-sm">
       <thead>
-        <tr>
-          <th>Input (.html)</th>
-          <th>Value (.ts)</th>
-        </tr>
+      <tr>
+        <th>Input (.html)</th>
+        <th>Value (.ts)</th>
+      </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><code>modalImages</code></td>
-          <td>
-            <div><i>Value: </i><code>Image[]</code></div>
-            <div>Array of <code>Image</code> objects</div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>imagePointer</code></td>
-          <td>
-            <div><i>Value: </i><code>undefined</code></div>
-            <div>It will display the entire gallery</div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>downloadable</code></td>
-          <td>
-            <div><i>Value: </i><code>true</code></div>
-            <div><b class="text-success">Downloadable with <kbd>ctrl</kbd>+<kbd>s</kbd> and <kbd>cmd</kbd>+<kbd>s</kbd></b></div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>description</code></td>
-          <td>
-            <div><i>Value: </i><code>undefined</code></div>
-            <div>It will use the default description</div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>buttonsConfig</code></td>
-          <td>
-            <div><i>Value: </i><code>&#123;download: true&#125;</code></div>
-            <div>
-              <ul>
-                <li><i class="fa fa-download"></i> is <span class="text-success">visible</span></li>
-                <li><i class="fa fa-external-link"></i> is <span class="text-danger">hidden</span></li>
-                <li><i class="fa fa-close"></i> is <span class="text-success">visible</span> by default</li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>keyboardConfig</code></td>
-          <td>
-            <div><i>Value: </i><code>undefined</code></div>
-            <div>All keyboard's keys have default values (<kbd>esc</kbd>, <kbd>&rarr;</kbd>, <kbd>&larr;</kbd> )</div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>enableCloseOutside</code></td>
-          <td>
-            <div><i>Value: </i><code>undefined</code></div>
-            <div>(<code>false</code> by default)</div>
-            <div>Clicking on the semi-transparent background, modal-gallery won't do nothing</div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>slideConfig</code></td>
-          <td>
-            <div><i>Value: </i><code>undefined</code></div>
-            <div>Infinite sliding is enabled by default, so you will be able to navigate between images without restrictions</div>
-          </td>
-        </tr>
+      <tr>
+        <td><code>modalImages</code></td>
+        <td>
+          <div><i>Value: </i><code>Image[]</code></div>
+          <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>downloadable</code></td>
+        <td>
+          <div><i>Value: </i><code>true</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          <div>Image download is enabled with keyboard shortcuts</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>buttonsConfig</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          <div>It will show both close and download buttons</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>enableCloseOutside</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          <div>Clicking on the semi-transparent background, modal-gallery will close</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>dotsConfig</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          <div>It will show dots below the current modal image</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>previewConfig</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          <div>It will show 3 clickable previews (default size) with arrows</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>loadingConfig</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          <div>It will show the loading spinner</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>slideConfig</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          <div>Infinite sliding is disabled by default and side previews are visible with a default size</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>accessibilityConfig</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><small>(an object with all default english accessibility values by default)</small></div>
+          <div>English accessibility values</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>description</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          <div>It will use the default description (always visible)</div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>keyboardConfig</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+        </td>
+      </tr>
+      <tr>
+        <td><code>plainGalleryConfig</code></td>
+        <td>
+          <div><i>Value: </i><code>undefined</code></div>
+          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          <div>Row plain gallery with default layout</div>
+        </td>
+      </tr>
       </tbody>
     </table>
   </section>

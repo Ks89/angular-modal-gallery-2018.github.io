@@ -24,10 +24,11 @@
 
 import { Component } from '@angular/core';
 
-import { DescriptionStrategy, Description, Image } from 'angular-modal-gallery';
+import { Description, DescriptionStrategy, Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
+import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
   selector: 'app-description-custom-page',
@@ -43,7 +44,27 @@ export class DescriptionCustomComponent {
     beforeTextDescription: ' => '
   };
 
+  configHtml: any = codemirrorHtml;
+  configTs: any = codemirrorTs;
+
+  codeHtml: string;
+  codeTypescript: string;
+
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Description custom');
+
+    this.codeHtml =
+      `<ks-modal-gallery [modalImages]="images"
+    [description]="customDescription"></ks-modal-gallery>`;
+
+    this.codeTypescript =
+      `  images: Image[]; // init this value with your images
+
+  customDescription: Description = {
+    strategy: DescriptionStrategy.ALWAYS_VISIBLE,
+    imageText: 'Look this image ',
+    numberSeparator: ' of ',
+    beforeTextDescription: ' => '
+  };`;
   }
 }

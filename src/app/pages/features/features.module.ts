@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from "@angular/common";
+import { CommonModule } from '@angular/common';
 
 import { routing } from './features.routing';
 
-import { FEATURES_COMPONENTS } from "./components";
-import { SharedModule } from "../../shared/shared.module";
+import { FEATURES_COMPONENTS } from './components';
+import { SharedModule } from '../../shared/shared.module';
 
 // ********************** angular-modal-gallery *****************************
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs @types/hammerjs`)
@@ -13,7 +13,6 @@ import { ModalGalleryModule } from 'angular-modal-gallery';
 // **************************************************************************
 
 import { NgxPageScrollModule, PageScrollConfig } from 'ngx-page-scroll';
-
 
 @NgModule({
   imports: [

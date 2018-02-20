@@ -28,10 +28,12 @@ import { Action, ButtonEvent, Image, ImageModalEvent } from 'angular-modal-galle
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
+import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
   selector: 'app-output-events-page',
-  templateUrl: 'output-events.html'
+  templateUrl: 'output-events.html',
+  styleUrls: ['output-events.scss']
 })
 export class OutputEventsComponent {
   images: Image[] = [...IMAGES_ARRAY];
@@ -41,47 +43,67 @@ export class OutputEventsComponent {
   isFirstImage: ImageModalEvent;
   isLastImage: ImageModalEvent;
   closeImageModal: ImageModalEvent;
+  buttonBeforeHook: ButtonEvent;
+  buttonAfterHook: ButtonEvent;
+
+  configHtml: any = codemirrorHtml;
+  configTs: any = codemirrorTs;
+
+  codeHtml: string;
+  codeTypescript: string;
 
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Output events');
+
+    this.codeHtml =
+      `<ks-modal-gallery [modalImages]="images"
+    (hasData)="onImageLoaded($event)"
+    (close)="onCloseImageModal($event)"
+    (show)="onVisibleIndex($event)"
+    (firstImage)="onIsFirstImage($event)"
+    (lastImage)="onIsLastImage($event)"
+    (buttonBeforeHook)="onButtonBeforeHook($event)"
+    (buttonAfterHook)="onButtonAfterHook($event)">`;
   }
 
   onImageLoaded(event: ImageModalEvent) {
     // angular-modal-gallery will emit this event if it will load successfully input images
-    console.log('(hasData)=onImageLoaded action: ' + Action[event.action]);
-    console.log('(hasData)=onImageLoaded result:' + event.result);
+    console.log('(hasData)=onImageLoaded action: ', Action[event.action]);
+    console.log('(hasData)=onImageLoaded result:', event.result);
     this.imageLoaded = event;
   }
 
   onVisibleIndex(event: ImageModalEvent) {
-    console.log('(show)=action: ' + Action[event.action]);
-    console.log('(show)=result:' + event.result);
+    console.log('(show)=action: ', Action[event.action]);
+    console.log('(show)=result:', event.result);
     this.visibleIndex = event;
   }
 
   onIsFirstImage(event: ImageModalEvent) {
-    console.log('(firstImage)=onfirst action: ' + Action[event.action]);
-    console.log('(firstImage)=onfirst result:' + event.result);
+    console.log('(firstImage)=onfirst action: ', Action[event.action]);
+    console.log('(firstImage)=onfirst result:', event.result);
     this.isFirstImage = event;
   }
 
   onIsLastImage(event: ImageModalEvent) {
-    console.log('(lastImage)=onlast action: ' + Action[event.action]);
-    console.log('(lastImage)=onlast result:' + event.result);
+    console.log('(lastImage)=onlast action: ', Action[event.action]);
+    console.log('(lastImage)=onlast result:', event.result);
     this.isLastImage = event;
   }
 
   onCloseImageModal(event: ImageModalEvent) {
-    console.log('(close)=onClose action: ' + Action[event.action]);
-    console.log('(close)=onClose result:' + event.result);
+    console.log('(close)=onClose action: ', Action[event.action]);
+    console.log('(close)=onClose result:', event.result);
     this.closeImageModal = event;
   }
 
   onButtonBeforeHook(event: ButtonEvent) {
-    console.log('onButtonBeforeHook ', event);
+    console.log('(buttonBeforeHook)=onButtonBeforeHook: ', event);
+    this.buttonBeforeHook = event;
   }
 
   onButtonAfterHook(event: ButtonEvent) {
-    console.log('onButtonAfterHook ', event);
+    console.log('(buttonAfterHook)=onButtonAfterHook: ', event);
+    this.buttonAfterHook = event;
   }
 }

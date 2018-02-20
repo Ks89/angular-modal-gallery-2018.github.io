@@ -15,7 +15,7 @@
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
@@ -24,17 +24,18 @@
 
 import { Component } from '@angular/core';
 
-import { ButtonsConfig, ButtonsStrategy, Image } from 'angular-modal-gallery';
+import { Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'app-download-simple-page',
-  templateUrl: 'download-simple.html'
+  selector: 'app-infinite-sliding-page',
+  templateUrl: 'infinite-sliding.html'
 })
-export class DownloadSimpleComponent {
+export class InfiniteSlidingComponent {
+
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -44,11 +45,11 @@ export class DownloadSimpleComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Download simple');
+    this.titleService.titleEvent.emit('Demo - Infinite sliding');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
-               [downloadable]="true">
-     </ks-modal-gallery>`;
+              [slideConfig]="{infinite: true, sidePreviews: {show: false}}">
+</ks-modal-gallery>`;
   }
 }

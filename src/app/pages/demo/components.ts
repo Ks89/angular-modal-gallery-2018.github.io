@@ -11,7 +11,11 @@ import { ArrayImagePointerComponent } from './array-image-pointer/array-image-po
 import { CloseOusideComponent } from './close-outside/close-outside.component';
 import { ButtonsConfigComponent } from './buttons-config/buttons-config.component';
 import { KeyboardConfigComponent } from './keyboard-config/keyboard-config.component';
-import { NoInfiniteSlidingComponent } from './no-infinite-sliding/no-infinite-sliding.component';
+import { InfiniteSlidingComponent } from './infinite-sliding/infinite-sliding.component';
+import { NoDotsAndPreviewsComponent } from './no-dots-and-previews/no-dots-and-previews.component';
+import { SidePreviewsHiddenComponent } from './side-previews-hidden/side-previews-hidden.component';
+import { OnlyCurrentImgComponent } from './only-current-img/only-current-img.component';
+import { PreviewsCustomSizeComponent } from './previews-custom-size/previews-custom-size.component';
 
 export const FEATURES_COMPONENTS = [
   DemoComponent,
@@ -27,5 +31,9 @@ export const FEATURES_COMPONENTS = [
   CloseOusideComponent,
   ButtonsConfigComponent,
   KeyboardConfigComponent,
-  NoInfiniteSlidingComponent
+  InfiniteSlidingComponent,
+  NoDotsAndPreviewsComponent,
+  SidePreviewsHiddenComponent,
+  OnlyCurrentImgComponent,
+  PreviewsCustomSizeComponent
 ];

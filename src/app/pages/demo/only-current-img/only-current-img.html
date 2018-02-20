@@ -1,12 +1,18 @@
 <div class="container">
 
-  <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src"><u class="text-success"><h1 class="text-success">Array Simple example</h1></u></a>
-  <p>Minimal and simple modal gallery example.</p>
+  <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src">
+    <u class="text-success"><h1 class="text-success">Only current image</h1></u>
+  </a>
+  <p>Modal gallery with only the current image.</p>
   <br>
 
   <h2>Live Demo</h2>
   <br>
-  <ks-modal-gallery [modalImages]="images"></ks-modal-gallery>
+  <ks-modal-gallery [modalImages]="images"
+                    [slideConfig]="{infinite: false, sidePreviews: {show: false}}"
+                    [buttonsConfig]="{visible: false, strategy: 1}"
+                    [previewConfig]="{visible: false}"
+                    [dotsConfig]="{visible: false}"></ks-modal-gallery>
   <br><br>
 
   <section>
@@ -48,7 +54,7 @@
         <tr>
           <td><code>buttonsConfig</code></td>
           <td>
-            <div><i>Value: </i><code>undefined</code></div>
+            <div><i>Value: </i><code>&#123;visible: false, strategy: 1&#125;</code></div>
             <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
             <div>It will show only the close button</div>
           </td>
@@ -64,7 +70,7 @@
         <tr>
           <td><code>dotsConfig</code></td>
           <td>
-            <div><i>Value: </i><code>undefined</code></div>
+            <div><i>Value: </i><code>&#123;visible: false&#125;</code></div>
             <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
             <div>It will show dots below the current modal image</div>
           </td>
@@ -72,7 +78,7 @@
         <tr>
           <td><code>previewConfig</code></td>
           <td>
-            <div><i>Value: </i><code>undefined</code></div>
+            <div><i>Value: </i><code>&#123;visible: false&#125;</code></div>
             <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
             <div>It will show 3 clickable previews (default size) with arrows</div>
           </td>
@@ -88,7 +94,7 @@
         <tr>
           <td><code>slideConfig</code></td>
           <td>
-            <div><i>Value: </i><code>undefined</code></div>
+            <div><i>Value: </i><code>&#123;visible: false, sidePreviews: &#123;show: false&#125;&#125;</code></div>
             <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
             <div>Infinite sliding is disabled by default and side previews are visible with a default size</div>
           </td>

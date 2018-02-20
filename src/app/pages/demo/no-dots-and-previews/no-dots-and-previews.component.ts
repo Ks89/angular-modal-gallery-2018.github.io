@@ -24,31 +24,29 @@
 
 import { Component } from '@angular/core';
 
-import { ButtonsConfig, ButtonsStrategy, Image } from 'angular-modal-gallery';
+import { Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
-import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
+import { codemirrorHtml } from '../../codemirror.config';
 
 @Component({
-  selector: 'app-download-simple-page',
-  templateUrl: 'download-simple.html'
+  selector: 'app-no-dots-and-previews-page',
+  templateUrl: 'no-dots-and-previews.html'
 })
-export class DownloadSimpleComponent {
+export class NoDotsAndPreviewsComponent {
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
-  configTs: any = codemirrorTs;
 
   codeHtml: string;
-  codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Download simple');
+    this.titleService.titleEvent.emit('Demo - No dots and previews');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
-               [downloadable]="true">
-     </ks-modal-gallery>`;
+    [previewConfig]="{visible: false}"
+    [dotsConfig]="{visible: false}"></ks-modal-gallery>`;
   }
 }

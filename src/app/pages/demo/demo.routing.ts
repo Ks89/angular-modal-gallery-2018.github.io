@@ -13,7 +13,11 @@ import { ArrayImagePointerComponent } from './array-image-pointer/array-image-po
 import { CloseOusideComponent } from './close-outside/close-outside.component';
 import { ButtonsConfigComponent } from './buttons-config/buttons-config.component';
 import { KeyboardConfigComponent } from './keyboard-config/keyboard-config.component';
-import { NoInfiniteSlidingComponent } from './no-infinite-sliding/no-infinite-sliding.component';
+import { InfiniteSlidingComponent } from './infinite-sliding/infinite-sliding.component';
+import { NoDotsAndPreviewsComponent } from './no-dots-and-previews/no-dots-and-previews.component';
+import { SidePreviewsHiddenComponent } from './side-previews-hidden/side-previews-hidden.component';
+import { OnlyCurrentImgComponent } from './only-current-img/only-current-img.component';
+import { PreviewsCustomSizeComponent } from './previews-custom-size/previews-custom-size.component';
 
 export const routes: Routes = [
   {
@@ -22,18 +26,37 @@ export const routes: Routes = [
     children: [
       {path: '', component: ArraySimpleComponent},
       {path: 'array-simple', component: ArraySimpleComponent},
-      {path: 'download-simple', component: DownloadSimpleComponent},
-      {path: 'download-advanced', component: DownloadAdvancedComponent},
-      {path: 'exturl-simple', component: ExtUrlSimpleComponent},
       {path: 'output-events', component: OutputEventsComponent},
       {path: 'add-image-array', component: AddImageArrayComponent},
-      {path: 'description-custom', component: DescriptionCustomComponent},
-      {path: 'description-full-custom', component: DescriptionFullCustomComponent},
-      {path: 'array-pointer', component: ArrayImagePointerComponent},
+
+      {path: 'no-dots-and-previews', component: NoDotsAndPreviewsComponent},
+      {path: 'side-previews-hidden', component: SidePreviewsHiddenComponent},
+      {path: 'only-current-img', component: OnlyCurrentImgComponent},
+      {path: 'preview-custom-size', component: PreviewsCustomSizeComponent},
+
       {path: 'close-outside', component: CloseOusideComponent},
-      {path: 'buttons-config', component: ButtonsConfigComponent},
+      {path: 'download-simple', component: DownloadSimpleComponent},
+      {path: 'download-advanced', component: DownloadAdvancedComponent},
+
+      {path: 'infinite-sliding', component: InfiniteSlidingComponent},
+
+      {path: 'loading-spinner-disable', component: ArrayImagePointerComponent},
+      {path: 'loading-spinner-type', component: ArrayImagePointerComponent},
+
+      {path: 'buttons-strategies', component: ButtonsConfigComponent},
+      {path: 'buttons-custom-fa', component: ArrayImagePointerComponent},
+      {path: 'exturl-newtab', component: ExtUrlSimpleComponent},
+
       {path: 'keyboard-config', component: KeyboardConfigComponent},
-      {path: 'no-infinite-sliding', component: NoInfiniteSlidingComponent}
+      {path: 'description-strategy', component: DescriptionCustomComponent},
+      {path: 'description-full-custom', component: DescriptionFullCustomComponent},
+
+      {path: 'previews-length', component: ArrayImagePointerComponent},
+      {path: 'previews-no-arrows', component: ArrayImagePointerComponent},
+      {path: 'previews-not-clickable', component: ArrayImagePointerComponent},
+      {path: 'previews-custom-size', component: ArrayImagePointerComponent},
+
+      {path: 'accessibility', component: ArrayImagePointerComponent}
     ]
   }
 ];

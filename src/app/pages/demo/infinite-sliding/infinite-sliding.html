@@ -1,14 +1,15 @@
 <div class="container">
 
-  <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src"><u class="text-success"><h1 class="text-success">Download Advanced example</h1></u></a>
-  <p>Modal gallery example with <b class="text-success">downloadable images</b> and <b class="text-success">download button</b>.</p>
+  <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src">
+    <u class="text-success"><h1 class="text-success">Infinite sliding enabled</h1></u>
+  </a>
+  <p>Modal gallery example with <b>infinite sliding enabled</b>, but without side-previews</p>
   <br>
 
   <h2>Live Demo</h2>
   <br>
   <ks-modal-gallery [modalImages]="images"
-                    [downloadable]="true"
-                    [buttonsConfig]="buttonsConfigSimple">
+                    [slideConfig]="{infinite: true, sidePreviews: {show: false}}">
   </ks-modal-gallery>
   <br><br>
 
@@ -17,10 +18,6 @@
     <br>
     <h5>Template</h5>
     <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
-    </codemirror>
-    <br>
-    <h5>Typescript</h5>
-    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
     </codemirror>
   </section>
 
@@ -47,9 +44,9 @@
       <tr>
         <td><code>downloadable</code></td>
         <td>
-          <div><i>Value: </i><code>true</code></div>
+          <div><i>Value: </i><code>undefined</code></div>
           <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>Image download is enabled with keyboard shortcuts</div>
+          <div>No downloadable at all</div>
         </td>
       </tr>
       <tr>
@@ -95,9 +92,9 @@
       <tr>
         <td><code>slideConfig</code></td>
         <td>
-          <div><i>Value: </i><code>undefined</code></div>
+          <div><i>Value: </i><code>&#123;infinite: true, sidePreviews: &#123;show: false &#125;&#125;</code></div>
           <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>Infinite sliding is disabled by default and side previews are visible with a default size</div>
+          <div>Infinite sliding is enabled and side previews are disabled</div>
         </td>
       </tr>
       <tr>

@@ -15,38 +15,15 @@
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+@import "theme";
 
-import { Image } from 'angular-modal-gallery';
-
-import { IMAGES_ARRAY } from '../images';
-import { TitleService } from '../../../core/services/title.service';
-import { codemirrorHtml } from '../../codemirror.config';
-
-@Component({
-  selector: 'app-no-infinite-sliding-page',
-  templateUrl: 'no-infinite-sliding.html'
-})
-export class NoInfiniteSlidingComponent {
-
-  images: Image[] = [...IMAGES_ARRAY];
-
-  configHtml: any = codemirrorHtml;
-
-  codeHtml: string;
-
-  constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - No infinite sliding');
-
-    this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
-    [slideConfig]="{infinite: false, sidePreviews: {show: true, size: {width: '100px', height: 'auto'}}}"></ks-modal-gallery>`;
-  }
+td {
+  min-width: 150px !important;
 }

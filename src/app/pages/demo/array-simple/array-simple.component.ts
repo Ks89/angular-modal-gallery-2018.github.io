@@ -28,6 +28,7 @@ import { Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
+import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
   selector: 'app-array-simple-page',
@@ -36,7 +37,16 @@ import { TitleService } from '../../../core/services/title.service';
 export class ArraySimpleComponent {
   images: Image[] = [...IMAGES_ARRAY];
 
+  configHtml: any = codemirrorHtml;
+  configTs: any = codemirrorTs;
+
+  codeHtml: string;
+  codeTypescript: string;
+
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Array simple');
+
+    this.codeHtml =
+      `<ks-modal-gallery [modalImages]="images"></ks-modal-gallery>`;
   }
 }

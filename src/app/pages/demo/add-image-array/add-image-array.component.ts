@@ -41,14 +41,21 @@ export class AddImageArrayComponent {
   configHtml: any = codemirrorHtml;
   configTs: any = codemirrorTs;
 
+  codeHtml: string;
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Add image array');
 
+    this.codeHtml =
+      `<ks-modal-gallery [modalImages]="images"></ks-modal-gallery>
+    <button class="btn btn-danger btn-sm" (click)="addRandomImage()">
+    <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add image</button>
+    `;
+
     this.codeTypescript =
       `  images: Image[]; // init this value with your images
-    
+
   addRandomImage() {
     const imageToCopy: Image = this.images[Math.floor(Math.random() * this.images.length)];
     const newImage: Image = new Image(this.images.length - 1 + 1, imageToCopy.modal, imageToCopy.plain);
