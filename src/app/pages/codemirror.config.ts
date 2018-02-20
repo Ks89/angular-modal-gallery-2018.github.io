@@ -28,7 +28,9 @@ export const codemirrorTs: any = {
   theme: 'monokai',
   mode: {
     name: 'javascript', typescript: true
-  }
+  },
+  // force codemirror's height https://codemirror.net/demo/resize.html
+  viewportMargin: Infinity
 };
 
 export const codemirrorHtml: any = {
@@ -37,5 +39,7 @@ export const codemirrorHtml: any = {
   theme: 'monokai',
   mode: {
     name: 'htmlmixed'
-  }
+  },
+  // force codemirror's height https://codemirror.net/demo/resize.html
+  viewportMargin: Infinity
 };

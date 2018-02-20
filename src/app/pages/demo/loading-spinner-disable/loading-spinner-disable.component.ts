@@ -4,7 +4,7 @@
  * Copyright (c) 2017-2018 Stefano Cappa
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the 'Software"), to deal
+ * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
@@ -22,16 +22,32 @@
  * SOFTWARE.
  */
 
-import { AboutComponent } from './about/about.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
-import { GettingStartedComponent } from './getting-started/getting-started.component';
-import { MigrationComponent } from './migration/migration.component';
+import { Component } from '@angular/core';
 
-export const COMPONENTS = [
-  AboutComponent,
-  NotFoundComponent,
-  HomeComponent,
-  GettingStartedComponent,
-  MigrationComponent
-];
+import { Image } from 'angular-modal-gallery';
+
+import { IMAGES_ARRAY } from '../images';
+import { TitleService } from '../../../core/services/title.service';
+import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
+
+@Component({
+  selector: 'app-loading-spinner-disable-page',
+  templateUrl: 'loading-spinner-disable.html'
+})
+export class LoadingSpinnerDisableComponent {
+  images: Image[] = [...IMAGES_ARRAY];
+
+  configHtml: any = codemirrorHtml;
+  configTs: any = codemirrorTs;
+
+  codeHtml: string;
+  codeTypescript: string;
+
+  constructor(private titleService: TitleService) {
+    this.titleService.titleEvent.emit('Demo - Loading spinner disabled');
+
+    this.codeHtml =
+      `<ks-modal-gallery [modalImages]="images"
+    [loadingConfig]="{enable: false, type: 1}"></ks-modal-gallery>`;
+  }
+}

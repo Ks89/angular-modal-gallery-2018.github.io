@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
-import { NotFound404Component } from './pages/404/not-found404.component';
 import { GettingStartedComponent } from './pages/getting-started/getting-started.component';
 import { MigrationComponent } from './pages/migration/migration.component';
+import { AboutComponent } from './pages/about/about.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -25,7 +26,9 @@ const routes: Routes = [
 
   {path: 'migration', component: MigrationComponent},
 
-  {path: '**', component: NotFound404Component}
+  {path: 'about', component: AboutComponent},
+
+  {path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({

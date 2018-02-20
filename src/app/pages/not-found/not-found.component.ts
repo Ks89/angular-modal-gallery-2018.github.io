@@ -4,7 +4,7 @@
  * Copyright (c) 2017-2018 Stefano Cappa
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the 'Software"), to deal
+ * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
@@ -22,16 +22,10 @@
  * SOFTWARE.
  */
 
-import { AboutComponent } from './about/about.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
-import { GettingStartedComponent } from './getting-started/getting-started.component';
-import { MigrationComponent } from './migration/migration.component';
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-not-found-page',
+  template: '<h3>Error 404: Page not found. Click here to go back to the <a href="https://ks89.github.io/angular-modal-gallery-2018.github.io/">main page</a></h3>'
+})
 
-export const COMPONENTS = [
-  AboutComponent,
-  NotFoundComponent,
-  HomeComponent,
-  GettingStartedComponent,
-  MigrationComponent
-];
+export class NotFoundComponent { }

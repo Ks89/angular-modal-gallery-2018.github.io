@@ -23,9 +23,31 @@
  */
 
 import { Component } from '@angular/core';
-@Component({
-  selector: 'app-not-found',
-  template: '<h3>Error 404: Page not found. Click here to go back to the <a href="https://ks89.github.io/angular-modal-gallery-2018.github.io/">main page</a></h3>'
-})
 
-export class NotFound404Component { }
+import { Image } from 'angular-modal-gallery';
+
+import { IMAGES_ARRAY } from '../images';
+import { TitleService } from '../../../core/services/title.service';
+import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
+
+@Component({
+  selector: 'app-previews-no-arrow-page',
+  templateUrl: 'previews-no-arrows.html'
+})
+export class PreviewsNoArrowsComponent {
+  images: Image[] = [...IMAGES_ARRAY];
+
+  configHtml: any = codemirrorHtml;
+  configTs: any = codemirrorTs;
+
+  codeHtml: string;
+  codeTypescript: string;
+
+  constructor(private titleService: TitleService) {
+    this.titleService.titleEvent.emit('Demo - Previews no arrows');
+
+    this.codeHtml =
+      `<ks-modal-gallery [modalImages]="images"
+    [previewConfig]="{visible: true, arrows: false}"></ks-modal-gallery>`;
+  }
+}

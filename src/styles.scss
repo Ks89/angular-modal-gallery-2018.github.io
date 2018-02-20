@@ -60,6 +60,12 @@ html {
 }
 
 
+// force codemirror's height https://codemirror.net/demo/resize.html
+.CodeMirror {
+  border: 1px solid #eee;
+  height: auto !important;
+}
+
 .text-success {
   color: $color-primary !important;
 }

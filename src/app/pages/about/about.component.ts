@@ -22,43 +22,10 @@
  * SOFTWARE.
  */
 
-@import "theme";
+import { Component } from '@angular/core';
+@Component({
+  selector: 'app-about-page',
+  templateUrl: 'about.html'
+})
 
-$text-color: #fff;
-$background: rgba(0, 0, 0, .7);
-
-.my-app-custom-plain-container-row {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-
-  .my-app-custom-image-row {
-    cursor: pointer;
-    height: auto;
-    margin-right: 2px;
-    width: 50px;
-
-    &.after {
-      border-top: 2px;
-      cursor: pointer;
-      display: none;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-  }
-}
-
-.more {
-  background: $background;
-  cursor: pointer;
-  color: $text-color !important;
-  padding-top: 2px;
-  height: 50px;
-  position: absolute;
-  text-align: center;
-  width: 50px;
-}
+export class AboutComponent {}

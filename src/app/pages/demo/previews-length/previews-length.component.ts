@@ -24,17 +24,17 @@
 
 import { Component } from '@angular/core';
 
-import { ButtonsConfig, ButtonsStrategy, Image } from 'angular-modal-gallery';
+import { Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'app-buttons-config-page',
-  templateUrl: 'buttons-config.html'
+  selector: 'app-previews-length-page',
+  templateUrl: 'previews-length.html'
 })
-export class ButtonsConfigComponent {
+export class PreviewsLengthComponent {
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -43,25 +43,11 @@ export class ButtonsConfigComponent {
   codeHtml: string;
   codeTypescript: string;
 
-  buttonsConfigDefault: ButtonsConfig = {
-    visible: true,
-    strategy: ButtonsStrategy.DEFAULT
-  };
-
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Buttons config');
+    this.titleService.titleEvent.emit('Demo - Previews length');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
-               [buttonsConfig]="buttonsConfigDefault">
-</ks-modal-gallery>`;
-
-    this.codeTypescript =
-      `  images: Image[]; // init this value with your images
-    
-  buttonsConfigDefault: ButtonsConfig = {
-    visible: true,
-    strategy: ButtonsStrategy.DEFAULT
-  };`;
+    [previewConfig]="{visible: true, number: 1}"></ks-modal-gallery>`;
   }
 }

@@ -24,17 +24,17 @@
 
 import { Component } from '@angular/core';
 
-import { ButtonsConfig, ButtonsStrategy, Image } from 'angular-modal-gallery';
+import { Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
 import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
-  selector: 'app-exturl-simple-page',
-  templateUrl: 'exturl-simple.html'
+  selector: 'app-previews-not-clickable-page',
+  templateUrl: 'previews-not-clickable.html'
 })
-export class ExtUrlSimpleComponent {
+export class PreviewsNotClickableComponent {
   images: Image[] = [...IMAGES_ARRAY];
 
   configHtml: any = codemirrorHtml;
@@ -43,26 +43,11 @@ export class ExtUrlSimpleComponent {
   codeHtml: string;
   codeTypescript: string;
 
-  buttonsConfigAdvanced: ButtonsConfig = {
-    visible: true,
-    strategy: ButtonsStrategy.ADVANCED
-  };
-
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - External URL simple');
+    this.titleService.titleEvent.emit('Demo - Not clickable previews');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
-               [downloadable]="true"
-               [buttonsConfig]="buttonsConfigAdvanced">
-</ks-modal-gallery>`;
-
-    this.codeTypescript =
-      `  images: Image[]; // init this value with your images
-    
-  buttonsConfigAdvanced: ButtonsConfig = {
-    visible: true,
-    strategy: ButtonsStrategy.ADVANCED
-  };`;
+    [previewConfig]="{visible: true, clickable: false}"></ks-modal-gallery>`;
   }
 }

@@ -1,24 +1,39 @@
 <div class="container">
 
   <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src">
-    <u class="text-success"><h1 class="text-success">Keyboard Config example</h1></u>
+    <u class="text-success"><h1 class="text-success">Loading spinner types</h1></u>
   </a>
-  <p>Modal gallery example with Keyboard configuration</p>
+  <p>Modal gallery example with different types of loading spinners.</p>
   <br>
 
-  <h2>Live Demo</h2>
+  <h2>Live Demos</h2>
   <br>
+  <p>1. Type STANDARD</p>
   <ks-modal-gallery [modalImages]="images"
-                 [keyboardConfig]="{esc: 81, left: 40, right: 38}">
-  </ks-modal-gallery>
+                    [loadingConfig]="{enable: true, type: 1}"></ks-modal-gallery>
+  <br>
+  <p>2. Type CIRCULAR</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 2}"></ks-modal-gallery>
+  <br>
+  <p>3. Type BARS</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 3}"></ks-modal-gallery>
+  <br>
+  <p>4. Type DOTS</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 4}"></ks-modal-gallery>
   <br><br>
 
   <section>
     <h2>Code</h2>
     <br>
+    <h5>Template</h5>
     <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
     </codemirror>
   </section>
+
+  <br><br>
 
   <section>
     <h2>Details</h2>
@@ -81,9 +96,9 @@
         <tr>
           <td><code>loadingConfig</code></td>
           <td>
-            <div><i>Value: </i><code>undefined</code></div>
+            <div><i>Value: </i><code>&#123; enable: true, type: 1 &#125;</code></div>
             <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-            <div>It will show the loading spinner</div>
+            <div>It will show loading spinners of different types, based on the value of 'type' (number from 1 to 4, also available as LoadingType enum)</div>
           </td>
         </tr>
         <tr>
@@ -113,17 +128,8 @@
         <tr>
           <td><code>keyboardConfig</code></td>
           <td>
-            <div><i>Value: </i><code>&#123;esc: 81, left: 40, right: 38&#125;</code></div>
+            <div><i>Value: </i><code>undefined</code></div>
             <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-            <div>
-              <p>This configuration will map actions to other keyboard's keys. So, if you want to change the key to close modal gallery,
-                you can use this property. In this example:</p>
-              <ul>
-                <li><span class="text-success">close gallery: <kbd>q</kbd></span><span class="text-tail"> (instead of the default <kbd>esc</kbd>)</span></li>
-                <li><span class="text-success">previous image: <kbd>&darr;</kbd></span><span class="text-tail"> (instead of the default <kbd>&larr;</kbd>)</span></li>
-                <li><span class="text-success">next image: <kbd>&uarr;</kbd></span><span class="text-tail"> (instead of the default <kbd>&rarr;</kbd>)</span></li>
-              </ul>
-            </div>
           </td>
         </tr>
         <tr>
