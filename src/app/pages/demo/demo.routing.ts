@@ -21,6 +21,9 @@ import { PreviewsLengthComponent } from './previews-length/previews-length.compo
 import { PreviewsNotClickableComponent } from './previews-not-clickable/previews-not-clickable.component';
 import { PreviewsNoArrowsComponent } from './previews-no-arrows/previews-no-arrows.component';
 import { AccessibilityComponent } from './accessibility/accessibility.component';
+import { ButtonsCustomFaComponent } from './buttons-custom-fa/buttons-custom-fa.component';
+import { ButtonsStrategiesComponent } from './buttons-strategies/buttons-strategies.component';
+import { ButtonsExturlNewtabComponent } from './buttons-exturl-newtab/buttons-exturl-newtab.component';
 
 export const routes: Routes = [
   {
@@ -54,6 +57,10 @@ export const routes: Routes = [
       {path: 'previews-no-arrows', component: PreviewsNoArrowsComponent},
       {path: 'previews-not-clickable', component: PreviewsNotClickableComponent},
       {path: 'previews-custom-size', component: PreviewsCustomSizeComponent},
+
+      {path: 'buttons-strategies', component: ButtonsStrategiesComponent},
+      {path: 'buttons-exturl-newtab', component: ButtonsExturlNewtabComponent},
+      {path: 'buttons-custom-fa', component: ButtonsCustomFaComponent},
 
       {path: 'accessibility', component: AccessibilityComponent}
     ]
