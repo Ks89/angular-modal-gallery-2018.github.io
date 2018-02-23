@@ -24,6 +24,10 @@ import { AccessibilityComponent } from './accessibility/accessibility.component'
 import { ButtonsCustomFaComponent } from './buttons-custom-fa/buttons-custom-fa.component';
 import { ButtonsStrategiesComponent } from './buttons-strategies/buttons-strategies.component';
 import { ButtonsExturlNewtabComponent } from './buttons-exturl-newtab/buttons-exturl-newtab.component';
+import { PlainGalleryLayoutsComponent } from './plain-gallery-layouts/plain-gallery-layouts.component';
+import { PlainGalleryAtagsComponent } from './plain-gallery-atags/plain-gallery-atags.component';
+import { PlainGalleryImagePointerComponent } from './plain-gallery-image-pointer/plain-gallery-image-pointer.component';
+import { PlainGalleryCustomWithDescComponent } from './plain-gallery-custom-with-desc/plain-gallery-custom-with-desc.component';
 
 export const routes: Routes = [
   {
@@ -61,6 +65,11 @@ export const routes: Routes = [
       {path: 'buttons-strategies', component: ButtonsStrategiesComponent},
       {path: 'buttons-exturl-newtab', component: ButtonsExturlNewtabComponent},
       {path: 'buttons-custom-fa', component: ButtonsCustomFaComponent},
+
+      {path: 'plain-layouts', component: PlainGalleryLayoutsComponent},
+      {path: 'plain-atags', component: PlainGalleryAtagsComponent},
+      {path: 'plain-image-pointer', component: PlainGalleryImagePointerComponent},
+      {path: 'plain-custom-desc', component: PlainGalleryCustomWithDescComponent},
 
       {path: 'accessibility', component: AccessibilityComponent}
     ]

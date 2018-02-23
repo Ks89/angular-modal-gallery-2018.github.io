@@ -1,0 +1,158 @@
+<div class="container">
+  <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src">
+    <u class="text-success"><h1 class="text-success">Plain gallery layouts</h1></u>
+  </a>
+  <p>Plain gallery with different layouts.</p>
+  <br>
+
+  <h2>Live Demo</h2>
+  <br>
+  <section>
+    <h3>Plain gallery layout (limit 2) and custom size</h3>
+    <br>
+    <ks-modal-gallery [modalImages]="images"
+                      [plainGalleryConfig]="plainGalleryRow"></ks-modal-gallery>
+  </section>
+  <section>
+    <h3>Plain gallery row layout space around (limit 2)</h3>
+    <br>
+    <ks-modal-gallery [modalImages]="images"
+                      [plainGalleryConfig]="plainGalleryRowSpaceAround"></ks-modal-gallery>
+  </section>
+  <section>
+    <h3>Plain gallery column layout (limit 3)</h3>
+    <br>
+    <ks-modal-gallery [modalImages]="images"
+                      [plainGalleryConfig]="plainGalleryColumn"></ks-modal-gallery>
+  </section>
+  <section>
+    <h3>Plain gallery grid layout and custom size</h3>
+    <br>
+    <ks-modal-gallery [modalImages]="images"
+                      [plainGalleryConfig]="plainGalleryGrid"></ks-modal-gallery>
+  </section>
+  <br><br>
+
+  <section>
+    <h2>Code</h2>
+    <br>
+    <h5>Template</h5>
+    <codemirror [(ngModel)]="codeHtml" [config]="configHtml">
+    </codemirror>
+    <br>
+    <h5>Typescript</h5>
+    <codemirror [(ngModel)]="codeTypescript" [config]="configTs">
+    </codemirror>
+  </section>
+
+  <br><br>
+
+  <section>
+    <h2>Details</h2>
+    <br>
+    <table class="table table-hover table-sm">
+      <thead>
+        <tr>
+          <th>Input (.html)</th>
+          <th>Value (.ts)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>modalImages</code></td>
+          <td>
+            <div><i>Value: </i><code>Image[]</code></div>
+            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>downloadable</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>No downloadable at all</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>buttonsConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>It will show only the close button</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>enableCloseOutside</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>Clicking on the semi-transparent background, modal-gallery will close</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>dotsConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>It will show dots below the current modal image</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>previewConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>It will show 3 clickable previews (default size) with arrows</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>loadingConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>It will show the loading spinner</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>slideConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>Infinite sliding is disabled by default and side previews are visible with a default size</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>accessibilityConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><small>(an object with all default english accessibility values by default)</small></div>
+            <div>English accessibility values</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>description</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>It will use the default description (always visible)</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>keyboardConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>plainGalleryConfig</code></td>
+          <td>
+            <div><i>Value: </i>see above</div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>Plain gallery with different layouts</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
