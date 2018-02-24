@@ -1,14 +1,14 @@
 <div class="container">
 
   <!-- TODO Add link to github sources -->
-  <a id="ModalGallery" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src"><u class="text-success"><h1 class="text-success">ModalGallery</h1></u></a>
+  <a id="ModalGallery" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery"><u class="text-success"><h1 class="text-success">ModalGallery</h1></u></a>
   <p>The ModalGallery component is the main component of this library. It contains the collection of images and many other config objects.
     It displays images as thumbnails (thanks to PlainGalleryComponent). Clicking on one of them, the image will be showed in full screen in a modal way using
     many other inner components: BackgroundComponent, UpperButtonsComponent, CurrentImageComponent, LoadingSpinnerComponent, DotsComponent and PreviewsComponent.</p>
   <p>All these components together provide navigation between images with both mouse and keyboard and it
     can enable/disable download features and other advanced behaviours.</p>
-  <p>This is the only public component, so evey input must be provided to it. However, many of the inputs are managed by inner components,
-    so I decided to split this documentation based on Components.</p>
+  <p>This is the only public component, so evey input must be provided to it. However, many of the inputs are managed by inner components</p>
+    <!--so I decided to split this documentation based on Components.</p>-->
   <br>
   <table class="table table-hover table-sm">
     <tbody>
@@ -28,7 +28,7 @@
     <table class="table table-hover table-sm">
       <tbody>
         <tr>
-          <td><small><code>modalImages</code></small></td>
+          <td class="big-tds"><small><code>modalImages</code></small></td>
           <td>
             <div>
               <i>Type: </i><code><a pageScroll href="#Image">Image[]</a></code>
@@ -41,7 +41,7 @@
           </td>
         </tr>
         <tr>
-          <td><small><code>downloadable</code></small></td>
+          <td class="big-tds"><small><code>downloadable</code></small></td>
           <td>
             <div>
               <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
@@ -57,7 +57,7 @@
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="big-tds">
             <div>
               <small><code>buttonsConfig</code></small>
             </div>
@@ -73,7 +73,7 @@
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="big-tds">
             <div>
               <small><code>enableCloseOutside</code></small>
             </div>
@@ -88,7 +88,7 @@
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="big-tds">
             <div>
               <small><code>previewConfig</code></small>
             </div>
@@ -104,7 +104,7 @@
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="big-tds">
             <div>
               <small><code>loadingConfig</code></small>
             </div>
@@ -120,7 +120,7 @@
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="big-tds">
             <div>
               <small><code>slideConfig</code></small>
             </div>
@@ -136,7 +136,7 @@
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="big-tds">
             <div>
               <small><code>accessibilityConfig</code></small>
             </div>
@@ -153,7 +153,7 @@
         </tr>
         <tr>
           <td><small><code>description</code></small></td>
-          <td>
+          <td class="big-tds">
             <div>
               <i>Type: </i><code><a pageScroll href="#DescriptionInterface">Description</a></code> interface<span class="badge badge-pill badge-secondary pull-right">optional</span>
             </div>
@@ -173,7 +173,7 @@
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="big-tds">
             <div>
               <small><code>keyboardConfig</code></small>
             </div>
@@ -188,7 +188,7 @@
           </td>
         </tr>
         <tr>
-          <td>
+          <td class="big-tds">
             <div>
               <small><code>plainGalleryConfig</code></small>
             </div>
@@ -304,7 +304,7 @@
 
   <br>
 
-  <a id="Image" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src"><u class="text-success"><h1 class="text-success">Image</h1></u></a>
+  <a id="Image" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery"><u class="text-success"><h1 class="text-success">Image</h1></u></a>
   <p>The main object that represents an Image with both modal, thumbnail, description and so on.
     To initialize <code>ModalGallery</code> you must build an array of these objects.</p>
   <br>
@@ -348,7 +348,7 @@
 
   <br>
 
-  <a id="ModalImage" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="ModalImage" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">ModalImage</h1></u>
   </a>
   <p>Interface that represent the modal image.</p>
@@ -432,7 +432,7 @@
 
   <br>
 
-  <a id="PlainImage" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="PlainImage" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">PlainImage</h1></u>
   </a>
   <p>Interface that represent the optional plain image used to open modal image, clicking on it.</p>
@@ -514,7 +514,7 @@
 
   <br>
 
-  <a id="ImageModalEvent" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="ImageModalEvent" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">ImageModalEvent</h1></u>
   </a>
   <p>The payload of events related to action, emitted by this library.</p>
@@ -549,7 +549,7 @@
 
   <br>
 
-  <a id="DotsConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="DotsConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">DotsConfig</h1></u>
   </a>
   <p>Interface to configure optional dots below the modal image.</p>
@@ -572,7 +572,7 @@
 
   <br>
 
-  <a id="Description" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="Description" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">Description</h1></u>
   </a>
   <p>Interface to set a config image description.</p>
@@ -580,7 +580,7 @@
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td><small><code>strategy</code></small></td>
+        <td class="very-big-tds"><small><code>strategy</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>DescriptionStrategy</code>
@@ -591,7 +591,7 @@
         </td>
       </tr>
       <tr>
-        <td><small><code>imageText</code></small></td>
+        <td class="very-big-tds"><small><code>imageText</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
@@ -605,19 +605,19 @@
         </td>
       </tr>
       <tr>
-        <td><small><code>number Separator</code></small></td>
+        <td class="very-big-tds"><small><code>numberSeparator</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
-            <p>It's the text between the current image number ad the total number of images.</p>
+            <p>It's the text between the current image number and the total number of images.</p>
             <p>Example: `Image 2<code>numberSeparator</code>12 - bla bla`</p>
           </div>
         </td>
       </tr>
       <tr>
-        <td><small><code>beforeText Description</code></small></td>
+        <td class="very-big-tds"><small><code>beforeTextDescription</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
@@ -629,7 +629,7 @@
         </td>
       </tr>
       <tr>
-        <td><small><code>customFull Description</code></small></td>
+        <td class="very-big-tds"><small><code>customFullDescription</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
@@ -647,7 +647,7 @@
 
   <br>
 
-  <a id="ButtonsConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="ButtonsConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">ButtonsConfig</h1></u>
   </a>
   <p>Interface to customize modal upper buttons.</p>
@@ -692,7 +692,7 @@
 
   <br>
 
-  <a id="ButtonEvent" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="ButtonEvent" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">ButtonEvent</h1></u>
   </a>
   <p>Interface that represent a button event.</p>
@@ -737,7 +737,7 @@
 
   <br>
 
-  <a id="ButtonConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="ButtonConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">ButtonConfig</h1></u>
   </a>
   <p>Interface that represent a button.</p>
@@ -830,7 +830,7 @@
 
   <br>
 
-  <a id="KeyboardConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="KeyboardConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">KeyboardConfig</h1></u>
   </a>
   <p>Interface to customize keyboard's buttons.</p>
@@ -875,7 +875,7 @@
 
   <br>
 
-  <a id="LoadingConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="LoadingConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">LoadingConfig</h1></u>
   </a>
   <p>Interface to customize loading spinner.</p>
@@ -909,7 +909,7 @@
 
   <br>
 
-  <a id="SlideConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="SlideConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">SlideConfig</h1></u>
   </a>
   <p>Interface to customize sliding features of modal gallery (both current image and side-previews).</p>
@@ -943,7 +943,7 @@
 
   <br>
 
-  <a id="PreviewConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="PreviewConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">PreviewConfig</h1></u>
   </a>
   <p>Interface to configure previews (not 'side-previews', but those at the bottom) in modal gallery.</p>
@@ -1010,7 +1010,7 @@
 
   <br>
 
-  <a id="PlainGalleryConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="PlainGalleryConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">PlainGalleryConfig</h1></u>
   </a>
   <p>Interface to configure plain gallery.</p>
@@ -1055,14 +1055,14 @@
 
   <br>
 
-  <a id="PlainGalleryLayout" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="PlainGalleryLayout" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">PlainGalleryLayout</h1></u>
   </a>
   <p>Empty interface implemented by both 'LineLayout', 'GridLayout', 'AdvancedLayout'.</p>
 
   <br>
 
-  <a id="LineLayout" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="LineLayout" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">LineLayout</h1></u>
   </a>
   <p>Class to configure a linear plain gallery.</p>
@@ -1107,7 +1107,7 @@
 
   <br>
 
-  <a id="GridLayout" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="GridLayout" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">GridLayout</h1></u>
   </a>
   <p>Class to configure a grid plain gallery.</p>
@@ -1141,7 +1141,7 @@
 
   <br>
 
-  <a id="AdvancedLayout" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="AdvancedLayout" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">AdvancedLayout</h1></u>
   </a>
   <p>Class to configure a custom plain gallery.</p>
@@ -1175,10 +1175,10 @@
 
   <br>
 
-  <a id="BreakConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="BreakConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">BreakConfig</h1></u>
   </a>
-  <p>Interface to limit the number of items of the plain gallery or to force it to fill other lines.</p>
+  <p>Interface to limit the number of items of the plain gallery or to fill other lines.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
@@ -1209,7 +1209,7 @@
 
   <br>
 
-  <a id="AdvancedConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="AdvancedConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">AdvancedConfig</h1></u>
   </a>
   <p>Interface to use &lt;a&gt; tags instead of &lt;img&gt; and to customize the css background property for thumbnails in plain gallery.</p>
@@ -1217,7 +1217,7 @@
   <table class="table table-hover table-sm">
     <tbody>
       <tr>
-        <td><small><code>aTags</code></small></td>
+        <td class="very-big-tds"><small><code>aTags</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>boolean</code>
@@ -1228,7 +1228,7 @@
         </td>
       </tr>
       <tr>
-        <td><small><code>additionalBackground</code></small></td>
+        <td class="very-big-tds"><small><code>additionalBackground</code></small></td>
         <td>
           <div>
             <i>Type: </i><code>string</code>
@@ -1244,11 +1244,11 @@
 
   <br>
 
-  <a id="AccessibilityConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="AccessibilityConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">AccessibilityConfig</h1></u>
   </a>
   <p>Interface to configure accessibility features as you want, for instance with a different language.</p>
-  <p>These are all supported fields (all strings) and they are grouped by components.</p>
+  <p>These are all supported string fields (grouped by components):</p>
   <br>
   <ul>
     <li>Background
@@ -1306,7 +1306,7 @@
 
   <br>
 
-  <a id="Size" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="Size" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">Size</h1></u>
   </a>
   <p>Interface to customize images/icon sizes.</p>
@@ -1344,7 +1344,7 @@
 
   <br>
 
-  <a id="ButtonsStrategy" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="ButtonsStrategy" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">ButtonsStrategy</h1></u>
   </a>
   <p>Enum to decide which buttons are visible or not. It can be one of these enum values:</p>
@@ -1353,19 +1353,18 @@
     <li><code>DEFAULT</code>: only close button</li>
     <li><code>SIMPLE</code>: close and download button</li>
     <li><code>ADVANCED</code>: close, download and exturl (to open a link in the current tab)</li>
-    <li><code>FULL</code>: close, download, exturl (to open a link in the current tab), delete and refresh</li>
+    <li><code>FULL</code>: close, download, exturl (to open a link in the current tab) and delete</li>
     <li><code>CUSTOM</code>: to add an array of <code>ButtonConfig</code></li>
   </ul>
 
   <br>
 
-  <a id="ButtonType" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="ButtonType" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">ButtonType</h1></u>
   </a>
   <p>Enum that represent the button's type. It can be one of these enum values:</p>
   <br>
   <ul>
-    <li><code>REFRESH</code>: refresh button</li>
     <li><code>DELETE</code>: delete button</li>
     <li><code>EXTURL</code>: extUrl button (to open a link in the current tab)</li>
     <li><code>DOWNLOAD</code>: download button</li>
@@ -1375,7 +1374,7 @@
 
   <br>
 
-  <a id="DescriptionStrategy" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="DescriptionStrategy" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">DescriptionStrategy</h1></u>
   </a>
   <p>Enum to decide when description should be visible or hidden. It can be one of these enum values:</p>
@@ -1388,7 +1387,7 @@
 
   <br>
 
-  <a id="LoadingType" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="LoadingType" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">LoadingType</h1></u>
   </a>
   <p>Enum that represents the type of the loading spinner. It can be one of these enum values:</p>
@@ -1402,7 +1401,7 @@
 
   <br>
 
-  <a id="ActionEnum" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="ActionEnum" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">Action</h1></u>
   </a>
   <p>Enum that represents the source of an action. It can be one of these enum values:</p>
@@ -1417,7 +1416,7 @@
 
   <br>
 
-  <a id="KeyboardEnum" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="KeyboardEnum" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">Keyboard</h1></u>
   </a>
   <p>Enum that represents keyboard's keycodes. It can be one of these enum values:</p>
@@ -1432,7 +1431,7 @@
 
   <br>
 
-  <a id="PlainGalleryStrategy" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/src">
+  <a id="PlainGalleryStrategy" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">PlainGalleryStrategy</h1></u>
   </a>
   <p>Enum that represent the strategy used to show thumbnails in plain gallery. It can be one of these enum values:</p>

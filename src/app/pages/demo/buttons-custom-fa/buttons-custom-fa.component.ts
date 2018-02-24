@@ -62,13 +62,6 @@ export class ButtonsCustomFaComponent {
         fontSize: '20px'
       },
       {
-        className: 'fa fa-refresh white',
-        type: ButtonType.REFRESH,
-        ariaLabel: 'custom refresh aria label',
-        title: 'custom refresh title',
-        fontSize: '20px'
-      },
-      {
         className: 'fa fa-download white',
         type: ButtonType.DOWNLOAD,
         ariaLabel: 'custom download aria label',
@@ -112,13 +105,6 @@ export class ButtonsCustomFaComponent {
         type: ButtonType.CLOSE,
         ariaLabel: 'custom close aria label',
         title: 'custom close title',
-        fontSize: '20px'
-      },
-      {
-        className: 'fa fa-refresh white',
-        type: ButtonType.REFRESH,
-        ariaLabel: 'custom refresh aria label',
-        title: 'custom refresh title',
         fontSize: '20px'
       },
       {

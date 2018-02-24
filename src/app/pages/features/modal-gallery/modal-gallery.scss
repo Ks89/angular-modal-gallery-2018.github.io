@@ -22,16 +22,13 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
-import { TitleService } from '../../../core/services/title.service';
+@import "theme";
 
-@Component({
-  selector: 'app-gallery-array-page',
-  templateUrl: 'modal-gallery.html',
-  styleUrls: ['modal-gallery.scss']
-})
-export class ModalGalleryComponent {
-  constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Features - ModalGallery');
-  }
+.very-big-tds {
+  min-width: 180px !important;
 }
+
+.big-tds {
+  min-width: 146px !important;
+}
+
