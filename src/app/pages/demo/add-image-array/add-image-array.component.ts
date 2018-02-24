@@ -49,9 +49,9 @@ export class AddImageArrayComponent {
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"></ks-modal-gallery>
-    <button class="btn btn-danger btn-sm" (click)="addRandomImage()">
-    <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add image</button>
-    `;
+<button class="btn btn-danger btn-sm" (click)="addRandomImage()">
+<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add image</button>
+  `;
 
     this.codeTypescript =
       `  images: Image[]; // init this value with your images

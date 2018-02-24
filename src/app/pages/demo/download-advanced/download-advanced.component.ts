@@ -54,7 +54,7 @@ export class DownloadAdvancedComponent {
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
     [downloadable]="true"
-    [buttonsConfig]="buttonsConfigSimple">`;
+    [buttonsConfig]="buttonsConfigSimple"></ks-modal-gallery>`;
 
     this.codeTypescript =
       `  images: Image[]; // init this value with your images

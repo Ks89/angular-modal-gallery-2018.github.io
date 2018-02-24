@@ -28,25 +28,42 @@ import { DescriptionStrategy, Description, Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
+import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
   selector: 'app-description-full-custom-page',
-  templateUrl: 'description-full-custom.html'
+  templateUrl: 'description-full-custom.html',
+  styleUrls: ['description-full-custom.scss']
 })
 export class DescriptionFullCustomComponent {
   images: Image[] = [...IMAGES_ARRAY];
 
   customFullDescription: Description = {
+    // ALWAYS_VISIBLE is mandatory to use customFullDescription
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
-    // you should build this value programmaticaly with the result of (show)="..()" event
     customFullDescription: 'Custom description of the current visible image'
-    // if customFullDescription !== undefined, all other fields will be ignored
-    // imageText: '',
-    // numberSeparator: '',
-    // beforeTextDescription: '',
   };
+
+  configHtml: any = codemirrorHtml;
+  configTs: any = codemirrorTs;
+
+  codeHtml: string;
+  codeTypescript: string;
 
   constructor(private titleService: TitleService) {
     this.titleService.titleEvent.emit('Demo - Description full custom');
+
+    this.codeHtml =
+      `<ks-modal-gallery [modalImages]="images"
+    [description]="customFullDescription"></ks-modal-gallery>`;
+
+    this.codeTypescript =
+      `  images: Image[]; // init this value with your images
+
+  customFullDescription: Description = {
+    // ALWAYS_VISIBLE is mandatory to use customFullDescription
+    strategy: DescriptionStrategy.ALWAYS_VISIBLE,
+    customFullDescription: 'Custom description of the current visible image'
+  };`;
   }
 }

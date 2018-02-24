@@ -48,20 +48,20 @@ export class LoadingSpinnerTypeComponent {
 
     this.codeHtml =
       `<p>1. Type STANDARD</p>
-  <ks-modal-gallery [modalImages]="images"
-                    [loadingConfig]="{enable: true, type: 1}"></ks-modal-gallery>
-  <br>
-  <p>2. Type CIRCULAR</p>
-  <ks-modal-gallery [modalImages]="images"
-                    [loadingConfig]="{enable: true, type: 2}"></ks-modal-gallery>  <br>
-  <br>
-  <p>3. Type BARS</p>
-  <ks-modal-gallery [modalImages]="images"
-                    [loadingConfig]="{enable: true, type: 3}"></ks-modal-gallery>  <br>
-  <br>
-  <p>4. Type DOTS</p>
-  <ks-modal-gallery [modalImages]="images"
-                    [loadingConfig]="{enable: true, type: 4}"></ks-modal-gallery>  <br><br>
+<ks-modal-gallery [modalImages]="images"
+                  [loadingConfig]="{enable: true, type: 1}"></ks-modal-gallery>
+<br>
+<p>2. Type CIRCULAR</p>
+<ks-modal-gallery [modalImages]="images"
+                  [loadingConfig]="{enable: true, type: 2}"></ks-modal-gallery>  <br>
+<br>
+<p>3. Type BARS</p>
+<ks-modal-gallery [modalImages]="images"
+                  [loadingConfig]="{enable: true, type: 3}"></ks-modal-gallery>  <br>
+<br>
+<p>4. Type DOTS</p>
+<ks-modal-gallery [modalImages]="images"
+                  [loadingConfig]="{enable: true, type: 4}"></ks-modal-gallery>  <br><br>
   `;
   }
 }

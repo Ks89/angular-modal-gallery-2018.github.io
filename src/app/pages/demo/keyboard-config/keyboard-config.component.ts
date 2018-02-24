@@ -46,7 +46,6 @@ export class KeyboardConfigComponent {
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
-               [keyboardConfig]="{esc: 81, left: 40, right: 38}">
-</ks-modal-gallery>`;
+    [keyboardConfig]="{esc: 81, left: 40, right: 38}"></ks-modal-gallery>`;
   }
 }

@@ -48,7 +48,6 @@ export class DownloadSimpleComponent {
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
-               [downloadable]="true">
-     </ks-modal-gallery>`;
+    [downloadable]="true"></ks-modal-gallery>`;
   }
 }

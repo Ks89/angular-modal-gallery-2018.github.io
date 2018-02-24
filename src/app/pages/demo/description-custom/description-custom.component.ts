@@ -32,7 +32,8 @@ import { codemirrorHtml, codemirrorTs } from '../../codemirror.config';
 
 @Component({
   selector: 'app-description-custom-page',
-  templateUrl: 'description-custom.html'
+  templateUrl: 'description-custom.html',
+  styleUrls: ['description-custom.scss']
 })
 export class DescriptionCustomComponent {
   images: Image[] = [...IMAGES_ARRAY];
