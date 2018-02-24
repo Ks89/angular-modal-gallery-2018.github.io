@@ -73,7 +73,7 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0",
     "@nguniversal/express-engine": "^5.0.0-beta.5",
     "@nguniversal/module-map-ngfactory-loader": "^5.0.0-beta.5",
-    "angular-modal-gallery": "^5.0.0-rc.2",
+    "angular-modal-gallery": "^5.0.0-rc.3",
     "bootstrap": "^4.0.0",
     "codemirror": "^5.34.0",
     "core-js": "^2.5.1",
