@@ -44,7 +44,7 @@ export class DownloadSimpleComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Download simple');
+    this.titleService.titleEvent.emit('Examples - Download simple');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

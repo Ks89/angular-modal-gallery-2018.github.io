@@ -26,7 +26,7 @@ import { Component } from '@angular/core';
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
-  selector: 'app-gallery-array-page',
+  selector: 'app-modal-gallery-page',
   templateUrl: 'modal-gallery.html',
   styleUrls: ['modal-gallery.scss']
 })

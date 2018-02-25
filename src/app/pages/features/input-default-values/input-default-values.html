@@ -3,7 +3,7 @@
   <a id="InputDefaultValues" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">Default input values</h1></u>
   </a>
-  <p>When undefined, ModalGallery's inputs have these default values:</p>
+  <p>When undefined, modal gallery's inputs have these default values:</p>
   <br>
   <div class="table-responsive">
     <table class="table table-hover table-sm">
@@ -59,7 +59,7 @@
         <tr>
           <td><small><code>accessibilityConfig</code></small></td>
           <td>
-            <div><small>an object with all default english accessibility values by default)</small></div>
+            <div><small>an object with all default english accessibility values. Check below for the complete object.</small></div>
           </td>
         </tr>
         <tr>
@@ -83,4 +83,61 @@
       </tbody>
     </table>
   </div>
+
+  <br>
+
+  <p>Default <code>AccessibilityConfig</code> exported as <code>KS_DEFAULT_ACCESSIBILITY_CONFIG</code></p>
+  <ul>
+    <li>Background
+      <ul>
+        <li><code>backgroundAriaLabel</code> 'Modal gallery full screen background'</li>
+        <li><code>backgroundTitle</code> ''</li>
+      </ul>
+    </li>
+    <li>Plain gallery
+      <ul>
+        <li><code>plainGalleryContentAriaLabel</code> 'Plain gallery content'</li>
+        <li><code>plainGalleryContentTitle</code> ''</li>
+      </ul>
+    </li>
+    <li>Modal gallery
+      <ul>
+        <li><code>modalGalleryContentAriaLabel</code> 'Modal gallery content'</li>
+        <li><code>modalGalleryContentTitle</code> ''</li>
+      </ul>
+    </li>
+    <li>Loading spinner
+      <ul>
+        <li><code>loadingSpinnerAriaLabel</code> 'The current image is loading. Please be patient.'</li>
+        <li><code>loadingSpinnerTitle</code> 'The current image is loading. Please be patient.'</li>
+      </ul>
+    </li>
+    <li>Current image
+      <ul>
+        <li><code>mainContainerAriaLabel</code> 'Current image and navigation'</li>
+        <li><code>mainContainerTitle</code> ''</li>
+        <li><code>mainPrevImageAriaLabel</code> 'Previous image'</li>
+        <li><code>mainPrevImageTitle</code> 'Previous image'</li>
+        <li><code>mainNextImageAriaLabel</code> 'Next image'</li>
+        <li><code>mainNextImageTitle</code> 'Next image'</li>
+      </ul>
+    </li>
+    <li>Dots
+      <ul>
+        <li><code>dotsContainerAriaLabel</code> 'Image navigation dots'</li>
+        <li><code>dotsContainerTitle</code> ''</li>
+        <li><code>dotAriaLabel</code> 'Navigate to image number'</li>
+      </ul>
+    </li>
+    <li>Previews
+      <ul>
+        <li><code>previewsContainerAriaLabel</code> 'Image previews'</li>
+        <li><code>previewsContainerTitle</code> ''</li>
+        <li><code>previewScrollPrevAriaLabel</code> 'Scroll previous previews'</li>
+        <li><code>previewScrollPrevTitle</code> 'Scroll previous previews'</li>
+        <li><code>previewScrollNextAriaLabel</code> 'Scroll next previews'</li>
+        <li><code>previewScrollNextTitle</code> 'Scroll next previews'</li>
+      </ul>
+    </li>
+  </ul>
 </div>

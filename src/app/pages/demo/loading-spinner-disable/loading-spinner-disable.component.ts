@@ -44,7 +44,7 @@ export class LoadingSpinnerDisableComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Loading spinner disabled');
+    this.titleService.titleEvent.emit('Examples - Loading spinner disabled');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

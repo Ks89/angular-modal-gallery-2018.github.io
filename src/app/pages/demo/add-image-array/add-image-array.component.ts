@@ -45,7 +45,7 @@ export class AddImageArrayComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Add image array');
+    this.titleService.titleEvent.emit('Examples - Add image array');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"></ks-modal-gallery>

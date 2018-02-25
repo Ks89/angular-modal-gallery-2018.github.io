@@ -45,7 +45,7 @@ export class InfiniteSlidingComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Infinite sliding');
+    this.titleService.titleEvent.emit('Examples - Infinite sliding');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

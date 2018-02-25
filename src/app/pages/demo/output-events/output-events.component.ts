@@ -53,7 +53,7 @@ export class OutputEventsComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Output events');
+    this.titleService.titleEvent.emit('Examples - Output events');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

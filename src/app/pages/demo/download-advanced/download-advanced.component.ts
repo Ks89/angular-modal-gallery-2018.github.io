@@ -49,7 +49,7 @@ export class DownloadAdvancedComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Download advanced');
+    this.titleService.titleEvent.emit('Examples - Download advanced');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

@@ -76,7 +76,7 @@ export class AccessibilityComponent {
   };
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Custom accessibility');
+    this.titleService.titleEvent.emit('Examples - Custom accessibility');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

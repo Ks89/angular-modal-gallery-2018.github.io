@@ -44,7 +44,7 @@ export class PreviewsLengthComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Previews length');
+    this.titleService.titleEvent.emit('Examples - Previews length');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

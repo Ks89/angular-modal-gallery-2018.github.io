@@ -42,7 +42,7 @@ export class PreviewsCustomSizeComponent {
   codeHtml: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Previews custom size');
+    this.titleService.titleEvent.emit('Examples - Previews custom size');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

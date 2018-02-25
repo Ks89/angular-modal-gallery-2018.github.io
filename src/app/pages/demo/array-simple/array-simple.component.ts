@@ -44,7 +44,7 @@ export class ArraySimpleComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Array simple');
+    this.titleService.titleEvent.emit('Examples - Array simple');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"></ks-modal-gallery>`;

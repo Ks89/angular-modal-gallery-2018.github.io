@@ -42,7 +42,7 @@ export class NoDotsAndPreviewsComponent {
   codeHtml: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - No dots and previews');
+    this.titleService.titleEvent.emit('Examples - No dots and previews');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

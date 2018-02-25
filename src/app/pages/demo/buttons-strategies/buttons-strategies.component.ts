@@ -61,7 +61,7 @@ export class ButtonsStrategiesComponent {
   };
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Button strategies');
+    this.titleService.titleEvent.emit('Examples - Button strategies');
 
     this.codeHtml =
       `  <p>1. Strategy DEFAULT</p>

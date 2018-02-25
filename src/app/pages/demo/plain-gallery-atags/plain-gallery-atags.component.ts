@@ -50,7 +50,7 @@ export class PlainGalleryAtagsComponent {
   };
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit(`Demo - Plain gallery with <a> tags`);
+    this.titleService.titleEvent.emit(`Examples - Plain gallery with <a> tags`);
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

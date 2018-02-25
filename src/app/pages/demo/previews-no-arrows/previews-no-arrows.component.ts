@@ -44,7 +44,7 @@ export class PreviewsNoArrowsComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Previews no arrows');
+    this.titleService.titleEvent.emit('Examples - Previews no arrows');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

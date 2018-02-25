@@ -51,7 +51,7 @@ export class PlainGalleryImagePointerComponent {
   };
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Plain gallery with image pointer');
+    this.titleService.titleEvent.emit('Examples - Plain gallery with image pointer');
 
     this.codeHtml =
       `<div class="my-app-custom-plain-container-row">

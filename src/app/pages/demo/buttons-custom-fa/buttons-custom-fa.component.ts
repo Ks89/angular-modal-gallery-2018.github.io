@@ -79,7 +79,7 @@ export class ButtonsCustomFaComponent {
   };
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Custom buttons with font-awesome 4');
+    this.titleService.titleEvent.emit('Examples - Custom buttons with font-awesome 4');
 
     this.codeHtml =
       `  <ks-modal-gallery [modalImages]="images"

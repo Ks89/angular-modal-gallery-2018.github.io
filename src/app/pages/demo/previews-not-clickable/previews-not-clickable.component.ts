@@ -44,7 +44,7 @@ export class PreviewsNotClickableComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Not clickable previews');
+    this.titleService.titleEvent.emit('Examples - Not clickable previews');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

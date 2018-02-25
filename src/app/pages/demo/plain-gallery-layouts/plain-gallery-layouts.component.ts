@@ -61,7 +61,7 @@ export class PlainGalleryLayoutsComponent {
   };
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Plain gallery layouts');
+    this.titleService.titleEvent.emit('Examples - Plain gallery layouts');
 
     this.codeHtml = `<section>
     <h3>Plain gallery layout (limit 2) and custom size</h3>

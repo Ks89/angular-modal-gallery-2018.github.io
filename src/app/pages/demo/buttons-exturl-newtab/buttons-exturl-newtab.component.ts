@@ -56,7 +56,7 @@ export class ButtonsExturlNewtabComponent {
   };
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Exturl button in a new tab');
+    this.titleService.titleEvent.emit('Examples - Exturl button in a new tab');
 
     this.codeHtml =
       `  <ks-modal-gallery [modalImages]="images"

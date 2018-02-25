@@ -44,7 +44,7 @@ export class CloseOusideComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - No close outside');
+    this.titleService.titleEvent.emit('Examples - No close outside');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

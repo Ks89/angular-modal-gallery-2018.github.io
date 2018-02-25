@@ -51,7 +51,7 @@ export class DescriptionFullCustomComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Description full custom');
+    this.titleService.titleEvent.emit('Examples - Description full custom');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

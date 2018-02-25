@@ -51,7 +51,7 @@ export class PlainGalleryCustomWithDescComponent {
   };
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Plain gallery custom with description');
+    this.titleService.titleEvent.emit('Examples - Plain gallery custom with description');
 
     this.codeHtml =
       `<div class="my-app-custom-plain-container-with-desc">

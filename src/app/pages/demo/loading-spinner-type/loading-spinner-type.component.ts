@@ -44,7 +44,7 @@ export class LoadingSpinnerTypeComponent {
   codeTypescript: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Loading spinner types');
+    this.titleService.titleEvent.emit('Examples - Loading spinner types');
 
     this.codeHtml =
       `<p>1. Type STANDARD</p>

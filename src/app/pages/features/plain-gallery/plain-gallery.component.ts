@@ -23,29 +23,15 @@
  */
 
 import { Component } from '@angular/core';
-
-import { Image } from 'angular-modal-gallery';
-
-import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
-import { codemirrorHtml } from '../../codemirror.config';
 
 @Component({
-  selector: 'app-keyboard-config-page',
-  templateUrl: 'keyboard-config.html'
+  selector: 'app-plain-gallery-page',
+  templateUrl: 'plain-gallery.html',
+  styleUrls: ['plain-gallery.scss']
 })
-export class KeyboardConfigComponent {
-  images: Image[] = [...IMAGES_ARRAY];
-
-  configHtml: any = codemirrorHtml;
-
-  codeHtml: string;
-
+export class PlainGalleryComponent {
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Examples - Keyboard config');
-
-    this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
-    [keyboardConfig]="{esc: 81, left: 40, right: 38}"></ks-modal-gallery>`;
+    this.titleService.titleEvent.emit('Features - PlainGallery');
   }
 }

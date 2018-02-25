@@ -42,7 +42,7 @@ export class SidePreviewsHiddenComponent {
   codeHtml: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Hidden side-previews');
+    this.titleService.titleEvent.emit('Examples - Hidden side-previews');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"

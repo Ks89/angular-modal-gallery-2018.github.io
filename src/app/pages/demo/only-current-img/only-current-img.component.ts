@@ -42,7 +42,7 @@ export class OnlyCurrentImgComponent {
   codeHtml: string;
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Demo - Only current image');
+    this.titleService.titleEvent.emit('Examples - Only current image');
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
