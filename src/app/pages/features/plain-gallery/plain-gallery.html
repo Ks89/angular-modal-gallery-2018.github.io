@@ -11,7 +11,7 @@
     <u class="text-success"><h1 class="text-success">PlainImage</h1></u>
   </a>
   <p>Interface that represent the optional plain image used to open modal image, clicking on it.</p>
-  <p>If you don't provide this object, <code>angular-modal-gallery</code> will scale down the img path of modal image to display the thumbnail.</p>
+  <p>If you don't provide this object, angular-modal-gallery will scale down the img path of modal image to display the thumbnail.</p>
   <br>
   <table class="table table-hover table-sm">
     <tbody>
@@ -80,7 +80,7 @@
           <i>Type: </i><code>Size</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
-          <p>Optional object to change the size of modal image. 'width: 50px' and 'height: auto' by default.</p>
+          <p>Optional object to change the size of modal image. <code>width: 50px</code> and <code>height: auto</code> by default.</p>
         </div>
       </td>
     </tr>
@@ -103,7 +103,7 @@
           <i>Type: </i><code>PlainGalleryStrategy</code>
         </div>
         <div>
-          <p>Enum that represents the strategy used to show thumbnails. 'ROW' by default.</p>
+          <p>Enum that represents the strategy used to show thumbnails. <code><a pageScroll href="#PlainGalleryStrategy">PlainGalleryStrategy.ROW</a></code> by default.</p>
         </div>
       </td>
     </tr>
@@ -114,7 +114,8 @@
           <i>Type: </i><code>PlainGalleryLayout</code>
         </div>
         <div>
-          <p>It can be either 'LineLayout', 'GridLayout' or 'AdvancedLayout' to configure the thumbnail's layout.</p>
+          <p>It can be either <code><a pageScroll href="#LineLayout">LineLayout</a></code>,
+            <code><a pageScroll href="#GridLayout">GridLayout</a></code> or <code><a pageScroll href="#AdvancedLayout">AdvancedLayout</a></code> to configure the thumbnail's layout.</p>
         </div>
       </td>
     </tr>
@@ -125,7 +126,8 @@
           <i>Type: </i><code>AdvancedConfig</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
         </div>
         <div>
-          <p>Optional object used to configure 'AdvancedLayout'. It will be ignored with both 'LineLayout' and 'GridLayout'.</p>
+          <p>Optional object used to configure <code><a pageScroll href="#AdvancedLayout">AdvancedLayout</a></code>.
+            It will be ignored with both <code><a pageScroll href="#LineLayout">LineLayout</a></code> and <code><a pageScroll href="#GridLayout">GridLayout</a></code>.</p>
         </div>
       </td>
     </tr>
@@ -137,7 +139,8 @@
   <a id="PlainGalleryLayout" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">PlainGalleryLayout</h1></u>
   </a>
-  <p>Empty interface implemented by both 'LineLayout', 'GridLayout', 'AdvancedLayout'.</p>
+  <p>Empty interface implemented by both <code><a pageScroll href="#LineLayout">LineLayout</a></code>,
+    <code><a pageScroll href="#GridLayout">GridLayout</a></code>, <code><a pageScroll href="#AdvancedLayout">AdvancedLayout</a></code>.</p>
 
   <br>
 
@@ -166,7 +169,7 @@
           <i>Type: </i><code>string</code>
         </div>
         <div>
-          <p>Represent the flexbox 'justify-content' property. For more info check <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">here</a></p>
+          <p>Represent the flexbox 'justify-content' property. For more info check <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">justify-content's doc at Mozilla</a></p>
         </div>
       </td>
     </tr>
@@ -177,7 +180,7 @@
           <i>Type: </i><code>Size</code>
         </div>
         <div>
-          <p>Object to change the size of thumbnails. 'width: 50px' and 'height: auto' by default.</p>
+          <p>Object to change the size of thumbnails. <code>width: 50px</code> and <code>height: auto</code> by default.</p>
         </div>
       </td>
     </tr>
@@ -211,7 +214,7 @@
           <i>Type: </i><code>Size</code>
         </div>
         <div>
-          <p>Object to change the size of thumbnails. 'width: 50px' and 'height: auto' by default.</p>
+          <p>Object to change the size of thumbnails. <code>width: 50px</code> and <code>height: auto</code> by default.</p>
         </div>
       </td>
     </tr>
@@ -245,7 +248,7 @@
           <i>Type: </i><code>boolean</code>
         </div>
         <div>
-          <p>If true, default plain gallery is hidden, otherwise not. It's really recommended to use always <code>true</code>.</p>
+          <p>If <code>true</code>, default plain gallery is hidden, otherwise not. It's really recommended to use always <code>true</code>.</p>
         </div>
       </td>
     </tr>
@@ -268,7 +271,7 @@
           <i>Type: </i><code>number</code>
         </div>
         <div>
-          <p>Number of items to show. -1 by default.</p>
+          <p>Number of items to show. <code>-1</code> by default.</p>
         </div>
       </td>
     </tr>
@@ -279,7 +282,7 @@
           <i>Type: </i><code>boolean</code>
         </div>
         <div>
-          <p>If true, images will wrap, otherwise not. This property correspond to css 'flex-wrap'. false by default.</p>
+          <p>If <code>true</code>, images will wrap, otherwise not. This property correspond to css 'flex-wrap'. <code>false</code> by default.</p>
         </div>
       </td>
     </tr>
@@ -314,7 +317,7 @@
           </div>
           <div>
             <p>Value useful to change the css background property. '50% 50%/cover' by default.
-              For more info check here <a href="https://www.w3schools.com/cssref/css3_pr_background.asp">HERE</a></p>
+              For more info check <a href="https://www.w3schools.com/cssref/css3_pr_background.asp">background CSS3 property</a></p>
           </div>
         </td>
       </tr>

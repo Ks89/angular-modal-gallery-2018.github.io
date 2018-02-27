@@ -54,7 +54,7 @@
             <div>
               <p>If true, you'll be able to download the current modal image always with keyboard shortcut (<kbd>ctrl</kbd>+<kbd>s</kbd>
                 or <kbd>cmd</kbd>+<kbd>s</kbd>),
-                but the download button will be visible only when <code>showDownloadButton</code> is true. Otherwise,
+                but the download button will be visible only when <code>showDownloadButton=true</code>. Otherwise,
                 all download features will be disabled. <code>downloadable=false</code> by default</p>
               <p>Please be careful: on SmartPhones and Tablets you can't use keyboard shortcuts, so to download images, please enable <code>downloadable</code> and use
                 <a [routerLink]="['/features/upper-buttons']"><code>ButtonsStrategy.SIMPLE</code></a> or higher to add the download button.</p>
@@ -88,7 +88,7 @@
               <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
             </div>
             <div>
-              <p>If true, you can click on the semi-transparent background of modal images to close it. <code>enableCloseOutside=true</code> by default.</p>
+              <p>If true, you can click on the semi-transparent background of modal images to close it. <code>true</code> by default.</p>
             </div>
           </td>
         </tr>
@@ -136,7 +136,7 @@
             </div>
             <div>
               <p>Interface to enable infinite-sliding (you won't be able to navigate before both the first and after the last images) and to configure side-previews.
-                By default, infinite sliding is disabled, and side-previews are visible with <code>width: '100px'</code> and <code>height: 'auto'</code>.</p>
+                By default, infinite sliding is disabled, and side-previews are visible with <code>width: 100px</code> and <code>height: auto</code>.</p>
             </div>
           </td>
         </tr>
@@ -292,7 +292,7 @@
         <tr>
           <td><small><code>buttonAfterHook</code></small></td>
           <td>
-            <p>A <code><a [routerLink]="['/features/upper-buttons']">>ButtonEvent</a></code> right <b>after</b> the action related to an upper button.</p>
+            <p>A <code><a [routerLink]="['/features/upper-buttons']">ButtonEvent</a></code> right <b>after</b> the action related to an upper button.</p>
             <p>It contains an <code><a pageScroll href="#ActionEnum">Action</a></code> enum, the current <code><a pageScroll href="#Image">Image</a></code> and the <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> that triggered this event</p>
             <p>This event is an 'after hook', because you can execute your code after every action triggered by buttons. Also, since you have the full
               <code><a [routerLink]="['/features/upper-buttons']">ButtonConfig</a></code> in the payload, you can run different code based on button's type</p>
@@ -640,7 +640,7 @@
           <i>Type: </i><code>LoadingType</code>
         </div>
         <div>
-          <p>Enum to choose a loading spinner (already bundled in angular-modal-gallery in pure css). <code>STANDARD</code> by default</p>
+          <p>Enum to choose a loading spinner (already bundled in angular-modal-gallery in pure css). <code>LoadingType.STANDARD</code> by default</p>
         </div>
       </td>
     </tr>
@@ -663,7 +663,7 @@
             <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
           </div>
           <div>
-            <p>If false, infinite sliding is visible, otherwise not</p>
+            <p>If <code>false</code>, infinite sliding is visible, otherwise not</p>
           </div>
         </td>
       </tr>
