@@ -5,6 +5,7 @@ import { InputDefaultValuesComponent } from './input-default-values/input-defaul
 import { PlainGalleryComponent } from './plain-gallery/plain-gallery.component';
 import { PreviewsComponent } from './previews/previews.component';
 import { UpperButtonsComponent } from './upper-buttons/upper-buttons.component';
+import { OverviewComponent } from './overview/overview.component';
 
 export const FEATURES_COMPONENTS = [
   FeaturesComponent,
@@ -13,5 +14,6 @@ export const FEATURES_COMPONENTS = [
   PreviewsComponent,
   UpperButtonsComponent,
   GlobalConfigComponent,
-  InputDefaultValuesComponent
+  InputDefaultValuesComponent,
+  OverviewComponent
 ];

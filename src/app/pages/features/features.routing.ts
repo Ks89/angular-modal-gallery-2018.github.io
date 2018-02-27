@@ -7,12 +7,13 @@ import { InputDefaultValuesComponent } from './input-default-values/input-defaul
 import { PlainGalleryComponent } from './plain-gallery/plain-gallery.component';
 import { PreviewsComponent } from './previews/previews.component';
 import { UpperButtonsComponent } from './upper-buttons/upper-buttons.component';
+import { OverviewComponent } from './overview/overview.component';
 
 export const routes: Routes = [
   { path: '',
     component: FeaturesComponent,
     children: [
-      { path: '',                       component: ModalGalleryComponent },
+      { path: '',                       component: OverviewComponent },
       { path: 'modal-gallery',           component: ModalGalleryComponent },
       { path: 'plain-gallery',           component: PlainGalleryComponent },
       { path: 'previews',               component: PreviewsComponent },
