@@ -167,6 +167,8 @@
                 The first one is the entire string (for instance 'Description of Image 1/2 - My family - bla bla'),
                 the second one is an object with these properties <code>imageText</code> (default is 'Image'),
                 <code>numberSeparator</code> (default is '/'), <code>beforeTextDescription</code> (default is ' - ').
+                You can also use HTML descriptions, but remember that Angular will sanitize dangerous code, so for
+                instance you cannot add input fields and so on, but only simple and secure HTML.
               </p>
               <p>
                 To customize part of the description, you can refer to this example: <small>`<code>imageText</code> <i>2</i> <code>numberSeparator</code> <i>12</i> <code>beforeTextDescription</code> <i>bla bla</i>`</small>.

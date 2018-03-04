@@ -41,7 +41,7 @@ export class DescriptionFullCustomComponent {
   customFullDescription: Description = {
     // ALWAYS_VISIBLE is mandatory to use customFullDescription
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
-    customFullDescription: 'Custom description of the current visible image'
+    customFullDescription: '<ol><li>Custom</li><li>description of the</li><li>current visible</li><li>image</li></ol>'
   };
 
   configHtml: any = codemirrorHtml;
@@ -63,7 +63,7 @@ export class DescriptionFullCustomComponent {
   customFullDescription: Description = {
     // ALWAYS_VISIBLE is mandatory to use customFullDescription
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
-    customFullDescription: 'Custom description of the current visible image'
+    customFullDescription: '<ol><li>Custom</li><li>description of the</li><li>current visible</li><li>image</li></ol>'
   };`;
   }
 }
