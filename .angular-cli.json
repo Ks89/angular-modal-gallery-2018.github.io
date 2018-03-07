@@ -60,21 +60,17 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "serviceWorker": true,
-      "styles": [
-        "styles.scss",
-        "../node_modules/codemirror/lib/codemirror.css",
-        "../node_modules/codemirror/theme/monokai.css"
-      ],
       "stylePreprocessorOptions": {
         "includePaths": [
           "theme"
         ]
       },
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.slim.js",
-        "../node_modules/popper.js/dist/umd/popper.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.js"
+      "styles": [
+        "styles.scss",
+        "../node_modules/codemirror/lib/codemirror.css",
+        "../node_modules/codemirror/theme/monokai.css"
       ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
