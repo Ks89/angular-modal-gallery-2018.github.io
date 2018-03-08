@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { ButtonsConfig, ButtonsStrategy, ButtonType, Image } from 'angular-modal-gallery';
+import { ButtonEvent, ButtonsConfig, ButtonsStrategy, ButtonType, Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -84,7 +84,9 @@ export class ButtonsCustomFaComponent {
     this.codeHtml =
       `  <ks-modal-gallery [modalImages]="images"
     [downloadable]="true"
-    [buttonsConfig]="customButtonsConfig"></ks-modal-gallery>`;
+    [buttonsConfig]="customButtonsConfig"
+    (buttonBeforeHook)="onCustomButtonBeforeHook($event)"
+    (buttonAfterHook)="onCustomButtonAfterHook($event)"></ks-modal-gallery>`;
 
     this.codeTypescript =
       `  images: Image[]; // init this value with your images
@@ -122,6 +124,48 @@ export class ButtonsCustomFaComponent {
         fontSize: '20px'
       }
     ]
-  };`;
+  };
+
+  onCustomButtonBeforeHook(event: ButtonEvent) {
+    // use before hook to get click on buttons
+    // for custom buttons, you have to check event with your logic
+    console.log('onCustomButtonBeforeHook ', event);
+    if (!event || !event.button) {
+      return;
+    }
+    // Invoked after a click on a button, but before that the related
+    // action is applied.
+  }
+
+  onCustomButtonAfterHook(event: ButtonEvent) {
+    // use after hook to get click on buttons
+    // for custom buttons, you have to check event with your logic
+    console.log('onCustomButtonAfterHook ', event);
+    if (!event || !event.button) {
+      return;
+    }
+    // Invoked after both a click on a button and its related action.
+  }`;
+  }
+
+  onCustomButtonBeforeHook(event: ButtonEvent) {
+    // use before hook to get click on buttons
+    // for custom buttons, you have to check event with your logic
+    console.log('onCustomButtonBeforeHook ', event);
+    if (!event || !event.button) {
+      return;
+    }
+    // Invoked after a click on a button, but before that the related
+    // action is applied.
+  }
+
+  onCustomButtonAfterHook(event: ButtonEvent) {
+    // use after hook to get click on buttons
+    // for custom buttons, you have to check event with your logic
+    console.log('onCustomButtonAfterHook ', event);
+    if (!event || !event.button) {
+      return;
+    }
+    // Invoked after both a click on a button and its related action.
   }
 }
