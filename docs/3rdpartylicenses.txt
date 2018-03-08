@@ -1,8 +1,8 @@
-@angular/core@5.2.6
+@angular/core@5.2.7
 MIT
 MIT
 
-@angular/common@5.2.6
+@angular/common@5.2.7
 MIT
 MIT
 
@@ -54,7 +54,7 @@ MIT License
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE
 
-angular-modal-gallery@5.0.1
+angular-modal-gallery@5.2.0-beta.1
 MIT
 The MIT License (MIT)
 
@@ -103,7 +103,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-@angular/forms@5.2.6
+@angular/forms@5.2.7
 MIT
 MIT
 
@@ -177,7 +177,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-cache-loader@1.2.0
+cache-loader@1.2.2
 MIT
 Copyright JS Foundation and other contributors
 
@@ -271,11 +271,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-@angular/router@5.2.6
+@angular/router@5.2.7
 MIT
 MIT
 
-@angular/platform-browser@5.2.6
+@angular/platform-browser@5.2.7
 MIT
 MIT
 
@@ -303,11 +303,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-@angular/animations@5.2.6
+@angular/animations@5.2.7
 MIT
 MIT
 
-@angular/platform-browser-dynamic@5.2.6
+@angular/platform-browser-dynamic@5.2.7
 MIT
 MIT
 
