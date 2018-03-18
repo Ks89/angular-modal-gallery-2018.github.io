@@ -19,6 +19,7 @@ export const routes: Routes = [
       { path: 'previews',               component: PreviewsComponent },
       { path: 'upper-buttons',          component: UpperButtonsComponent },
       { path: 'global-config',           component: GlobalConfigComponent },
+      { path: 'defaultValues',          component: InputDefaultValuesComponent},
       { path: 'default-values',          component: InputDefaultValuesComponent}
     ]
   }
