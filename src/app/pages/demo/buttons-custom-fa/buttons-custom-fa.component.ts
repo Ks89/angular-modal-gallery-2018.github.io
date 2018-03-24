@@ -48,28 +48,28 @@ export class ButtonsCustomFaComponent {
     strategy: ButtonsStrategy.CUSTOM,
     buttons: [
       {
-        className: 'fa fa-plus white',
+        className: 'fas fa-plus white',
         type: ButtonType.CUSTOM,
         ariaLabel: 'custom plus aria label',
         title: 'custom plus title',
         fontSize: '20px'
       },
       {
-        className: 'fa fa-close white',
+        className: 'fas fa-times white',
         type: ButtonType.CLOSE,
         ariaLabel: 'custom close aria label',
         title: 'custom close title',
         fontSize: '20px'
       },
       {
-        className: 'fa fa-download white',
+        className: 'fas fa-download white',
         type: ButtonType.DOWNLOAD,
         ariaLabel: 'custom download aria label',
         title: 'custom download title',
         fontSize: '20px'
       },
       {
-        className: 'fa fa-external-link white',
+        className: 'fas fa-external-link-alt white',
         type: ButtonType.EXTURL,
         ariaLabel: 'custom exturl aria label',
         title: 'custom exturl title',
@@ -79,7 +79,7 @@ export class ButtonsCustomFaComponent {
   };
 
   constructor(private titleService: TitleService) {
-    this.titleService.titleEvent.emit('Examples - Custom buttons with font-awesome 4');
+    this.titleService.titleEvent.emit('Examples - Custom buttons with Font Awesome 5');
 
     this.codeHtml =
       `  <ks-modal-gallery [modalImages]="images"
