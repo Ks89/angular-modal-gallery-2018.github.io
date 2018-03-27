@@ -41,7 +41,17 @@ export class DescriptionFullCustomComponent {
   customFullDescription: Description = {
     // ALWAYS_VISIBLE is mandatory to use customFullDescription
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
-    customFullDescription: '<ol><li>Custom</li><li>description of the</li><li>current visible</li><li>image</li></ol>'
+    customFullDescription: '<ol><li>Custom</li><li>description of the</li><li>current visible</li><li>image</li></ol>',
+    style: {
+      bgColor: 'rgba(255, 0, 0, .5)',
+      textColor: 'blue',
+      margin: {
+        marginTop: '3px',
+        marginBottom: '0px',
+        marginLeft: '5px',
+        marginRight: '5px'
+      }
+    }
   };
 
   configHtml: any = codemirrorHtml;
@@ -55,7 +65,7 @@ export class DescriptionFullCustomComponent {
 
     this.codeHtml =
       `<ks-modal-gallery [modalImages]="images"
-    [description]="customFullDescription"></ks-modal-gallery>`;
+    [description]="customFullCustomDescription"></ks-modal-gallery>`;
 
     this.codeTypescript =
       `  images: Image[]; // init this value with your images
@@ -63,7 +73,17 @@ export class DescriptionFullCustomComponent {
   customFullDescription: Description = {
     // ALWAYS_VISIBLE is mandatory to use customFullDescription
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
-    customFullDescription: '<ol><li>Custom</li><li>description of the</li><li>current visible</li><li>image</li></ol>'
+    customFullDescription: '<ol><li>Custom</li><li>description of the</li><li>current visible</li><li>image</li></ol>',
+    style: {
+      bgColor: 'rgba(255, 0, 0, .5)',
+      textColor: 'blue',
+      margin: {
+        marginTop: '3px',
+        marginBottom: '0px',
+        marginLeft: '5px',
+        marginRight: '5px'
+      }
+    }
   };`;
   }
 }

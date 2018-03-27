@@ -176,6 +176,7 @@
                 the description passed thanks to the input <a pageScroll href="#Image"><code>Image</code></a> object.
               </p>
               <p>Attention please! There aren't spaces between values. So if you want a 'text - text' you have to specify exactly ' - ', with the two spaces</p>
+              <p>Also, from version 5.4.0, you can use this interface to change description's style.</p>
             </div>
           </td>
         </tr>
@@ -567,6 +568,119 @@
           </div>
         </td>
       </tr>
+      <tr>
+        <td class="very-big-tds"><small><code>style</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>DescriptionStyle</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          </div>
+          <div>
+            <p>Interface to change background color, text color and margins.</p>
+            <p>All properties are optional and with default values. Check <code><a pageScroll href="#DescriptionStyle">DescriptionStyle</a></code> for more information.</p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <a id="DescriptionStyle" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
+    <u class="text-success"><h1 class="text-success">DescriptionStyle</h1></u>
+  </a>
+  <p>Interface to change description style.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td class="very-big-tds"><small><code>bgColor</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+        </div>
+        <div>
+          <p>CSS 'background' property. <code>rgba(0, 0, 0, .5)</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="very-big-tds"><small><code>textColor</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+        </div>
+        <div>
+          <p>CSS 'color' property. <code>white</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="very-big-tds"><small><code>margin</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>DescriptionMargin</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+        </div>
+        <div>
+          <p>Interface to customize CSS margins</p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <a id="DescriptionMargin" href="https://github.com/Ks89/angular-modal-gallery/tree/master/angular-modal-gallery/libs/angular-modal-gallery">
+    <u class="text-success"><h1 class="text-success">DescriptionMargin</h1></u>
+  </a>
+  <p>Interface to change description's margins.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td class="very-big-tds"><small><code>marginTop</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+        </div>
+        <div>
+          <p>CSS 'margin-top' property. <code>0px</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="very-big-tds"><small><code>marginBottom</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+        </div>
+        <div>
+          <p>CSS 'margin-bottom' property. <code>5px</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="very-big-tds"><small><code>marginLeft</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+        </div>
+        <div>
+          <p>CSS 'margin-left' property. <code>0px</code> by default.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="very-big-tds"><small><code>marginRight</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+        </div>
+        <div>
+          <p>CSS 'margin-right' property. <code>0px</code> by default.</p>
+        </div>
+      </td>
+    </tr>
     </tbody>
   </table>
 

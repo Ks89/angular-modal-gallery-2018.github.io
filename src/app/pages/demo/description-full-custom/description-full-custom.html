@@ -1,14 +1,14 @@
 <div class="container">
 
   <a href="https://github.com/Ks89/angular-modal-gallery/tree/master/src"><u class="text-success"><h1 class="text-success">Description full custom example</h1></u></a>
-  <p>Minimal and simple modal gallery <b class="text-success">with a full custom text description.</b></p>
+  <p>Minimal and simple modal gallery <b class="text-success">with a full custom text description and additional style.</b></p>
   <p><b class="text-success">Description will be replaced with the provided text (plain text or also HTML).</b></p>
   <br>
 
   <h2>Live Demo</h2>
   <br>
   <ks-modal-gallery [modalImages]="images"
-                    [description]="customFullDescription"></ks-modal-gallery>
+                    [description]="customFullCustomDescription"></ks-modal-gallery>
   <br><br>
 
   <section>
@@ -110,9 +110,13 @@
       <tr>
         <td class="very-big-tds"><code>description</code></td>
         <td>
-          <div><i>Value: </i><code>&#123; strategy: DescriptionStrategy.ALWAYS_VISIBLE, customFullDescription: 'Custom full desc ' &#125;</code></div>
+          <div><i>Value: </i><code>&#123; strategy: DescriptionStrategy.ALWAYS_VISIBLE, customFullDescription: 'Custom full desc ',
+            style: &#123; bgColor: 'rgba(255, 0, 0, .5)', textColor: 'blue', margin: &#123; marginTop: '3px', marginBottom: '0px',
+            marginLeft: '5px', marginRight: '5px' &#125; &#125; &#125;
+          </code></div>
           <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>It will use the custom HTML description (remember to use always DescriptionStrategy.ALWAYS_VISIBLE when you want to use customFullDescription). </div>
+          <div>It will use the custom HTML description (remember to use always DescriptionStrategy.ALWAYS_VISIBLE when you want to use customFullDescription)
+            and additional style</div>
         </td>
       </tr>
       <tr>
