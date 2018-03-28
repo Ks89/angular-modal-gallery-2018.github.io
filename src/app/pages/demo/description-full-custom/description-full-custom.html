@@ -111,8 +111,8 @@
         <td class="very-big-tds"><code>description</code></td>
         <td>
           <div><i>Value: </i><code>&#123; strategy: DescriptionStrategy.ALWAYS_VISIBLE, customFullDescription: 'Custom full desc ',
-            style: &#123; bgColor: 'rgba(255, 0, 0, .5)', textColor: 'blue', margin: &#123; marginTop: '3px', marginBottom: '0px',
-            marginLeft: '5px', marginRight: '5px' &#125; &#125; &#125;
+            style: &#123; bgColor: 'rgba(255,0,0,.5)', textColor: 'blue', marginTop: '3px', marginBottom: '0px',
+            marginLeft: '5px', marginRight: '5px', position: 'absolute', top: '0px', height: '25px'  &#125; &#125;
           </code></div>
           <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
           <div>It will use the custom HTML description (remember to use always DescriptionStrategy.ALWAYS_VISIBLE when you want to use customFullDescription)

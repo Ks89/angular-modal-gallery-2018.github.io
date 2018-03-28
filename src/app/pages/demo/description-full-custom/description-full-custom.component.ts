@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { DescriptionStrategy, Description, Image } from 'angular-modal-gallery';
+import { Description, DescriptionStrategy, Image } from 'angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -43,14 +43,16 @@ export class DescriptionFullCustomComponent {
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
     customFullDescription: '<ol><li>Custom</li><li>description of the</li><li>current visible</li><li>image</li></ol>',
     style: {
-      bgColor: 'rgba(255, 0, 0, .5)',
+      bgColor: 'rgba(255,0,0,.5)',
       textColor: 'blue',
-      margin: {
-        marginTop: '3px',
-        marginBottom: '0px',
-        marginLeft: '5px',
-        marginRight: '5px'
-      }
+      marginTop: '3px',
+      marginBottom: '0px',
+      marginLeft: '5px',
+      marginRight: '5px',
+      position: 'absolute',
+      top: '0px',
+      height: '25px'
+      // be careful to use width, in particular with % values
     }
   };
 
@@ -75,14 +77,15 @@ export class DescriptionFullCustomComponent {
     strategy: DescriptionStrategy.ALWAYS_VISIBLE,
     customFullDescription: '<ol><li>Custom</li><li>description of the</li><li>current visible</li><li>image</li></ol>',
     style: {
-      bgColor: 'rgba(255, 0, 0, .5)',
+      bgColor: 'rgba(255,0,0,.5)',
       textColor: 'blue',
-      margin: {
-        marginTop: '3px',
-        marginBottom: '0px',
-        marginLeft: '5px',
-        marginRight: '5px'
-      }
+      marginTop: '3px',
+      marginBottom: '0px',
+      marginLeft: '5px',
+      marginRight: '5px',
+      position: 'absolute',
+      top: '0px',
+      height: '25px'
     }
   };`;
   }
