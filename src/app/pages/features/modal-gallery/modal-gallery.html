@@ -49,7 +49,7 @@
           <td class="big-tds"><small><code>downloadable</code></small></td>
           <td>
             <div>
-              <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>If true, you'll be able to download the current modal image always with keyboard shortcut (<kbd>ctrl</kbd>+<kbd>s</kbd>
@@ -69,7 +69,7 @@
           </td>
           <td>
             <div>
-              <i>Type: </i><code><a [routerLink]="['/features/upper-buttons']">ButtonsConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code><a [routerLink]="['/features/upper-buttons']">ButtonsConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>Interface to choose which buttons to show and handle their behaviour. ModalGalleryComponent passes this object straight to UpperButtonsComponent,
@@ -85,7 +85,7 @@
           </td>
           <td>
             <div>
-              <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>If true, you can click on the semi-transparent background of modal images to close it. <code>true</code> by default.</p>
@@ -100,7 +100,7 @@
           </td>
           <td>
             <div>
-              <i>Type: </i><code><a [routerLink]="['/features/previews']">PreviewConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code><a [routerLink]="['/features/previews']">PreviewConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>Interface to configure previews, for instance to choose either the number, visibility, arrows, sizes.
@@ -117,7 +117,7 @@
           </td>
           <td>
             <div>
-              <i>Type: </i><code><a pageScroll href="#LoadingConfig">LoadingConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code><a pageScroll href="#LoadingConfig">LoadingConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>Interface to hide/show and to configure the modal loading spinner. <code>&#123; enable: true, type: 1 &#125;</code> by default.</p>
@@ -132,7 +132,7 @@
           </td>
           <td>
             <div>
-              <i>Type: </i><code><a pageScroll href="#SlideConfig">SlideConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code><a pageScroll href="#SlideConfig">SlideConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>Interface to enable infinite-sliding (you won't be able to navigate before both the first and after the last images) and to configure side-previews.
@@ -148,7 +148,7 @@
           </td>
           <td>
             <div>
-              <i>Type: </i><code><a pageScroll href="#AccessibilityConfig">AccessibilityConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code><a pageScroll href="#AccessibilityConfig">AccessibilityConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>Interface to customize accessibility features, like alt, titles, aria-labels and so on. ModalGalleryComponent applies a default value with english texts.
@@ -160,7 +160,7 @@
           <td><small><code>description</code></small></td>
           <td class="big-tds">
             <div>
-              <i>Type: </i><code><a pageScroll href="#Description">Description</a></code> interface<span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code><a pageScroll href="#Description">Description</a></code> interface<span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>Interface to specify a custom description either a full string or an object with string properties.
@@ -188,7 +188,7 @@
           </td>
           <td>
             <div>
-              <i>Type: </i><code><a pageScroll href="#KeyboardConfig">KeyboardConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code><a pageScroll href="#KeyboardConfig">KeyboardConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>Interface to configure keyboard's buttons. All properties are optional and with default values. Check <code><a pageScroll href="#KeyboardConfig">KeyboardConfig</a></code> for more information.</p>
@@ -203,7 +203,7 @@
           </td>
           <td>
             <div>
-              <i>Type: </i><code><a [routerLink]="['/features/plain-gallery']">PlainGalleryConfig</a></code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+              <i>Type: </i><code><a [routerLink]="['/features/plain-gallery']">PlainGalleryConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
               <p>Interface to configure thumbnails, for instance to change the layout. Furthermore, it's useful to write full custom layouts (for more info see official demos).
@@ -344,7 +344,7 @@
       <td><small><code>plain</code></small></td>
       <td>
         <div>
-          <i>Type: </i><a [routerLink]="['/features/plain-gallery']"><code>PlainImage</code></a><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><a [routerLink]="['/features/plain-gallery']"><code>PlainImage</code></a><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>Optional interface to configure the thumbnail (or 'plain image').</p>
@@ -378,7 +378,7 @@
         <td><small><code>description</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>Optional description text.
@@ -391,7 +391,7 @@
         <td><small><code>extUrl</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>Optional external URL path. You must use a valid URL, because <code>angular-modal-gallery</code>
@@ -403,7 +403,7 @@
         <td><small><code>title</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>Optional title text. It sets 'title' html's attribute, useful for accessibility purposes.
@@ -415,7 +415,7 @@
         <td><small><code>alt</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>Optional alt text. It sets 'alt' html's attribute, useful for accessibility purposes.
@@ -427,7 +427,7 @@
         <td><small><code>arialLabel</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>Optional aria label text. It sets 'aria-label' html's attribute, useful for accessibility purposes.
@@ -520,7 +520,7 @@
         <td class="very-big-tds"><small><code>imageText</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>It's the beginning part of the description. By default its value is the string 'Image',
@@ -534,7 +534,7 @@
         <td class="very-big-tds"><small><code>numberSeparator</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>It's the text between the current image number and the total number of images.</p>
@@ -546,7 +546,7 @@
         <td class="very-big-tds"><small><code>beforeTextDescription</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>It's the text between the total number of images and the final description text</p>
@@ -558,7 +558,7 @@
         <td class="very-big-tds"><small><code>customFullDescription</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>It's the full text description. If you set this value, all others will be ignored.</p>
@@ -572,7 +572,7 @@
         <td class="very-big-tds"><small><code>style</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>DescriptionStyle</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>DescriptionStyle</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>Interface to change background color, text color, margins, positions, sizes and so on.</p>
@@ -596,7 +596,7 @@
       <td class="very-big-tds"><small><code>bgColor</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'background' property. <code>rgba(0, 0, 0, .5)</code> by default.</p>
@@ -607,7 +607,7 @@
       <td class="very-big-tds"><small><code>textColor</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'color' property. <code>white</code> by default.</p>
@@ -618,7 +618,7 @@
       <td class="very-big-tds"><small><code>marginTop</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'margin-top' property. <code>0px</code> by default.</p>
@@ -629,7 +629,7 @@
       <td class="very-big-tds"><small><code>marginBottom</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'margin-bottom' property. <code>5px</code> by default.</p>
@@ -640,7 +640,7 @@
       <td class="very-big-tds"><small><code>marginLeft</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'margin-left' property. <code>0px</code> by default.</p>
@@ -651,7 +651,7 @@
       <td class="very-big-tds"><small><code>marginRight</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'margin-right' property. <code>0px</code> by default.</p>
@@ -663,7 +663,7 @@
       <td class="very-big-tds"><small><code>position</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'position' property.</p>
@@ -674,7 +674,7 @@
       <td class="very-big-tds"><small><code>top</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'top' property.</p>
@@ -685,7 +685,7 @@
       <td class="very-big-tds"><small><code>bottom</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'bottom' property.</p>
@@ -696,7 +696,7 @@
       <td class="very-big-tds"><small><code>left</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'left' property.</p>
@@ -707,7 +707,7 @@
       <td class="very-big-tds"><small><code>right</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'right' property.</p>
@@ -718,7 +718,7 @@
       <td class="very-big-tds"><small><code>width</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'width' property.</p>
@@ -729,7 +729,7 @@
       <td class="very-big-tds"><small><code>height</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>string</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>CSS 'height' property.</p>
@@ -752,7 +752,7 @@
       <td><small><code>esc</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>Javascript keycode to use instead of the default <kbd>esc</kbd></p>
@@ -763,7 +763,7 @@
       <td><small><code>right</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>Javascript keycode to use instead of the default  <kbd>&rarr;</kbd></p>
@@ -774,7 +774,7 @@
       <td><small><code>left</code></small></td>
       <td>
         <div>
-          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+          <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary float-right">optional</span>
         </div>
         <div>
           <p>Javascript keycode to use instead of the default <kbd>&larr;</kbd></p>
@@ -831,7 +831,7 @@
         <td><small><code>infinite</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>If <code>false</code>, infinite sliding is visible, otherwise not</p>
@@ -842,7 +842,7 @@
         <td><small><code>sidePreviews</code></small></td>
         <td>
           <div>
-            <i>Type: </i><code>SidePreviewsConfig</code><span class="badge badge-pill badge-secondary pull-right">optional</span>
+            <i>Type: </i><code>SidePreviewsConfig</code><span class="badge badge-pill badge-secondary float-right">optional</span>
           </div>
           <div>
             <p>With this property, you can hide/show side-previews or change sizes.</p>

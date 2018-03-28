@@ -51,7 +51,7 @@ export class DescriptionFullCustomComponent {
       marginRight: '5px',
       position: 'absolute',
       top: '0px',
-      height: '25px'
+      height: '125px'
       // be careful to use width, in particular with % values
     }
   };
@@ -85,7 +85,7 @@ export class DescriptionFullCustomComponent {
       marginRight: '5px',
       position: 'absolute',
       top: '0px',
-      height: '25px'
+      height: '125px'
     }
   };`;
   }
