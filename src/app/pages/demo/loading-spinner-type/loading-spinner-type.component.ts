@@ -48,20 +48,33 @@ export class LoadingSpinnerTypeComponent {
 
     this.codeHtml =
       `<p>1. Type STANDARD</p>
-<ks-modal-gallery [modalImages]="images"
-                  [loadingConfig]="{enable: true, type: 1}"></ks-modal-gallery>
-<br>
-<p>2. Type CIRCULAR</p>
-<ks-modal-gallery [modalImages]="images"
-                  [loadingConfig]="{enable: true, type: 2}"></ks-modal-gallery>  <br>
-<br>
-<p>3. Type BARS</p>
-<ks-modal-gallery [modalImages]="images"
-                  [loadingConfig]="{enable: true, type: 3}"></ks-modal-gallery>  <br>
-<br>
-<p>4. Type DOTS</p>
-<ks-modal-gallery [modalImages]="images"
-                  [loadingConfig]="{enable: true, type: 4}"></ks-modal-gallery>  <br><br>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 1}"></ks-modal-gallery>
+  <br>
+  <p>2. Type CIRCULAR</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 2}"></ks-modal-gallery>
+  <br>
+  <p>3. Type BARS</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 3}"></ks-modal-gallery>
+  <br>
+  <p>4. Type DOTS</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 4}"></ks-modal-gallery>
+  <br>
+  <p>5. Type CUBE_FLIPPING</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 5}"></ks-modal-gallery>
+  <br>
+  <p>6. Type CIRCLES</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 6}"></ks-modal-gallery>
+  <br>
+  <p>7. Type EXPLOSING_SQUARES</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 7}"></ks-modal-gallery>
+  <br>
   `;
   }
 }

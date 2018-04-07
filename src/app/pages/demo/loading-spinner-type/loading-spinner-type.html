@@ -23,6 +23,18 @@
   <p>4. Type DOTS</p>
   <ks-modal-gallery [modalImages]="images"
                     [loadingConfig]="{enable: true, type: 4}"></ks-modal-gallery>
+  <br>
+  <p>5. Type CUBE_FLIPPING</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 5}"></ks-modal-gallery>
+  <br>
+  <p>6. Type CIRCLES</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 6}"></ks-modal-gallery>
+  <br>
+  <p>7. Type EXPLOSING_SQUARES</p>
+  <ks-modal-gallery [modalImages]="images"
+                    [loadingConfig]="{enable: true, type: 7}"></ks-modal-gallery>
   <br><br>
 
   <section>
@@ -98,7 +110,7 @@
           <td>
             <div><i>Value: </i><code>&#123; enable: true, type: 1 &#125;</code></div>
             <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-            <div>It will show loading spinners of different types, based on the value of 'type' (number from 1 to 4, also available as LoadingType enum)</div>
+            <div>It will show loading spinners of different types, based on the value of 'type' (number from 1 to 7, also available as LoadingType enum)</div>
           </td>
         </tr>
         <tr>
