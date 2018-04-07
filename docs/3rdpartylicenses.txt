@@ -54,7 +54,7 @@ MIT License
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE
 
-angular-modal-gallery@5.4.0-beta.2
+angular-modal-gallery@5.5.0
 MIT
 The MIT License (MIT)
 
