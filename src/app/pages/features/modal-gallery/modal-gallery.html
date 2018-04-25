@@ -33,6 +33,20 @@
     <table class="table table-hover table-sm">
       <tbody>
         <tr>
+          <td class="big-tds"><small><code>id</code></small></td>
+          <td>
+            <div>
+              <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary float-right">optional</span>
+            </div>
+            <div>
+              Unique id >= 0 of the current modal gallery, used by <a pageScroll href="#GalleryService"><code>GalleryService</code></a>.
+            </div>
+            <div>
+              <b>This will be a mandatory input from angular-modal-gallery 6 or greater.</b>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td class="big-tds"><small><code>modalImages</code></small></td>
           <td>
             <div>
@@ -947,6 +961,31 @@
           <p style="margin-bottom: 0;">It can be a valid value for the css 'height' property.</p>
           <p style="margin-bottom: 0;">For instance, you can use either '100px', 'auto', '20%'.</p>
           <p style="margin-bottom: 0;">Default values change depending by the related component.</p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <a id="GalleryService" href="https://github.com/Ks89/angular-modal-gallery/tree/master/libs/angular-modal-gallery">
+    <u class="text-success"><h1 class="text-success">GalleryService</h1></u>
+  </a>
+  <p>Service to interact with modal gallery without clicking on plain-gallery. For instance, you can open modal gallery from your Component's code instead of clicking on a thumb in plain gallery.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td><small><code>openGallery ( galleryId, index )</code></small></td>
+      <td>
+        <div>
+          <i>Input types: </i><code>galleryId: number | undefined</code>&nbsp;&nbsp;and&nbsp;&nbsp;<code>index: number</code>
+        </div>
+        <div>
+          <p>Method to open an image (index) of modal gallery (id). You have to provide an index >= 0 and a galleryId >= 0.
+            Also, remember that ids must be unique across your web page,
+            so every instance of modal gallery must have a different id.</p>
         </div>
       </td>
     </tr>

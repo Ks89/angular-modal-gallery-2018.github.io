@@ -26,6 +26,7 @@ import { PlainGalleryCustomWithDescComponent } from './plain-gallery-custom-with
 import { PlainGalleryImagePointerComponent } from './plain-gallery-image-pointer/plain-gallery-image-pointer.component';
 import { PlainGalleryLayoutsComponent } from './plain-gallery-layouts/plain-gallery-layouts.component';
 import { PlainGalleryAtagsComponent } from './plain-gallery-atags/plain-gallery-atags.component';
+import { GalleryServiceComponent } from './gallery-service/gallery-service.component';
 
 export const FEATURES_COMPONENTS = [
   DemoComponent,
@@ -56,5 +57,6 @@ export const FEATURES_COMPONENTS = [
   PlainGalleryCustomWithDescComponent,
   PlainGalleryImagePointerComponent,
   PlainGalleryLayoutsComponent,
-  PlainGalleryAtagsComponent
+  PlainGalleryAtagsComponent,
+  GalleryServiceComponent
 ];

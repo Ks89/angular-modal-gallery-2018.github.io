@@ -28,6 +28,7 @@ import { PlainGalleryLayoutsComponent } from './plain-gallery-layouts/plain-gall
 import { PlainGalleryAtagsComponent } from './plain-gallery-atags/plain-gallery-atags.component';
 import { PlainGalleryImagePointerComponent } from './plain-gallery-image-pointer/plain-gallery-image-pointer.component';
 import { PlainGalleryCustomWithDescComponent } from './plain-gallery-custom-with-desc/plain-gallery-custom-with-desc.component';
+import { GalleryServiceComponent } from './gallery-service/gallery-service.component';
 
 export const routes: Routes = [
   {
@@ -71,7 +72,9 @@ export const routes: Routes = [
       {path: 'plain-image-pointer', component: PlainGalleryImagePointerComponent},
       {path: 'plain-custom-desc', component: PlainGalleryCustomWithDescComponent},
 
-      {path: 'accessibility', component: AccessibilityComponent}
+      {path: 'accessibility', component: AccessibilityComponent},
+
+      {path: 'gallery-service', component: GalleryServiceComponent}
     ]
   }
 ];
