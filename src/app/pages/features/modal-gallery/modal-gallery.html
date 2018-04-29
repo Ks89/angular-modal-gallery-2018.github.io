@@ -225,6 +225,21 @@
             </div>
           </td>
         </tr>
+        <tr>
+          <td class="big-tds">
+            <div>
+              <small><code>currentImageConfig</code></small>
+            </div>
+          </td>
+          <td>
+            <div>
+              <i>Type: </i><code><a pageScroll href="#CurrentImageConfig">CurrentImageConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
+            </div>
+            <div>
+              <p>Interface to configure current image in modal-gallery. For instance you can disable navigation when you click on the current image (enabled by default).</p>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
   </section>
@@ -961,6 +976,29 @@
           <p style="margin-bottom: 0;">It can be a valid value for the css 'height' property.</p>
           <p style="margin-bottom: 0;">For instance, you can use either '100px', 'auto', '20%'.</p>
           <p style="margin-bottom: 0;">Default values change depending by the related component.</p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <a id="CurrentImageConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/libs/angular-modal-gallery">
+    <u class="text-success"><h1 class="text-success">CurrentImageConfig</h1></u>
+  </a>
+  <p>Interface to customize current image in modal gallery.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+    <tr>
+      <td><small><code>navigateOnClick</code></small></td>
+      <td>
+        <div>
+          <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary float-right">optional</span>
+        </div>
+        <div>
+          <p>If false, click events on the current image will be ignored, otherwise will navigate to the next image.</p>
         </div>
       </td>
     </tr>
