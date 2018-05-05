@@ -9,5 +9,6 @@ describe('angular-modal-gallery-2018.github.io App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
+    expect(true).toBe(true);
   });
 });
