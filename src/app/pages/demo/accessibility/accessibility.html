@@ -38,6 +38,13 @@
       </thead>
       <tbody>
         <tr>
+          <td><code>id</code></td>
+          <td>
+            <div><i>Value: </i><code>0</code></div>
+            <div><b class="text-success">Unique id</b></div>
+          </td>
+        </tr>
+        <tr>
           <td><code>modalImages</code></td>
           <td>
             <div><i>Value: </i><code>Image[]</code></div>
@@ -45,11 +52,11 @@
           </td>
         </tr>
         <tr>
-          <td><code>downloadable</code></td>
+          <td><code>currentImageConfig</code></td>
           <td>
             <div><i>Value: </i><code>undefined</code></div>
             <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-            <div>No downloadable at all</div>
+            <div>No downloadable at all, default loading spinner, clickable current image and with default description (always visible)</div>
           </td>
         </tr>
         <tr>
@@ -85,14 +92,6 @@
           </td>
         </tr>
         <tr>
-          <td><code>loadingConfig</code></td>
-          <td>
-            <div><i>Value: </i><code>undefined</code></div>
-            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-            <div>It will show the loading spinner</div>
-          </td>
-        </tr>
-        <tr>
           <td><code>slideConfig</code></td>
           <td>
             <div><i>Value: </i><code>undefined</code></div>
@@ -106,14 +105,6 @@
             <div><i>Value: </i>see <code>accessibilityConfig</code> above</div>
             <div><small>(an object with all default english accessibility values by default)</small></div>
             <div>Custom accessibility values</div>
-          </td>
-        </tr>
-        <tr>
-          <td><code>description</code></td>
-          <td>
-            <div><i>Value: </i><code>undefined</code></div>
-            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-            <div>It will use the default description (always visible)</div>
           </td>
         </tr>
         <tr>

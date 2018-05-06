@@ -37,100 +37,91 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td><code>modalImages</code></td>
-        <td>
-          <div><i>Value: </i><code>Image[]</code></div>
-          <div><b class="text-success">Array of <code>Image</code> objects</b></div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>downloadable</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>No downloadable at all</div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>buttonsConfig</code></td>
-        <td>
-          <div><i>Value: </i>see the ButtonsConfig object above</div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>It will show only the exturl button as a custom button to navigate to an external url in a new tab</div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>enableCloseOutside</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>Clicking on the semi-transparent background, modal-gallery will close</div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>dotsConfig</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>It will show dots below the current modal image</div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>previewConfig</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>It will show 3 clickable previews (default size) with arrows</div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>loadingConfig</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>It will show the loading spinner</div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>slideConfig</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>Infinite sliding is disabled by default and side previews are visible with a default size</div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>accessibilityConfig</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><small>(an object with all default english accessibility values by default)</small></div>
-          <div>English accessibility values</div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>description</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>It will use the default description (always visible)</div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>keyboardConfig</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-        </td>
-      </tr>
-      <tr>
-        <td><code>plainGalleryConfig</code></td>
-        <td>
-          <div><i>Value: </i><code>undefined</code></div>
-          <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
-          <div>Row plain gallery with default layout</div>
-        </td>
-      </tr>
+        <tr>
+          <td><code>id</code></td>
+          <td>
+            <div><i>Value: </i><code>0</code></div>
+            <div><b class="text-success">Unique id</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>modalImages</code></td>
+          <td>
+            <div><i>Value: </i><code>Image[]</code></div>
+            <div><b class="text-success">Array of <code>Image</code> objects</b></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>currentImageConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>No downloadable at all, default loading spinner, clickable current image and with default description (always visible)</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>buttonsConfig</code></td>
+          <td>
+            <div><i>Value: </i>see the ButtonsConfig object above</div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>It will show only the exturl button as a custom button to navigate to an external url in a new tab</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>enableCloseOutside</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>Clicking on the semi-transparent background, modal-gallery will close</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>dotsConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>It will show dots below the current modal image</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>previewConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>It will show 3 clickable previews (default size) with arrows</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>slideConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>Infinite sliding is disabled by default and side previews are visible with a default size</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>accessibilityConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><small>(an object with all default english accessibility values by default)</small></div>
+            <div>English accessibility values</div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>keyboardConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>plainGalleryConfig</code></td>
+          <td>
+            <div><i>Value: </i><code>undefined</code></div>
+            <div><a [routerLink]="['/features/defaultValues']">default value</a></div>
+            <div>Row plain gallery with default layout</div>
+          </td>
+        </tr>
       </tbody>
     </table>
   </section>
