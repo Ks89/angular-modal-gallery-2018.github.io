@@ -28,7 +28,7 @@ import { TitleService } from '../../../core/services/title.service';
 @Component({
   selector: 'app-input-default-values-page',
   templateUrl: 'input-default-values.html',
-  styleUrls: ['input-default-values.html']
+  styleUrls: ['input-default-values.scss']
 })
 export class InputDefaultValuesComponent {
   constructor(private titleService: TitleService) {

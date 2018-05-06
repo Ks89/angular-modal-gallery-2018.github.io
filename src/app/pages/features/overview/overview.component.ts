@@ -25,7 +25,7 @@
 import { Component } from '@angular/core';
 import { TitleService } from '../../../core/services/title.service';
 
-import { environment } from '../../../../environments/environment';
+import { environment } from '../../../../environments/environment';
 
 const PATH = environment.imgPath;
 

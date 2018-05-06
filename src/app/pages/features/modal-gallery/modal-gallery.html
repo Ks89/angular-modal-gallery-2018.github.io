@@ -36,13 +36,10 @@
           <td class="big-tds"><small><code>id</code></small></td>
           <td>
             <div>
-              <i>Type: </i><code>number</code><span class="badge badge-pill badge-secondary float-right">optional</span>
+              <i>Type: </i><code>number</code>
             </div>
             <div>
-              Unique id >= 0 of the current modal gallery, used by <a pageScroll href="#GalleryService"><code>GalleryService</code></a>.
-            </div>
-            <div>
-              <b>This will be a mandatory input from angular-modal-gallery 6 or greater.</b>
+              A mandatory unique id >= 0 of the current modal gallery, used by <a pageScroll href="#GalleryService"><code>GalleryService</code></a>.
             </div>
           </td>
         </tr>
@@ -56,22 +53,6 @@
               The mandatory array of <a pageScroll href="#Image"><code>Image</code></a> objects, that represent both the thumb gallery and the
               modal images. In fact, an <a pageScroll href="#Image"><code>Image</code></a> is an object with both thumb and
               image source paths with other additional configuration parameters. For more info check <a pageScroll href="#Image"><code>Image</code></a>.
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds"><small><code>downloadable</code></small></td>
-          <td>
-            <div>
-              <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary float-right">optional</span>
-            </div>
-            <div>
-              <p>If true, you'll be able to download the current modal image always with keyboard shortcut (<kbd>ctrl</kbd>+<kbd>s</kbd>
-                or <kbd>cmd</kbd>+<kbd>s</kbd>),
-                but the download button will be visible only when <code>showDownloadButton=true</code>. Otherwise,
-                all download features will be disabled. <code>downloadable=false</code> by default</p>
-              <p>Please be careful: on SmartPhones and Tablets you can't use keyboard shortcuts, so to download images, please enable <code>downloadable</code> and use
-                <a [routerLink]="['/features/upper-buttons']"><code>ButtonsStrategy.SIMPLE</code></a> or higher to add the download button.</p>
             </div>
           </td>
         </tr>
@@ -126,21 +107,6 @@
         <tr>
           <td class="big-tds">
             <div>
-              <small><code>loadingConfig</code></small>
-            </div>
-          </td>
-          <td>
-            <div>
-              <i>Type: </i><code><a pageScroll href="#LoadingConfig">LoadingConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
-            </div>
-            <div>
-              <p>Interface to hide/show and to configure the modal loading spinner. <code>&#123; enable: true, type: 1 &#125;</code> by default.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="big-tds">
-            <div>
               <small><code>slideConfig</code></small>
             </div>
           </td>
@@ -167,30 +133,6 @@
             <div>
               <p>Interface to customize accessibility features, like alt, titles, aria-labels and so on. ModalGalleryComponent applies a default value with english texts.
                 This default config object is exported as <small><code><a [routerLink]="['/features/default-values']">KS_DEFAULT_ACCESSIBILITY_CONFIG'</a></code></small>.</p>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td><small><code>description</code></small></td>
-          <td class="big-tds">
-            <div>
-              <i>Type: </i><code><a pageScroll href="#Description">Description</a></code> interface<span class="badge badge-pill badge-secondary float-right">optional</span>
-            </div>
-            <div>
-              <p>Interface to specify a custom description either a full string or an object with string properties.
-                The first one is the entire string (for instance 'Description of Image 1/2 - My family - bla bla'),
-                the second one is an object with these properties <code>imageText</code> (default is 'Image'),
-                <code>numberSeparator</code> (default is '/'), <code>beforeTextDescription</code> (default is ' - ').
-                You can also use HTML descriptions, but remember that Angular will sanitize dangerous code, so for
-                instance you cannot add input fields and so on, but only simple and secure HTML.
-              </p>
-              <p>
-                To customize part of the description, you can refer to this example: <small>`<code>imageText</code> <i>2</i> <code>numberSeparator</code> <i>12</i> <code>beforeTextDescription</code> <i>bla bla</i>`</small>.
-                As you can see, "red" parts are customizable using the three properties described above. Furthermore, `<i>2</i>` is the index of the visible image, `<i>12</i>` the total number of images and `<i>bla bla</i>`
-                the description passed thanks to the input <a pageScroll href="#Image"><code>Image</code></a> object.
-              </p>
-              <p>Attention please! There aren't spaces between values. So if you want a 'text - text' you have to specify exactly ' - ', with the two spaces</p>
-              <p>Also, from version 5.4.0, you can use this interface to change description's style.</p>
             </div>
           </td>
         </tr>
@@ -236,7 +178,9 @@
               <i>Type: </i><code><a pageScroll href="#CurrentImageConfig">CurrentImageConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
             </div>
             <div>
-              <p>Interface to configure current image in modal-gallery. For instance you can disable navigation when you click on the current image (enabled by default).</p>
+              <p>Interface to configure current image in modal-gallery. For instance you can either disable navigation when you click on the current image (enabled by default),
+                or change descriptions, loading spinners or enable download features.</p>
+              <p>For more information, please see the <a pageScroll href="#CurrentImageConfig">CurrentImageConfig</a>'s section</p>
             </div>
           </td>
         </tr>
@@ -496,6 +440,84 @@
           <div>
             <p>The result/data of the emitted event. For example, it could be the index of the current image
               or a boolean to say if images are ready to display and so on.</p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <a id="CurrentImageConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/libs/angular-modal-gallery">
+    <u class="text-success"><h1 class="text-success">CurrentImageConfig</h1></u>
+  </a>
+  <p>Interface to customize current image in modal gallery.</p>
+  <br>
+  <table class="table table-hover table-sm">
+    <tbody>
+      <tr>
+        <td class="big-tds"><small><code>downloadable</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary float-right">optional</span>
+          </div>
+          <div>
+            <p>If true, you'll be able to download the current modal image always with keyboard shortcut (<kbd>ctrl</kbd>+<kbd>s</kbd>
+              or <kbd>cmd</kbd>+<kbd>s</kbd>),
+              but the download button will be visible only when <code>showDownloadButton=true</code>. Otherwise,
+              all download features will be disabled. <code>downloadable=false</code> by default</p>
+            <p>Please be careful: on SmartPhones and Tablets you can't use keyboard shortcuts, so to download images, please enable <code>downloadable</code> and use
+              <a [routerLink]="['/features/upper-buttons']"><code>ButtonsStrategy.SIMPLE</code></a> or higher to add the download button.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="big-tds">
+          <div>
+            <small><code>loadingConfig</code></small>
+          </div>
+        </td>
+        <td>
+          <div>
+            <i>Type: </i><code><a pageScroll href="#LoadingConfig">LoadingConfig</a></code><span class="badge badge-pill badge-secondary float-right">optional</span>
+          </div>
+          <div>
+            <p>Interface to hide/show and to configure the modal loading spinner. <code>&#123; enable: true, type: 1 &#125;</code> by default.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>description</code></small></td>
+        <td class="big-tds">
+          <div>
+            <i>Type: </i><code><a pageScroll href="#Description">Description</a></code> interface<span class="badge badge-pill badge-secondary float-right">optional</span>
+          </div>
+          <div>
+            <p>Interface to specify a custom description either a full string or an object with string properties.
+              The first one is the entire string (for instance 'Description of Image 1/2 - My family - bla bla'),
+              the second one is an object with these properties <code>imageText</code> (default is 'Image'),
+              <code>numberSeparator</code> (default is '/'), <code>beforeTextDescription</code> (default is ' - ').
+              You can also use HTML descriptions, but remember that Angular will sanitize dangerous code, so for
+              instance you cannot add input fields and so on, but only simple and secure HTML.
+            </p>
+            <p>
+              To customize part of the description, you can refer to this example: <small>`<code>imageText</code> <i>2</i> <code>numberSeparator</code> <i>12</i> <code>beforeTextDescription</code> <i>bla bla</i>`</small>.
+              As you can see, "red" parts are customizable using the three properties described above. Furthermore, `<i>2</i>` is the index of the visible image, `<i>12</i>` the total number of images and `<i>bla bla</i>`
+              the description passed thanks to the input <a pageScroll href="#Image"><code>Image</code></a> object.
+            </p>
+            <p>Attention please! There aren't spaces between values. So if you want a 'text - text' you have to specify exactly ' - ', with the two spaces</p>
+            <p>Also, from version 5.4.0, you can use this interface to change description's style.</p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><small><code>navigateOnClick</code></small></td>
+        <td>
+          <div>
+            <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary float-right">optional</span>
+          </div>
+          <div>
+            <p>If false, click events on the current image will be ignored, otherwise will navigate to the next image.</p>
           </div>
         </td>
       </tr>
@@ -984,29 +1006,6 @@
 
   <br>
 
-  <a id="CurrentImageConfig" href="https://github.com/Ks89/angular-modal-gallery/tree/master/libs/angular-modal-gallery">
-    <u class="text-success"><h1 class="text-success">CurrentImageConfig</h1></u>
-  </a>
-  <p>Interface to customize current image in modal gallery.</p>
-  <br>
-  <table class="table table-hover table-sm">
-    <tbody>
-    <tr>
-      <td><small><code>navigateOnClick</code></small></td>
-      <td>
-        <div>
-          <i>Type: </i><code>boolean</code><span class="badge badge-pill badge-secondary float-right">optional</span>
-        </div>
-        <div>
-          <p>If false, click events on the current image will be ignored, otherwise will navigate to the next image.</p>
-        </div>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-
-  <br>
-
   <a id="GalleryService" href="https://github.com/Ks89/angular-modal-gallery/tree/master/libs/angular-modal-gallery">
     <u class="text-success"><h1 class="text-success">GalleryService</h1></u>
   </a>
@@ -1021,7 +1020,7 @@
           <i>Input types: </i><code>galleryId: number | undefined</code>&nbsp;&nbsp;and&nbsp;&nbsp;<code>index: number</code>
         </div>
         <div>
-          <p>Method to open an image (index) of modal gallery (id). You have to provide an index >= 0 and a galleryId >= 0.
+          <p>Method to open an image (index) of modal gallery (id). You have to provide both an index >= 0 and a galleryId >= 0.
             Also, remember that ids must be unique across your web page,
             so every instance of modal gallery must have a different id.</p>
         </div>

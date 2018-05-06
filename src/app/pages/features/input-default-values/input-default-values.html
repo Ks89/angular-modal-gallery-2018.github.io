@@ -15,15 +15,22 @@
       </thead>
       <tbody>
         <tr>
+          <td><small><code>id</code></small></td>
+          <td>
+            <div>Mandatory field, without a default value</div>
+          </td>
+        </tr>
+        <tr>
           <td><small><code>modalImages</code></small></td>
           <td>
             <div>Mandatory field, without a default value</div>
           </td>
         </tr>
         <tr>
-          <td><small><code>downloadable</code></small></td>
+          <td><small><code>currentImageConfig</code></small></td>
           <td>
-            <div><small>false</small></div>
+            <div><small>&#123; navigateOnClick: true, downloadable: false, loadingConfig: &#123;enable: true, type: LoadingType.STANDARD&#125;, description: &#123; strategy: DescriptionStrategy.ALWAYS_VISIBLE, imageText: 'Image ', numberSeparator: '/', beforeTextDescription: ' - ',
+              style: &#123; bgColor: 'rgba(0,0,0,.5)', textColor: 'white', marginTop: '0px', marginBottom: '5px', marginLeft: '0px', marginRight: '0px' &#125; &#125; &#125;</small></div>
           </td>
         </tr>
         <tr>
@@ -45,12 +52,6 @@
           </td>
         </tr>
         <tr>
-          <td><small><code>loadingConfig</code></small></td>
-          <td>
-            <div><small>&#123;enable: true, type: LoadingType.STANDARD&#125;</small></div>
-          </td>
-        </tr>
-        <tr>
           <td><small><code>slideConfig</code></small></td>
           <td>
             <div><small>&#123; infinite: false, sidePreviews: &#123; show: true, size: &#123; width: '100px', height: 'auto' &#125; &#125; &#125;</small></div>
@@ -63,14 +64,6 @@
           </td>
         </tr>
         <tr>
-          <td><small><code>description</code></small></td>
-          <td>
-            <div><small>&#123; strategy: DescriptionStrategy.ALWAYS_VISIBLE, imageText: 'Image ', numberSeparator: '/', beforeTextDescription: ' - ',
-              style: &#123; bgColor: 'rgba(0,0,0,.5)', textColor: 'white', marginTop: '0px', marginBottom: '5px', marginLeft: '0px', marginRight: '0px' &#125; &#125;
-            </small></div>
-          </td>
-        </tr>
-        <tr>
           <td><small><code>keyboardConfig</code></small></td>
           <td>
             <div><kbd>esc</kbd>, <kbd>&rarr;</kbd>, <kbd>&larr;</kbd></div>
@@ -80,12 +73,6 @@
           <td><small><code>plainGalleryConfig</code></small></td>
           <td>
             <div><small>&#123; strategy: PlainGalleryStrategy.ROW, layout: this.defaultLayout, advanced: &#123; aTags: false, additionalBackground: '50% 50%/cover' &#125; &#125;</small></div>
-          </td>
-        </tr>
-        <tr>
-          <td><small><code>currentImageConfig</code></small></td>
-          <td>
-            <div><small>&#123; navigateOnClick: true &#125;</small></div>
           </td>
         </tr>
       </tbody>
