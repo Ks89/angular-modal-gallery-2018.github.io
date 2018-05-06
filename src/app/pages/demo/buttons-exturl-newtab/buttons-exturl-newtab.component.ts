@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Action, ButtonEvent, ButtonsConfig, ButtonsStrategy, ButtonType, Image, ImageModalEvent } from 'angular-modal-gallery';
+import { Action, ButtonEvent, ButtonsConfig, ButtonsStrategy, ButtonType, Image, ImageModalEvent } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -59,8 +59,8 @@ export class ButtonsExturlNewtabComponent {
     this.titleService.titleEvent.emit('Examples - Exturl button in a new tab');
 
     this.codeHtml =
-      `  <ks-modal-gallery [modalImages]="images"
-    [downloadable]="true"
+      `  <ks-modal-gallery [id]="0" [modalImages]="images"
+    [currentImageConfig]="{downloadable: true}"
     [buttonsConfig]="customButtonsConfigExtUrlNewTab"></ks-modal-gallery>`;
 
     this.codeTypescript =

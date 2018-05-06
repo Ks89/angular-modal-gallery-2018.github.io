@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Action, ButtonEvent, ButtonsConfig, ButtonsStrategy, ButtonType, Image, ImageModalEvent } from 'angular-modal-gallery';
+import { Action, ButtonEvent, ButtonsConfig, ButtonsStrategy, ButtonType, Image, ImageModalEvent } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -65,19 +65,19 @@ export class ButtonsStrategiesComponent {
 
     this.codeHtml =
       `  <p>1. Strategy DEFAULT</p>
-  <ks-modal-gallery [modalImages]="images"
+  <ks-modal-gallery [id]="0" [modalImages]="images"
                     [buttonsConfig]="buttonsConfigDefault"></ks-modal-gallery>
   <br>
   <p>2. Strategy SIMPLE</p>
-  <ks-modal-gallery [modalImages]="images"
+  <ks-modal-gallery [id]="1" [modalImages]="images"
                     [buttonsConfig]="buttonsConfigSimple"></ks-modal-gallery>
   <br>
   <p>3. Strategy ADVANCED</p>
-  <ks-modal-gallery [modalImages]="images"
+  <ks-modal-gallery [id]="2" [modalImages]="images"
                     [buttonsConfig]="buttonsConfigAdvanced"></ks-modal-gallery>
   <br>
   <p>4. Strategy FULL</p>
-  <ks-modal-gallery [modalImages]="images"
+  <ks-modal-gallery [id]="3" [modalImages]="images"
                     [buttonsConfig]="buttonsConfigFull"
                     (show)="onVisibleIndex($event)"
                     (buttonBeforeHook)="onButtonBeforeHook($event)"

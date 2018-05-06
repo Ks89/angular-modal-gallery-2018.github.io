@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Image } from 'angular-modal-gallery';
+import { Image } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -48,7 +48,7 @@ export class InfiniteSlidingComponent {
     this.titleService.titleEvent.emit('Examples - Infinite sliding');
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
     [slideConfig]="{infinite: true, sidePreviews: {show: false}}"></ks-modal-gallery>`;
   }
 }

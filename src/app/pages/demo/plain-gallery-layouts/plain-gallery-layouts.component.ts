@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { GridLayout, Image, LineLayout, PlainGalleryConfig, PlainGalleryStrategy } from 'angular-modal-gallery';
+import { GridLayout, Image, LineLayout, PlainGalleryConfig, PlainGalleryStrategy } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -66,25 +66,25 @@ export class PlainGalleryLayoutsComponent {
     this.codeHtml = `<section>
     <h3>Plain gallery layout (limit 2) and custom size</h3>
     <br>
-    <ks-modal-gallery [modalImages]="images"
+    <ks-modal-gallery [id]="0" [modalImages]="images"
                       [plainGalleryConfig]="plainGalleryRow"></ks-modal-gallery>
   </section>
   <section>
     <h3>Plain gallery row layout space around (limit 2)</h3>
     <br>
-    <ks-modal-gallery [modalImages]="images"
+    <ks-modal-gallery [id]="1" [modalImages]="images"
                       [plainGalleryConfig]="plainGalleryRowSpaceAround"></ks-modal-gallery>
   </section>
   <section>
     <h3>Plain gallery column layout (limit 3)</h3>
     <br>
-    <ks-modal-gallery [modalImages]="images"
+    <ks-modal-gallery [id]="2" [modalImages]="images"
                       [plainGalleryConfig]="plainGalleryColumn"></ks-modal-gallery>
   </section>
   <section>
     <h3>Plain gallery grid layout and custom size</h3>
     <br>
-    <ks-modal-gallery [modalImages]="images"
+    <ks-modal-gallery [id]="3" [modalImages]="images"
                       [plainGalleryConfig]="plainGalleryGrid"></ks-modal-gallery>
   </section>`;
 

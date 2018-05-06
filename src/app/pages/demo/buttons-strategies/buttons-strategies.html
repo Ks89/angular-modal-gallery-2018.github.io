@@ -9,19 +9,19 @@
   <h2>Live Demo</h2>
   <br>
   <p>1. Strategy DEFAULT</p>
-  <ks-modal-gallery [modalImages]="images"
+  <ks-modal-gallery [id]="0" [modalImages]="images"
                     [buttonsConfig]="buttonsConfigDefault"></ks-modal-gallery>
   <br>
   <p>2. Strategy SIMPLE</p>
-  <ks-modal-gallery [modalImages]="images"
+  <ks-modal-gallery [id]="1" [modalImages]="images"
                     [buttonsConfig]="buttonsConfigSimple"></ks-modal-gallery>
   <br>
   <p>3. Strategy ADVANCED</p>
-  <ks-modal-gallery [modalImages]="images"
+  <ks-modal-gallery [id]="2" [modalImages]="images"
                     [buttonsConfig]="buttonsConfigAdvanced"></ks-modal-gallery>
   <br>
   <p>4. Strategy FULL</p>
-  <ks-modal-gallery [modalImages]="images"
+  <ks-modal-gallery [id]="3" [modalImages]="images"
                     [buttonsConfig]="buttonsConfigFull"
                     (show)="onVisibleIndex($event)"
                     (buttonBeforeHook)="onButtonBeforeHook($event)"

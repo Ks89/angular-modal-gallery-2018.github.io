@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { AdvancedLayout, Image, PlainGalleryConfig, PlainGalleryStrategy } from 'angular-modal-gallery';
+import { AdvancedLayout, Image, PlainGalleryConfig, PlainGalleryStrategy } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -64,7 +64,7 @@ export class PlainGalleryCustomWithDescComponent {
       </figure>
     </ng-container>
   </div>
-  <ks-modal-gallery [modalImages]="images"
+  <ks-modal-gallery [id]="0" [modalImages]="images"
                     [plainGalleryConfig]="customPlainGalleryRowDescConfig"></ks-modal-gallery>
 `;
 

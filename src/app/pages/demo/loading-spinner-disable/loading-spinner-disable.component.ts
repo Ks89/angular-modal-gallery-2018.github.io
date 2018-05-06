@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Image } from 'angular-modal-gallery';
+import { Image } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -47,7 +47,7 @@ export class LoadingSpinnerDisableComponent {
     this.titleService.titleEvent.emit('Examples - Loading spinner disabled');
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
-    [loadingConfig]="{enable: false, type: 1}"></ks-modal-gallery>`;
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
+    [currentImageConfig]="{loadingConfig: {enable: false, type: 1}}"></ks-modal-gallery>`;
   }
 }

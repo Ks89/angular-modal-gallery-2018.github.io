@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Image } from 'angular-modal-gallery';
+import { Image } from '@ks89/angular-modal-gallery';
 
 import { environment } from '../../../environments/environment';
 

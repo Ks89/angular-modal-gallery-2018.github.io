@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Image } from 'angular-modal-gallery';
+import { Image } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -47,7 +47,7 @@ export class PreviewsLengthComponent {
     this.titleService.titleEvent.emit('Examples - Previews length');
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
     [previewConfig]="{visible: true, number: 1}"></ks-modal-gallery>`;
   }
 }

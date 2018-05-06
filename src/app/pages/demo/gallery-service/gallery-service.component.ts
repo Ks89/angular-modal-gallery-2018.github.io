@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Image, GalleryService } from 'angular-modal-gallery';
+import { Image, GalleryService } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';

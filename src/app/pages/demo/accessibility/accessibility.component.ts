@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Image, AccessibilityConfig } from 'angular-modal-gallery';
+import { Image, AccessibilityConfig } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -79,7 +79,7 @@ export class AccessibilityComponent {
     this.titleService.titleEvent.emit('Examples - Custom accessibility');
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
     [accessibilityConfig]="accessibilityConfig"></ks-modal-gallery>`;
 
     this.codeTypescript =

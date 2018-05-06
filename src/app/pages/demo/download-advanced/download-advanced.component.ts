@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { ButtonsConfig, ButtonsStrategy, Image } from 'angular-modal-gallery';
+import { ButtonsConfig, ButtonsStrategy, Image } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -52,8 +52,8 @@ export class DownloadAdvancedComponent {
     this.titleService.titleEvent.emit('Examples - Download advanced');
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
-    [downloadable]="true"
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
+    [currentImageConfig]="{downloadable: true}"
     [buttonsConfig]="buttonsConfigSimple"></ks-modal-gallery>`;
 
     this.codeTypescript =

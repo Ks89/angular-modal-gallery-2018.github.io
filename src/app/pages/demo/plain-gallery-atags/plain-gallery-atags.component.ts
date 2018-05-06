@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Image, LineLayout, PlainGalleryConfig, PlainGalleryStrategy } from 'angular-modal-gallery';
+import { Image, LineLayout, PlainGalleryConfig, PlainGalleryStrategy } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -53,7 +53,7 @@ export class PlainGalleryAtagsComponent {
     this.titleService.titleEvent.emit(`Examples - Plain gallery with <a> tags`);
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
     [plainGalleryConfig]="plainGalleryRowATags"></ks-modal-gallery>`;
 
     this.codeTypescript = `

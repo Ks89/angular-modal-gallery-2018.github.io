@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { ButtonEvent, ButtonsConfig, ButtonsStrategy, ButtonType, Image } from 'angular-modal-gallery';
+import { ButtonEvent, ButtonsConfig, ButtonsStrategy, ButtonType, Image } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -82,8 +82,8 @@ export class ButtonsCustomFaComponent {
     this.titleService.titleEvent.emit('Examples - Custom buttons with Font Awesome 5');
 
     this.codeHtml =
-      `  <ks-modal-gallery [modalImages]="images"
-    [downloadable]="true"
+      `  <ks-modal-gallery [id]="0" [modalImages]="images"
+    [currentImageConfig]="{downloadable: true}"
     [buttonsConfig]="customButtonsConfig"
     (buttonBeforeHook)="onCustomButtonBeforeHook($event)"
     (buttonAfterHook)="onCustomButtonAfterHook($event)"></ks-modal-gallery>`;

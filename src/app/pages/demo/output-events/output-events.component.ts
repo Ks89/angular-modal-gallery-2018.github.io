@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Action, ButtonEvent, Image, ImageModalEvent } from 'angular-modal-gallery';
+import { Action, ButtonEvent, Image, ImageModalEvent } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -56,7 +56,7 @@ export class OutputEventsComponent {
     this.titleService.titleEvent.emit('Examples - Output events');
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
     (hasData)="onImageLoaded($event)"
     (close)="onCloseImageModal($event)"
     (show)="onVisibleIndex($event)"

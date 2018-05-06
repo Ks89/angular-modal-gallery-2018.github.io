@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Description, DescriptionStrategy, Image } from 'angular-modal-gallery';
+import { Description, DescriptionStrategy, Image } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -55,8 +55,8 @@ export class DescriptionCustomComponent {
     this.titleService.titleEvent.emit('Examples - Description custom');
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
-    [description]="customDescription"></ks-modal-gallery>`;
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
+    [currentImageConfig]="{description: customDescription}"></ks-modal-gallery>`;
 
     this.codeTypescript =
       `  images: Image[]; // init this value with your images

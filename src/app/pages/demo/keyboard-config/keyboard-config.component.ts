@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Image } from 'angular-modal-gallery';
+import { Image } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -45,7 +45,7 @@ export class KeyboardConfigComponent {
     this.titleService.titleEvent.emit('Examples - Keyboard config');
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
     [keyboardConfig]="{esc: 81, left: 40, right: 38}"></ks-modal-gallery>`;
   }
 }

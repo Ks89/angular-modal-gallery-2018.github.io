@@ -24,7 +24,7 @@
 
 import { Component } from '@angular/core';
 
-import { Image } from 'angular-modal-gallery';
+import { Image } from '@ks89/angular-modal-gallery';
 
 import { IMAGES_ARRAY } from '../images';
 import { TitleService } from '../../../core/services/title.service';
@@ -45,7 +45,7 @@ export class NoDotsAndPreviewsComponent {
     this.titleService.titleEvent.emit('Examples - No dots and previews');
 
     this.codeHtml =
-      `<ks-modal-gallery [modalImages]="images"
+      `<ks-modal-gallery [id]="0" [modalImages]="images"
     [previewConfig]="{visible: false}"
     [dotsConfig]="{visible: false}"></ks-modal-gallery>`;
   }
