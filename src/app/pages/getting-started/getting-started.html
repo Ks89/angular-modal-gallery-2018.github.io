@@ -11,14 +11,15 @@
       <h3>Dependencies</h3>
       <p>The most important required dependencies are:</p>
       <ul>
-        <li>Angular (requires Angular version 4 or higher, tested with 5.2.x)</li>
+        <li>Angular (requires Angular version 5 or higher, tested with 6.x.x)</li>
         <li>Rxjs 5.0.0 or higher</li>
+        <li>If </li>
       </ul>
 
       <h3>Installation</h3>
       <p>After installing the above dependencies, add these: </p>
       <ul>
-        <li><code>npm i --save angular-modal-gallery hammerjs mousetrap</code></li>
+        <li><code>npm i --save @ks89/angular-modal-gallery hammerjs mousetrap</code></li>
         <li><code>npm i --save @types/hammerjs @types/mousetrap</code></li>
       </ul>
 
@@ -31,13 +32,14 @@
       <pre>
         import 'hammerjs';
         import 'mousetrap';
-        import &#123; ModalGalleryModule &#125; from 'angular-modal-gallery';
+        import &#123; ModalGalleryModule &#125; from '@ks89/angular-modal-gallery';
       </pre>
-      <p>The only remaining part is to list the imported module in your root module and any additional application modules that make use of the components in this library. The exact method will be slightly different for the root (top-level) module for which you should end up with the code similar to (notice <code>ModalGalleryModule.forRoot()</code>):</p>
+      <p>The only remaining part is to list the imported module in your root module and any additional application modules that make use of the components in this library.
+        The exact method will be slightly different for the root (top-level) module for which you should end up with the code similar to (notice <code>ModalGalleryModule.forRoot()</code>):</p>
       <pre>
         import 'hammerjs';
         import 'mousetrap';
-        import &#123;ModalGalleryModule&#125; from 'angular-modal-gallery';
+        import &#123;ModalGalleryModule&#125; from '@ks89/angular-modal-gallery';
         @NgModule(&#123;
           imports: [ModalGalleryModule.forRoot(), ...],
           declarations: [ AppComponent, ... ],
@@ -48,7 +50,7 @@
       </pre>
       <p>Other modules in your application should simply import <code>ModalGalleryModule</code> (without <code>.forRoot()</code>):</p>
       <pre>
-        import &#123;ModalGalleryModule&#125; from 'angular-modal-gallery';
+        import &#123;ModalGalleryModule&#125; from '@ks89/angular-modal-gallery';
 
         @NgModule(&#123;
           imports: [ModalGalleryModule, ...],
@@ -63,7 +65,6 @@
         <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/angular-cli-material">angular-cli with material</a></li>
         <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/systemjs">SystemJs</a></li>
         <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/universal">angular-universal</a></li>
-        <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/webpack">webpack 3</a></li>
         <li><a href="https://github.com/Ks89/angular-modal-gallery/tree/master/examples/stackblitz">live examples on stackblitz.com</a></li>
       </ul>
 
@@ -75,12 +76,14 @@
         map: &#123;
           'hammerjs'                  : 'node_modules/hammerjs',
           'mousetrap'                 : 'node_modules/mousetrap'
-          'angular-modal-gallery'     : 'node_modules/angular-modal-gallery/bundles',
+          ''@ks89'                    : 'node_modules/@ks89',
         &#125;
 
         packages = &#123;
-          'hammerjs'                  : &#123; main: 'hammer.js' &#125;,
-          'mousetrap'                 : &#123; main: 'mousetrap.js' &#125;,
+          'hammerjs'                    : &#123; main: 'hammer.js' &#125;,
+          'mousetrap'                   : &#123; main: 'mousetrap.js' &#125;,
+          '@ks89/angular-modal-gallery' : &#123; main: 'bundles/ks89-angular-modal-gallery.umd.min.js', defaultExtension: 'js' &#125;
+
           'angular-modal-gallery'     : &#123; main: 'angular-modal-gallery.umd.js' &#125;
         &#125;
       </pre>

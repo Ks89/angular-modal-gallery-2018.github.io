@@ -8,50 +8,53 @@
   <div class="row">
     <div class="col-12 col-md-9 pull-md-3">
 
-      <h3>5.0.0 is out and it's huge!!!</h3>
+      <h3>6.0.0 is out!!!</h3>
       <br><hr>
-      <p>Honestly, there are so many breaking changes that 5.0.0 should be consider a new library :). Ok, no that was a joke,
-        but it's impossible to write a full migration guide, so I decided to create the minimal tutorial to migrate the minimal demo of angular-modal-gallery.</p>
-      <p>In your template, replace this </p>
-      <pre>
-    &lt;modal-gallery [modalImages]="imagesArray"&gt;&lt;/modal-gallery&gt;
-      </pre>
-      <p><b>with this </b></p>
-      <pre>
-    &lt;ks-modal-gallery [modalImages]="images"&gt;&lt;/ks-modal-gallery&gt;
-      </pre>
-      <p>In your Component, replace this </p>
-      <pre>
-     imagesArray: Image[] = [
-      new Image(
-        '../assets/images/gallery/img1.jpg',
-        null, // no thumb
-        null, // no description
-        null // url
-      ),
-      new Image(
-        '../assets/images/gallery/img2.png',
-        '../assets/images/gallery/thumbs/img2.png',
-        'Description 2',
-        null // url
-      )
-    ];
-      </pre>
-      <b>with this </b>
-      <pre>
-    images: Image[] = [
-      new Image(0, &#123;
-        img: '../assets/images/gallery/img1.jpg',
-        extUrl: 'http://www.google.com'
-      &#125;),
-      new Image(1, &#123;
-        img: '../assets/images/gallery/img2.png',
-        description: 'Description 2'
-      &#125;, &#123;img: '../assets/images/gallery/thumbs/img2.png'&#125;)
-    ];
-      </pre>
+      TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+      TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+      TODOTODO
+      <!--<p>Honestly, there are so many breaking changes that 5.0.0 should be consider a new library :). Ok, no that was a joke,-->
+        <!--but it's impossible to write a full migration guide, so I decided to create the minimal tutorial to migrate the minimal demo of angular-modal-gallery.</p>-->
+      <!--<p>In your template, replace this </p>-->
+      <!--<pre>-->
+    <!--&lt;modal-gallery [modalImages]="imagesArray"&gt;&lt;/modal-gallery&gt;-->
+      <!--</pre>-->
+      <!--<p><b>with this </b></p>-->
+      <!--<pre>-->
+    <!--&lt;ks-modal-gallery [modalImages]="images"&gt;&lt;/ks-modal-gallery&gt;-->
+      <!--</pre>-->
+      <!--<p>In your Component, replace this </p>-->
+      <!--<pre>-->
+     <!--imagesArray: Image[] = [-->
+      <!--new Image(-->
+        <!--'../assets/images/gallery/img1.jpg',-->
+        <!--null, // no thumb-->
+        <!--null, // no description-->
+        <!--null // url-->
+      <!--),-->
+      <!--new Image(-->
+        <!--'../assets/images/gallery/img2.png',-->
+        <!--'../assets/images/gallery/thumbs/img2.png',-->
+        <!--'Description 2',-->
+        <!--null // url-->
+      <!--)-->
+    <!--];-->
+      <!--</pre>-->
+      <!--<b>with this </b>-->
+      <!--<pre>-->
+    <!--images: Image[] = [-->
+      <!--new Image(0, &#123;-->
+        <!--img: '../assets/images/gallery/img1.jpg',-->
+        <!--extUrl: 'http://www.google.com'-->
+      <!--&#125;),-->
+      <!--new Image(1, &#123;-->
+        <!--img: '../assets/images/gallery/img2.png',-->
+        <!--description: 'Description 2'-->
+      <!--&#125;, &#123;img: '../assets/images/gallery/thumbs/img2.png'&#125;)-->
+    <!--];-->
+      <!--</pre>-->
 
-      <br><br>
+      <!--<br><br>-->
 
       <h6>Addition info</h6>
       <p>If you are using <code>ModalGalleryModule.forRoot()</code> inside a child module, you should use simply <code>ModalGalleryModule</code> (without forRoot()).
