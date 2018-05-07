@@ -22,7 +22,11 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+
+import { PageScrollInstance, PageScrollService } from 'ngx-page-scroll';
+
 import { TitleService } from '../../../core/services/title.service';
 
 @Component({
@@ -30,7 +34,12 @@ import { TitleService } from '../../../core/services/title.service';
   templateUrl: 'global-config.html'
 })
 export class GlobalConfigComponent {
-  constructor(private titleService: TitleService) {
+
+  constructor(private titleService: TitleService, private scrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
     this.titleService.titleEvent.emit('Features - Global configuration');
+
+    // scroll to the top of the document
+    const pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, 'div#features');
+    this.scrollService.start(pageScrollInstance);
   }
 }

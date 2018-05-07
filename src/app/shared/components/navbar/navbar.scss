@@ -31,3 +31,9 @@ a {
 .bg-dark {
   background-color: $color-light-black !important;
 }
+
+@media only screen and (max-width: 1340px) {
+  #githubButtons {
+    display: none;
+  }
+}

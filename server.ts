@@ -22,30 +22,35 @@
  SOFTWARE.
  */
 
-import 'zone.js/dist/zone-node';
-import 'reflect-metadata';
-import { enableProdMode } from '@angular/core';
-
+const domino = require('domino');
 import { readFileSync } from 'fs';
-// Express Engine
-import { ngExpressEngine } from '@nguniversal/express-engine';
-// Import module map for lazy loading
-import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
-
-import * as express from 'express';
 import { join } from 'path';
+
+const PORT = process.env.PORT || 4000;
+const DIST_FOLDER = join(process.cwd(), 'dist');
+// Our index.html we'll use as our template
+const template = readFileSync(join(DIST_FOLDER, 'browser', 'index.html')).toString();
+
+const win = domino.createWindow(template);
+
+global['window'] = win;
+global['document'] = win.document;
+global['CSS'] = null;
+
+import 'reflect-metadata';
+import 'zone.js/dist/zone-node';
+import { enableProdMode } from '@angular/core';
+import { ngExpressEngine } from '@nguniversal/express-engine';
+import * as express from 'express';
+import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
+// Express Engine
+// Import module map for lazy loading
 
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
 
 // Express server
 const app = express();
-
-const PORT = process.env.PORT || 4000;
-const DIST_FOLDER = join(process.cwd(), 'dist');
-
-// Our index.html we'll use as our template
-const template = readFileSync(join(DIST_FOLDER, 'browser', 'index.html')).toString();
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const {AppServerModuleNgFactory, LAZY_MODULE_MAP} = require('./dist/server/main');
@@ -72,6 +77,7 @@ app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
 
 // ALl regular routes use the Universal engine
 app.get('*', (req, res) => {
+  global['navigator'] = req['headers']['user-agent'];
   res.render('index', {req});
 });
 

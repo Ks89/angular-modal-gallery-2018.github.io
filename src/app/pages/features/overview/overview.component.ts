@@ -22,9 +22,12 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
-import { TitleService } from '../../../core/services/title.service';
+import { Component, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
+import { PageScrollInstance, PageScrollService } from 'ngx-page-scroll';
+
+import { TitleService } from '../../../core/services/title.service';
 import { environment } from '../../../../environments/environment';
 
 const PATH = environment.imgPath;
@@ -38,7 +41,11 @@ export class OverviewComponent {
   modalGalleryPath: string = PATH + '/assets/modalgallery.svg';
   plainGalleryPath: string = PATH + '/assets/plaingallery.svg';
 
-  constructor(private titleService: TitleService) {
+  constructor(private titleService: TitleService, private scrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
     this.titleService.titleEvent.emit('Features - Overview');
+
+    // scroll to the top of the document
+    const pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, 'div#features');
+    this.scrollService.start(pageScrollInstance);
   }
 }

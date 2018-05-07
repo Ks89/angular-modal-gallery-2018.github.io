@@ -22,11 +22,13 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 import { Image } from '@ks89/angular-modal-gallery';
 
 import { environment } from '../../../environments/environment';
+import { PageScrollInstance, PageScrollService } from 'ngx-page-scroll';
+import { DOCUMENT } from '@angular/common';
 
 const PATH = environment.imgPath;
 
@@ -70,5 +72,11 @@ export class HomeComponent {
       img: `${PATH}/assets/images/gallery/thumbs/img5.jpg`
     })
   ];
+
+  constructor(private scrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+    // scroll to the top of the document
+    const pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, 'div#home');
+    this.scrollService.start(pageScrollInstance);
+  }
 
 }

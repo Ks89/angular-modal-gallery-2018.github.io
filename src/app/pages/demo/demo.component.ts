@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+
+import { PageScrollInstance, PageScrollService } from 'ngx-page-scroll';
+
 import { TitleService } from '../../core/services/title.service';
 
 @Component({

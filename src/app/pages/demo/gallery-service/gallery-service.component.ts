@@ -22,7 +22,10 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+
+import { PageScrollInstance, PageScrollService } from 'ngx-page-scroll';
 
 import { Image, GalleryService } from '@ks89/angular-modal-gallery';
 
@@ -43,8 +46,12 @@ export class GalleryServiceComponent {
   codeHtml: string;
   codeTypescript: string;
 
-  constructor(private titleService: TitleService,
-              private galleryService: GalleryService) {
+  constructor(private titleService: TitleService, private galleryService: GalleryService, private scrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+
+    // scroll to the top of the document
+    const pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, 'div#demo');
+    this.scrollService.start(pageScrollInstance);
+
     this.titleService.titleEvent.emit('Examples - Gallery service');
 
     this.codeHtml =

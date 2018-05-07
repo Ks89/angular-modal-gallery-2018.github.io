@@ -22,10 +22,21 @@
  * SOFTWARE.
  */
 
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+
+import { PageScrollInstance, PageScrollService } from 'ngx-page-scroll';
+
 @Component({
   selector: 'app-about-page',
   templateUrl: 'about.html'
 })
 
-export class AboutComponent {}
+export class AboutComponent {
+
+  constructor(private scrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+    // scroll to the top of the document
+    const pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, 'div#about');
+    this.scrollService.start(pageScrollInstance);
+  }
+}
